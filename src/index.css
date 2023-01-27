@@ -153,26 +153,39 @@ body, html, .App, #root, .auth-wrapper {
 .courses {
   padding: auto;
   border-radius: 5px;
-  margin: 2rem;
   display: flex;
   justify-content: space-around;
 }
 
 .course {
-  background-color: #e6e8ee;
+  background-color: #7e7aa2;
   border-radius: 1rem;
-  width: 24%;
+  width: 90%;
+  margin: 1rem;
   height: auto;
 }
 
 .course:hover {
-  background-color: #e6e8ee;
+  background-color: #5C5889;
   border-radius: 1rem;
-  width: 30%;
-  height: auto;
+  width: 100%;
+  margin: 0;
 }
 
 .course img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.selected {
+  background-color: #5C5889;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+} 
+
+.selected img {
   width: 100%;
   border-radius: 1rem;
 }
@@ -184,4 +197,79 @@ body, html, .App, #root, .auth-wrapper {
   width: 100%;
   height: 10rem;
   box-shadow: 0 1rem 4px 0 rgb(0 0 0 / 10%);
+}
+
+.testimonials {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.testimonials text {
+  margin-bottom: 0;
+}
+
+.testimonial {
+  width: 100%;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.student-image {
+  width: 50%;
+}
+
+.student-image img{
+  width: 40%;
+  margin: 5%;
+  margin-bottom: 8%;
+  margin-left: 20%;
+  display: block;
+  /* top: 10%; */
+  position: relative;
+  border-radius: 10%;
+  z-index: 9999;
+  box-shadow: -0.5rem 0.5rem #b2b2bd;
+}
+
+.student-review {
+  width: 50%;
+  padding-left: 5rem;
+  padding-top: 3rem;
+  margin-right: 10%;
+  background: rgb(238, 238, 238);
+  opacity: 0.8;
+  box-shadow: 0.5rem 0.5rem #b2b2bd;
+  overflow: hidden;
+  text-align: left;
+  display: inline-grid;
+  margin-bottom: 1rem;
+}
+
+.review {
+  overflow-wrap: break-word;
+  font-size:small;
+  color: black;
+  font-family: ui-serif;
+  font-style: italic;
+}
+
+
+.img-wrap {
+  content: '';
+  background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
+  position: absolute;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.des {
+  background-color: #5C5889;
+  background-image: url(/slide.png);
+  width: 50%;
+  border-radius: 2rem;
+  box-shadow: 0 0 8px 8px #5C5889 ;
+  background-size: cover;
+
 }

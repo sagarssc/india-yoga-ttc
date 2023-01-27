@@ -22,7 +22,7 @@ export default class Footer extends Component {
                 </div>
             ))}
               </div>
-              <text style={{color:"#000", position:"absolute", bottom:".2rem", left:"4rem"}}>Copyright © 2023, India Yoga TTC</text>
+              <text style={{color:"#fff", position:"absolute", bottom:".2rem", left:"4rem"}}>Copyright © 2023, India Yoga TTC</text>
 
             </div>
           </nav>
