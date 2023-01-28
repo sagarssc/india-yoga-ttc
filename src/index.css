@@ -266,10 +266,18 @@ body, html, .App, #root, .auth-wrapper {
 
 .des {
   background-color: #5C5889;
-  background-image: url(/slide.png);
   width: 50%;
   border-radius: 2rem;
   box-shadow: 0 0 8px 8px #5C5889 ;
   background-size: cover;
+  overflow: hidden;
+}
 
+.detail-pop {
+  width: "90%";
+  margin-left: "5%";
+  height: "32rem";
+  background: "linear-gradient(to right, #ffffff 0%, #5C5889 100%)";
+  border-radius: "4rem";
+  margin-bottom: "2rem";
 }

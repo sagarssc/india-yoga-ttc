@@ -12,26 +12,13 @@ import Footer from './components/defaults/footer';
 
 function App() {
   return (<Router>
-    {/* <div className="App"> */}
       <div className="app">
       <Navbar/>
-      {/* <img className='home-image' src='/png1.png' /> */}
       <div className='background'>
       <Home />
       <Footer />
       </div>
       </div>
-      {/* <Home /> */}
-      {/* <div className="auth-wrapper">
-        <div className="auth-inner">
-          <Switch>
-            <Route exact path='/' component={Login} />
-            <Route path="/sign-in" component={Login} />
-            <Route path="/sign-up" component={SignUp} />
-          </Switch>
-        </div>
-      </div> */}
-    {/* </div> */}
     </Router>
   );
 }

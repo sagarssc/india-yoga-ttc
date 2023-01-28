@@ -3,15 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Slider from "./slider";
 import Courses from "./courses";
 import Testimonials from "./testimonial";
-
-let getDevider = (title) => {
-  return(
-    <div>
-    {title != "" && <p> {title} </p>} 
-    <img src="/divider.png" />
-    </div>
-    )
-}
+import {getDevider} from '../defaults/utils';
+import Faq from './faq';
 export default class Home extends Component {
   render() {
     return (
@@ -22,6 +15,10 @@ export default class Home extends Component {
         <div className="explore-courses">
           {getDevider("Explores Courses")}
           <Courses />
+        </div>
+        <div className="testimonials">
+          {getDevider("FAQs")}
+          <Faq />
         </div>
         <div className="testimonials">
           {getDevider("Testimonials")}

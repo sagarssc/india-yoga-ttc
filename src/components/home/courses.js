@@ -19,7 +19,7 @@ export default class Courses extends Component {
     super(props);
     this.state = {
       title: "",
-      selected: -1,
+      selected:  -1,
     };
     this.showDetails = this.showDetails.bind(this);
   }
@@ -65,7 +65,7 @@ export default class Courses extends Component {
             style={{
               width: "90%",
               marginLeft: "5%",
-              height: "25rem",
+              height: "32rem",
               background: "linear-gradient(to right, #ffffff 0%, #5C5889 100%)",
               borderRadius: "4rem",
               marginBottom: "2rem",
@@ -105,8 +105,13 @@ export default class Courses extends Component {
                     <hr style={{ borderTop: "2px solid #5C5889" }} />
                   </div>
                 ))}
+                <div style={{ height:"5rem"}}>
+                  <div style={{width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"3%"}}>
+                    <text style={{fontWeight:"700", color:"wheat"}}>Read More</text>
+                  </div>
+                </div>
               </div>
-              <div className="des"></div>
+              <div className="des"><img src={courses[selected].img} style={{width:"100%", height:"-webkit-fill-available"}}/></div>
             </div>
           </div>
         )}
