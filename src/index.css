@@ -233,7 +233,7 @@ body, html, .App, #root, .auth-wrapper {
 
 .student-review {
   width: 50%;
-  padding-left: 5rem;
+  padding-left: 6rem;
   padding-top: 3rem;
   margin-right: 10%;
   background: rgb(238, 238, 238);
@@ -280,4 +280,19 @@ body, html, .App, #root, .auth-wrapper {
   background: "linear-gradient(to right, #ffffff 0%, #5C5889 100%)";
   border-radius: "4rem";
   margin-bottom: "2rem";
+}
+
+.hrs-course {
+  width: 90%;
+  margin-left: 5%;
+}
+
+li::before {
+  content: "\f621";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 11px;
+  position: absolute;
+  top: 10px;
+  left: 0;
 }

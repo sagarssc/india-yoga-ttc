@@ -14,7 +14,7 @@ export default class Home extends Component {
         </div>
         <div className="explore-courses">
           {getDevider("Explores Courses")}
-          <Courses />
+          <Courses selectCourse={(hrs)=>this.props.selectCourse(hrs)}/>
         </div>
         <div className="testimonials">
           {getDevider("FAQs")}

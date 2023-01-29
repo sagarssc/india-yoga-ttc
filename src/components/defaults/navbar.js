@@ -7,7 +7,7 @@ export default class Navbar extends Component {
         return (
           <div className="navbar" style={{position: "fixed"}}>
             <div className="nav-container">
-              <div className="logo">
+              <div onClick={()=>this.props.switchTab("home")} className="logo">
                 INDIA YOGA TTC
               </div>
               <div className="nav-menu">
