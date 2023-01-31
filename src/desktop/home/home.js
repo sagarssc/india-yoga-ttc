@@ -9,9 +9,10 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <div className="slides">
+        {/* <div className="slides">
           <Slider />
-        </div>
+        </div> */}
+        <div style={{paddingTop: "2rem", backgroundImage:"url('./slide.png')", height:"30rem", backgroundSize:"100% 100%"}}></div>
         <div className="explore-courses">
           {getDevider("Explores Courses")}
           <Courses selectCourse={(hrs)=>this.props.selectCourse(hrs)}/>
