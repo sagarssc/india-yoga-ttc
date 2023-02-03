@@ -12,11 +12,12 @@ export default class CourseDetails extends Component {
         return (
           <div
             style={{
-              width: "90%",
-              marginLeft: "5%",
+
               height: "32rem",
-              background: "linear-gradient(to right, #ffffff 0%, #5C5889 100%)",
-              borderRadius: "4rem",
+              backgroundColor:"white",
+              backgroundImage:"url('./home/bg/3.png')",
+              backgroundPosition: "left",
+              backgroundRepeat:"no-repeat",
               marginBottom: "2rem",
             }}
           >
@@ -50,14 +51,14 @@ export default class CourseDetails extends Component {
                         justifyContent: "space-between",
                       }}
                     >
-                      <text style={{fontSize:"large"}}>{detail.title}</text>
-                      <text style={{fontSize:"large"}}>{detail.value}</text>
+                      <text style={{fontSize:"large", fontWeight:"500"}}>{detail.title}</text>
+                      <text style={{fontSize:"large", fontWeight:"500"}}>{detail.value}</text>
                     </div>
                     <hr style={{ borderTop: "2px solid #5C5889" }} />
                   </div>
                 ))}
                 {displayTitle && <div style={{ height:"5rem"}}>
-                  <div onClick={()=>this.props.onReadMore()} style={{width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"3%"}}>
+                  <div onClick={()=>this.props.onReadMore()} style={{width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"2%"}}>
                     <text style={{fontWeight:"700", color:"wheat"}}>Read More</text>
                   </div>
                 </div>}

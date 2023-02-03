@@ -5,24 +5,29 @@ import Courses from "./courses";
 import Testimonials from "./testimonial";
 import {getDevider} from '../defaults/utils';
 import Faq from './faq';
+import QuickLink from "./quickLink";
+import ExtraDiv from "../defaults/extraDiv";
 export default class Home extends Component {
   render() {
     return (
       <div>
-        {/* <div className="slides">
+        <div className="blocks">
           <Slider />
-        </div> */}
-        <div style={{paddingTop: "2rem", backgroundImage:"url('./slide.png')", height:"30rem", backgroundSize:"100% 100%"}}></div>
+        </div>
+        <div className="blocks">
+          <QuickLink />
+        </div>
         <div className="explore-courses">
-          {getDevider("Explores Courses")}
           <Courses selectCourse={(hrs)=>this.props.selectCourse(hrs)}/>
         </div>
+        <div className="common-div">
+          <ExtraDiv />
+        </div>
         <div className="testimonials">
-          {getDevider("FAQs")}
           <Faq />
         </div>
         <div className="testimonials">
-          {getDevider("Testimonials")}
+          {/* {getDevider("Testimonials")} */}
           <Testimonials />
         </div>
       </div>

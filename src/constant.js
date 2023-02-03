@@ -55,6 +55,13 @@ export const courses = {
     {title: "Duration", value: "12 Days" },
     {title: "Timing", value: "1st to 12th of every month" },
   ] },
+  500:{ img: "/slide.png", name: "500 Hours TTC", details: [
+    {title: "Fee", value: "$499" },
+    {title: "Style", value: "Ashtanga Yoga, Vinyasa Flow" },
+    {title: "Level", value: "Beginner" },
+    {title: "Duration", value: "12 Days" },
+    {title: "Timing", value: "1st to 12th of every month" },
+  ] },
   online:{ img: "/slide.png", name: "Online TTC", details: [
     {title: "Fee", value: "$499" },
     {title: "Style", value: "Ashtanga Yoga, Vinyasa Flow" },
@@ -242,3 +249,26 @@ export const KeyPoints = {
     },
   ]
 }
+
+export const extraDetails = [
+  {img:'./home/slide/2.png',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img:'./home/slide/3.png',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img:'./home/slide/4.png', social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+];  
+
+export const Faqs = [
+  {
+    question:
+      "denw dnjew dfenwjkdf nlfdew dfewjhifd fdjhwo dfwejif nweniodwef ?",
+    answer:
+      "deaknjfbhjdfe eajkncde ledsnkj dekjnefds lkedsf edsiljedsf niledsjbndefjhkefsd esdfhji dcnjke decnjesf maesilkesf descjklncsn jihdcs kcsjjkdfwe,ikcsrjdnslifjjlifdeso \
+    felkdfskncvdsf njdsak cdsjn dscjndscfnjkl ijdsfmnklj dscjklndsf nnkdefs jdcsjjk jodsefn",
+  },
+  {
+    question:
+      "denw dnjew dfenwjkdf nlfdew dfewjhifd fdjhwo dfwejif nweniodwef ?",
+    answer:
+      "deaknjfbhjdfe eajkncde ledsnkj dekjnefds lkedsf edsiljedsf niledsjbndefjhkefsd esdfhji dcnjke decnjesf maesilkesf descjklncsn jihdcs kcsjjkdfwe,ikcsrjdnslifjjlifdeso \
+    felkdfskncvdsf njdsak cdsjn dscjndscfnjkl ijdsfmnklj dscjklndsf nnkdefs jdcsjjk jodsefn",
+  },
+];

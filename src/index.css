@@ -86,8 +86,8 @@ body, html, .App, #root, .auth-wrapper {
   z-index: 9999;
 }
 
-.logo {
-  font-size: 2rem;
+.logo-large {
+  font-size: 3rem;
   color: black;
   font-family: cursive;
   text-align: start;
@@ -121,17 +121,29 @@ body, html, .App, #root, .auth-wrapper {
   padding: 1rem
 }
 
-.slides{
-  padding: 4rem;
+/* .slides{ */
+  /* padding: 4rem; */
+  /* padding-top: 2rem;
+  height: 40rem;
+} */
+
+.blocks{
+  /* padding: 4rem; */
   padding-top: 2rem;
+  position: relative;
+  padding-bottom: 2rem;
   height: 40rem;
 }
 
 .slide-image {
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   width: -webkit-fill-available;
   height: 100%;
 }
+
+.slide-image div div .rsis-container .rsis-image {
+    background-size: 100% 100% !important;
+  }
 
 .background {
     /* background: #5C5889 !important; */
@@ -139,40 +151,54 @@ body, html, .App, #root, .auth-wrapper {
     background: linear-gradient(to top, #ffffff 0%, #f3f3f4 100%);
     height: 100%;
     background-attachment: fixed;
-    margin-top: 90px;
+    /* margin-top: 90px; */
 }
 
 .explore-courses {
   font-size: xx-large;
   text-align: center;
+  padding: 7% 0% 0% 0%;
+  width: 95%;
+  margin-left: 2.5%;
 }
 
 .explore-courses text {
   margin-bottom: 0;
   font-size: 25px;
+  font-weight: 700;
+}
+
+.common-div {
+  padding: 7% 0% 0% 0%;
+  width: 95%;
+  margin-left: 2.5%;
 }
 
 .courses {
   padding: auto;
   border-radius: 5px;
   display: flex;
+  background-color: #fff;
   justify-content: space-around;
 }
 
 .course {
   /* background-color: #7e7aa2; */
-  background-color: #f4f4f5;
+  /* background-color: #f4f4f5; */
   border-radius: 1rem;
   width: 90%;
-  margin: 1rem;
+  /* margin: 1rem; */
   height: auto;
+  text-align: center;
+  display: inline-grid;
 }
 
 .course:hover {
-  background-color: #5C5889;
   border-radius: 1rem;
-  width: 100%;
-  margin: 0;
+  width: 90%;
+  height: auto;
+  border-bottom: 5px solid gold;
+  color: gold;
 }
 
 .course img {
@@ -180,12 +206,15 @@ body, html, .App, #root, .auth-wrapper {
   border-radius: 1rem;
 }
 
-.selected {
-  background-color: #5C5889;
+.selected-course {
   border-radius: 1rem;
-  width: 100%;
-  margin: 0;
-  height: 100%;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  display: inline-grid;
+  background-color: #f1f1f1;
+  color: gold;
+  border-bottom: 5px solid gold;
 } 
 
 .selected img {
@@ -205,6 +234,8 @@ body, html, .App, #root, .auth-wrapper {
 .testimonials {
   font-size: xx-large;
   text-align: center;
+  margin: 2.5%;
+  background-color: #ffffff;
 }
 
 .testimonials text {
@@ -213,12 +244,14 @@ body, html, .App, #root, .auth-wrapper {
 
 .testimonial {
   width: 100%;
-  display: flex;
+  /* display: flex; */
   padding-top: 1rem;
 }
 
 .student-image {
-  width: 50%;
+  width: 100%;
+  height: 40%;
+  /* margin-left: 22%; */
 }
 
 .student-image img{
@@ -231,29 +264,29 @@ body, html, .App, #root, .auth-wrapper {
   position: relative;
   border-radius: 10%;
   z-index: 9999;
-  box-shadow: -0.5rem 0.5rem #b2b2bd;
+  /* box-shadow: -0.5rem 0.5rem #b2b2bd; */
 }
 
-.student-review {
+/* .student-review {
   width: 50%;
   padding-left: 6rem;
   padding-top: 3rem;
-  margin-right: 10%;
-  background: rgb(238, 238, 238);
-  opacity: 0.8;
+  margin-right: 10%; */
+  /* background: rgb(238, 238, 238); */
+  /* opacity: 0.8;
   box-shadow: 0.5rem 0.5rem #b2b2bd;
   overflow: hidden;
   text-align: left;
   display: inline-grid;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; */
+/* } */
 
 .review {
   overflow-wrap: break-word;
   font-size:small;
   color: black;
-  font-family: ui-serif;
-  font-style: italic;
+  font-family: Open Sans;
+  /* font-style: italic; */
 }
 
 
@@ -298,4 +331,171 @@ li::before {
   position: absolute;
   top: 10px;
   left: 0;
+}
+
+.blog-heading {
+  padding-top:"2%";
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.blog-heading:hover {
+  color: gold;
+}
+
+.gery-image {
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+
+.gery-image:hover {
+  background-size: 100% 100%;
+  filter: grayscale(0%);
+}
+
+.right-image {
+  width: 100%;
+  height: 90%;
+  background-size: 100% 100%;
+  box-shadow: -20px 20px 0 0 gold;
+}
+
+.left-image {
+  width: 100%;
+  height: 90%;
+  background-size: 100% 100%;
+  box-shadow: 20px 20px 0 0 silver;
+}
+
+.left-image:hover {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  box-shadow: 15px 15px 0 0 silver;
+  transition: .7s;
+}
+
+.right-image:hover {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  box-shadow: -15px 15px 0 0 gold;
+  transition: .7s;
+}
+
+.accordion__button[aria-expanded='true']::before {
+  transform: rotate(45deg);
+  color: #ffc03f;
+}
+
+.accordion__button[aria-expanded='true'] {
+  color: #ffc03f;
+}
+
+
+
+.carousel-root {
+  width: 64% !important;
+  margin: auto !important;
+  margin-top: 3% !important;
+}
+
+.carousel .slide {
+  background: #fff !important;
+  color: black;
+  height: 100%;
+}
+
+.carousel .slide img {
+  width: 30% !important;
+  height: 12rem;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.student-review {
+  background: #fafafa;
+  margin-top: -6%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid #ddd;
+  /* height: 18rem; */
+}
+
+.carousel .control-dots {
+  padding-left: 5px !important;
+  outline: 0;
+  bottom: 5% !important;
+  display: none;
+}
+
+.student-review h3 {
+  color: #222;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.student-review h4 {
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: 500;
+  color: #787878;
+  font-size: 14px;
+}
+
+.student-review p {
+  font-weight: 100 !important;
+  line-height: 29px !important;
+  color: #222;
+  font-size: 15px;
+  font-family: sans-serif;
+  max-height: 67px;
+}
+
+.student-review p:before {
+  content: "“";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.student-review p:after {
+  content: "”";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+  line-height: 0;
+}
+
+.carousel .control-dots .dot {
+  box-shadow: none !important;
+  background: #454545 !important;
+  outline: 0;
+  /* display: none; */
+}
+
+.carousel.carousel-slider .control-arrow {
+  background: #000 !important;
+  height: 50px !important;
+  position: absolute;
+  top: 50% !important;
+}
+
+li.slide.selected::before {
+  display: none;
+}
+
+li.dot::before {
+  display: none;
 }

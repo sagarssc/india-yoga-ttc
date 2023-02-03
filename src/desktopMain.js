@@ -4,7 +4,7 @@ import Navbar from "./desktop/defaults/navbar";
 import Home from "./desktop/home/home";
 import Footer from "./desktop/defaults/footer";
 import Hrs from "./desktop/courses/hrs";
-
+import Blog from "./desktop/home/blog";
 export default class DesktopMain extends Component {
   constructor(props) {
     super(props);
@@ -24,6 +24,7 @@ export default class DesktopMain extends Component {
   }
 
   updateTab(tab) {
+    tab = tab.toLowerCase().replace(" ","_")
     this.setState({
       tab: tab,
     });
@@ -38,6 +39,8 @@ export default class DesktopMain extends Component {
         break;
       case "course":
         return <Hrs hrs={courseHrs} />;
+      case "blog":
+        return <Blog />;
     }
   }
   render() {
@@ -48,7 +51,6 @@ export default class DesktopMain extends Component {
             <Navbar switchTab={(tab)=>this.updateTab(tab)}/>
             <div className="background">
               {this.getContent()}
-              {/* <Hrs100/> */}
               <Footer />
             </div>
           </div>

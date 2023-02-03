@@ -12,6 +12,7 @@ export default class Courses extends Component {
       details: {}
     };
     this.showDetails = this.showDetails.bind(this);
+    // this.showDetails(0)
   }
   showDetails(index) {
     let { selected, show } = this.state;
@@ -40,18 +41,17 @@ export default class Courses extends Component {
             <div>
               {selected == course[0] ? (
                 <div
-                  className="selected"
+                  className="selected-course"
                   onClick={() => this.showDetails(course[0])}
+                  style={{backgroundImage: "url('./home/bg/header.png')"}}
                 >
-                  <img src={course[1].img} />
-                  <text>{course[1].name}</text>
-                  <text> {course[1].subtext}</text>
+                  {/* <img src={course[1].img} /> */}
+                  <text style={{margin: "4rem", marginTop:"0.5rem", marginBottom:"0.5rem"}}>{course[1].name}</text>
                 </div>
               ) : (
                 <div className="course" onClick={() => this.showDetails(course[0])}>
-                  <img src={course[1].img} />
-                  <text>{course[1].name}</text>
-                  <text> {course[1].subtext}</text>
+                  {/* <img src={course[1].img} /> */}
+                  <text style={{margin: "4rem", marginTop:"0.5rem", marginBottom:"0.5rem"}}>{course[1].name}</text>
                 </div>
               )}
             </div>
