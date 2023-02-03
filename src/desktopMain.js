@@ -35,8 +35,8 @@ export default class DesktopMain extends Component {
     window.scrollTo(0, 0);
     switch (tab) {
       case "home":
-        return <Home selectCourse={(hrs) => this.updateCourseHrs(hrs)} />;
-        break;
+        return <Home/>;
+        // return <Home selectCourse={(hrs) => this.updateCourseHrs(hrs)} />;
       case "course":
         return <Hrs hrs={courseHrs} />;
       case "blog":
