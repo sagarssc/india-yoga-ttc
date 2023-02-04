@@ -50,6 +50,7 @@ export default class Navbar extends Component {
                 paddingTop:"25%",
                 transition: "all .75s ease"
               }}
+              onClick={() => this.handleShowNavbar()}
             >
               <div className="nav-menu">
                 {titles.map((title, index) => (  

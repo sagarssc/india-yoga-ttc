@@ -17,9 +17,9 @@ export default class Home extends Component {
         <div className="blocks">
           <QuickLink />
         </div>
-        {/* <div className="explore-courses">
+        <div className="explore-courses">
           <Courses selectCourse={(hrs)=>this.props.selectCourse(hrs)}/>
-        </div> */}
+        </div>
         <div className="common-div">
           <ExtraDiv />
         </div>

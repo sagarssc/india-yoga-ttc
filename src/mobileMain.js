@@ -43,12 +43,12 @@ export default class MobileMain extends Component {
   }
   render() {
     return (
-      <Router>
+      <div>
         <div>
           <div className="app">
-            <BrowserRouter>
+            {/* <BrowserRouter> */}
             <Navbar switchTab={(tab)=>this.updateTab(tab)}/>
-            </BrowserRouter>
+            {/* </BrowserRouter> */}
             <div className="background">
               {this.getContent()}
               {/* <Hrs100/> */}
@@ -56,7 +56,7 @@ export default class MobileMain extends Component {
             </div>
           </div>
         </div>
-      </Router>
+      </div>
     );
   }
 }

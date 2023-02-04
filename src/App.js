@@ -13,24 +13,24 @@ import Hrs100 from './desktop/courses/hrs';
 import DesktopMain from './desktopMain';
 import MobileMain from "./mobileMain";
 function App() {
-  // const [width, setWindowWidth] = useState(0);
+  const [width, setWindowWidth] = useState(0);
 
-  // useEffect( () => {
-  //   updateDimensions();
-  //   window.addEventListener("resize", updateDimensions);
-  //   return () => window.removeEventListener("resize", updateDimensions);
-  // }, [])
+  useEffect( () => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, [])
 
-  // const updateDimensions = () => {
-  //   const width = window.innerWidth;
-  //   setWindowWidth(width);
-  // };
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+  };
 
-  // const isDesktopScreen = width > 1023
+  const isDesktopScreen = width > 1023
   return (
     <div>
-      <DesktopMain />
-    {/* {isDesktopScreen ? <DesktopMain /> : <MobileMain />} */}
+      {/* <DesktopMain /> */}
+    {isDesktopScreen ? <DesktopMain /> : <MobileMain />}
     </div>
   );
 }
