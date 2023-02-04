@@ -410,6 +410,7 @@ li::before {
   height: 12rem;
   border-radius: 50%;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .student-review {
