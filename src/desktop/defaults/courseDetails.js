@@ -8,6 +8,7 @@ export default class CourseDetails extends Component {
       let {index, displayTitle} = this.props
       let title = courses[index].name;
       let details = courses[index].details
+      let ref_link = courses[index].link
       let hrs = index
         return (
           <div
@@ -58,9 +59,9 @@ export default class CourseDetails extends Component {
                   </div>
                 ))}
                 {displayTitle && <div style={{ height:"5rem"}}>
-                  <div onClick={()=>this.props.onReadMore()} style={{width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"2%"}}>
+                <Link to={ref_link} className="link"><div style={{width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"2%"}}>
                     <text style={{fontWeight:"700", color:"wheat"}}>Read More</text>
-                  </div>
+                  </div></Link>
                 </div>}
               </div>
               <div className="des"><img src={courses[index].img} style={{width:"100%", height:"-webkit-fill-available"}}/></div>

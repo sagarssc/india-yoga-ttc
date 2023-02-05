@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   /* background: #5C5889 !important; */
   min-height: 100vh;
@@ -227,8 +228,8 @@ body, html, .App, #root, .auth-wrapper {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 10rem;
-  box-shadow: 0 1rem 4px 0 rgb(0 0 0 / 10%);
+  /* height: 15rem; */
+  /* box-shadow: 0 1rem 4px 0 rgb(0 0 0 / 10%); */
 }
 
 .testimonials {
@@ -499,4 +500,9 @@ li.slide.selected::before {
 
 li.dot::before {
   display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
 }

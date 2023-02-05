@@ -27,7 +27,6 @@ export default class Home extends Component {
           <Faq />
         </div>
         <div className="testimonials">
-          {/* {getDevider("Testimonials")} */}
           <Testimonials />
         </div>
       </div>

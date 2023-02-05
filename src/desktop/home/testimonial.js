@@ -44,7 +44,7 @@ export default class Testimonials extends Component {
         autoPlay={true}
         interval={6100}>
           {reviews.map((review, index) => (
-            <div className="testimonial">
+            <div className="testimonial" style={{backgroundImage:"url('/home/bg/3.png')", backgroundPosition:"top left"}}>
               <div className="student-image">
                 <img src={review.img} />
               </div>

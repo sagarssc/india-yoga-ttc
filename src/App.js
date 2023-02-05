@@ -29,7 +29,6 @@ function App() {
   const isDesktopScreen = width > 1023
   return (
     <div>
-      {/* <DesktopMain /> */}
     {isDesktopScreen ? <DesktopMain /> : <MobileMain />}
     </div>
   );

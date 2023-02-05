@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Routes ,Route } from 'react-router-dom';
 import Navbar from "./desktop/defaults/navbar";
 import Home from "./desktop/home/home";
 import Footer from "./desktop/defaults/footer";
 import Hrs from "./desktop/courses/hrs";
 import Blog from "./desktop/home/blog";
+import ScrollToTop from "./scrollToTop";
 export default class DesktopMain extends Component {
   constructor(props) {
     super(props);
@@ -46,13 +48,29 @@ export default class DesktopMain extends Component {
     return (
       <div>
         <div>
+            <BrowserRouter>
+            <ScrollToTop />
           <div className="app">
-            <Navbar switchTab={(tab)=>this.updateTab(tab)}/>
             <div className="background">
-              {this.getContent()}
-              <Footer />
+            <Navbar props={this.props}/>
+              <Routes>
+                <Route index element={<Home selectCourse={(hrs) => this.updateCourseHrs(hrs)} />} />
+                <Route path="/" element={<Home selectCourse={(hrs) => this.updateCourseHrs(hrs)} />} />
+                <Route path="/courses" element={<Hrs hrs={100} />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/aboutus" element={<Blog />} />
+                <Route path="/100-hrs-course" element={<Hrs hrs={100} />} />
+                <Route path="/200-hrs-course" element={<Hrs hrs={200} />} />
+                <Route path="/300-hrs-course" element={<Hrs hrs={300} />} />
+                <Route path="/500-hrs-course" element={<Hrs hrs={500} />} />
+                <Route path="/online-training" element={<Hrs hrs={"online"} />} />
+                {/* </Route> */}
+              </Routes>
             </div>
           </div>
+              <Footer />
+            </BrowserRouter>
+              {/* {this.getContent()} */}
         </div>
       </div>
     );
