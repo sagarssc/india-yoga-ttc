@@ -35,7 +35,7 @@ export default class Testimonials extends Component {
   render() {
     return (
       <div style={{paddingBottom:"5%", backgroundImage:"url('/home/bg/header.png')"}}>
-      <div style={{width:"100%", alignText:"center", marginBottom:"2rem",paddingTop:"2rem", fontFamily:"serif", fontSize:"larger"}}>Testimonials</div>
+      <div className="heading">Testimonials</div>
       <div style={{borderBottom: "0px"}}>
         <Carousel slide={1} showArrows={true}
         infiniteLoop={true}

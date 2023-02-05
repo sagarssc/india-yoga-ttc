@@ -302,7 +302,13 @@ export const KeyPoints = {
   ]
 }
 
-export const extraDetails = [
+export const extraDetailsHome = [
+  {img:'./home/slide/2.png',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img:'./home/slide/3.png',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img:'./home/slide/4.png', social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+];  
+
+export const extraDetailsAboutUs = [
   {img:'./home/slide/2.png',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
   {img:'./home/slide/3.png',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
   {img:'./home/slide/4.png', social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
@@ -371,3 +377,33 @@ export const FooterLinks = {
   ],
   copyright: "Copyright © 2023, India Yoga TTC",
 }
+
+export const teachers = [
+  {img:"url('/home/slide/1.png')", name:"Sagar Singh Chauhan", description:"Being a master in yoga, Yogi Saajan is full of knowledge and wisdom. He chose to teach meditation and Yoga philosophy because he believes in spreading peace to the world. He has a good strong texture of voice which certainly makes the environment holy when he chants the mantras at the same he has a therapeutic voice that takes people to reach a relaxed and peaceful state easily. He has been teaching for the last 8 years now. He teaches some beautiful meditation techniques to let go of all the negative emotions people are carrying inside them thus makes them lighter and peaceful."},
+  {img:"url('/home/slide/1.png')", name:"Sagar Singh Chauhan", description:"Being a master in yoga, Yogi Saajan is full of knowledge and wisdom. He chose to teach meditation and Yoga philosophy because he believes in spreading peace to the world. He has a good strong texture of voice which certainly makes the environment holy when he chants the mantras at the same he has a therapeutic voice that takes people to reach a relaxed and peaceful state easily. He has been teaching for the last 8 years now. He teaches some beautiful meditation techniques to let go of all the negative emotions people are carrying inside them thus makes them lighter and peaceful."},
+  {img:"url('/home/slide/1.png')", name:"Sagar Singh Chauhan", description:"Being a master in yoga, Yogi Saajan is full of knowledge and wisdom. He chose to teach meditation and Yoga philosophy because he believes in spreading peace to the world. He has a good strong texture of voice which certainly makes the environment holy when he chants the mantras at the same he has a therapeutic voice that takes people to reach a relaxed and peaceful state easily. He has been teaching for the last 8 years now. He teaches some beautiful meditation techniques to let go of all the negative emotions people are carrying inside them thus makes them lighter and peaceful."},
+  {img:"url('/home/slide/1.png')", name:"Sagar Singh Chauhan", description:"Being a master in yoga, Yogi Saajan is full of knowledge and wisdom. He chose to teach meditation and Yoga philosophy because he believes in spreading peace to the world. He has a good strong texture of voice which certainly makes the environment holy when he chants the mantras at the same he has a therapeutic voice that takes people to reach a relaxed and peaceful state easily. He has been teaching for the last 8 years now. He teaches some beautiful meditation techniques to let go of all the negative emotions people are carrying inside them thus makes them lighter and peaceful."},
+]
+
+export const galleryImages = [
+  { url: "url('/home/slide/1.png')" },
+  { url: "url('/home/slide/2.png')" },
+  { url: "url('/home/slide/3.png')" },
+  { url: "url('/home/slide/4.png')" },
+  { url: "url('/home/slide/1.png')" },
+  { url: "url('/home/slide/2.png')" },
+  { url: "url('/home/slide/3.png')" },
+  { url: "url('/home/slide/4.png')" },
+  { url: "url('/home/slide/1.png')" },
+  { url: "url('/home/slide/2.png')" },
+  { url: "url('/home/slide/3.png')" },
+  { url: "url('/home/slide/4.png')" },
+  { url: "url('/home/slide/1.png')" },
+  { url: "url('/home/slide/2.png')" },
+  { url: "url('/home/slide/3.png')" },
+  { url: "url('/home/slide/4.png')" },
+  { url: "url('/home/slide/1.png')" },
+  { url: "url('/home/slide/2.png')" },
+  { url: "url('/home/slide/3.png')" },
+  { url: "url('/home/slide/4.png')" },
+];

@@ -14,7 +14,7 @@ export default class Faq extends Component {
     return (
       <div style={{paddingBottom:"5%", backgroundImage:"url('/home/bg/header.png')"}}>
 
-        <div style={{width:"100%", alignText:"center", marginBottom:"2rem",paddingTop:"2rem", fontFamily:"serif", fontSize:"larger"}}>FAQ's</div>
+        <div className="heading">FAQ's</div>
       <div style={{ width: "80%", height: "auto", margin:"5%",marginTop:'0%',marginLeft:"10%", backgroundColor:"white", boxShadow:"-5px 5px 8px 5px"}}>
         <Accordion allowZeroExpanded={true}>
           {Faqs.map((faq, index) => (

@@ -506,3 +506,27 @@ li.dot::before {
   text-decoration: none;
   color: black;
 }
+
+.our-teachers {
+  width: 95%;
+  margin: 2.5%;
+  background-color: white;
+  padding: 2%;
+}
+
+.heading {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  font-family: serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+.custom-dot-list-style {
+  display: none;
+}
+
+li::before {
+  display: none;
+}
