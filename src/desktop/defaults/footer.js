@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {FooterLinks, icons} from "../../constant"
+import {FooterLinks, icons, social_images} from "../../constant"
 
 const titles = ["Courses", "About Us", "Blog", "Contact" ]
-
-const social_images = [
-  { img: "/facebook.png"},
-  { img: "/instagram.png"},
-  { img: "/youtube.png"},
-];
 
 export default class Footer extends Component {
     render() {
@@ -23,7 +17,7 @@ export default class Footer extends Component {
                 <div className="social-media" style={{paddingTop:"2rem",justifyContent:"space-around", display:"flex"}}>
                   {social_images.map((social, index) =>(
                     <div>
-                      <img src={social.img} style={{width:"30px"}}/>
+                      <a href={social.url} target="_blank" className="link"><img src={social.img} style={{width:"30px"}}/></a>
                     </div>
                   ))}
                 </div>
@@ -46,7 +40,8 @@ export default class Footer extends Component {
                               <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundColor:"gold"}}></div>
                             </div>
                             <div style={{width:"80%"}}>
-                              <p style={{margin:"0", fontWeight:"700"}}>{contact.heading}</p><p>{contact.value}</p>
+                              <p style={{margin:"0", fontWeight:"700"}}>{contact.heading}</p>
+                              <a href={contact.ref} target="_blank" className="link"><p>{contact.value}</p></a>
                             </div>
                           </div> 
                         ))}

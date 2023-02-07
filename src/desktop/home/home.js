@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Slider from "../defaults/slider";
 import Courses from "./courses";
 import Testimonials from "./testimonial";
-import {getDevider} from '../defaults/utils';
+import {getDevider} from '../../utils';
 import Faq from './faq';
 import QuickLink from "./quickLink";
 import ExtraDiv from "../defaults/extraDiv";

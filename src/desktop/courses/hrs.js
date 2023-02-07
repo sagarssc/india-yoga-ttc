@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {getDevider} from '../defaults/utils';
+import {getDevider} from '../../utils';
 import {CoursePage, KeyPoints} from "../../constant";
 import CourseDetails from "../defaults/courseDetails"
 

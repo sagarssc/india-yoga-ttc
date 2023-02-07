@@ -333,6 +333,8 @@ export const Faqs = [
 
 export const logo = "url('./icons/logo.png')"
 
+export const contactNo = "+91 9719700541"
+
 export const QuickLinks = {
   heading: "Find your inner beauty through yoga and mediation",
   headImgUrl: logo,
@@ -341,13 +343,15 @@ export const QuickLinks = {
     {img:"url('./slide.png')",link:"/aboutus"},
     {img:"url('./slide.png')",link:"/blog"},
   ],
-  contact: "+91 9719700541"
+  contact: contactNo
 };
 
 export const Contacts = {
   mobile: "+91 9719700541",
   email: "sagarsinghchauhan49@gmail.com",
   googleLocation: "https://goo.gl/maps/WqxFZ2xrK4Jdr8u87",
+  emailLink: 'mailto:sagarsinghchauhan49@gmail.com',
+  whatsappLink:"https://api.whatsapp.com/send?phone="+contactNo.replace('+','').replace(' ',''),
   address: "Rishikesh Yog Nirvana Upper Tapovan, Balaknath Road, Rishikesh – 249192, India"
 }
 
@@ -355,6 +359,14 @@ export const icons = {
   mobile: "url('./icons/call.png')",
   email: "url('./icons/email.png')",
   location: "url('./icons/location.png')"
+}
+
+export const contactus = {
+  ContactDetails: [
+    {icon: icons.mobile, heading:"CALL/WHATSAPP", value: Contacts.mobile, ref: Contacts.whatsappLink},
+    {icon: icons.email, heading:"E-MAIL", value: Contacts.email, ref: Contacts.emailLink},
+    {icon: icons.location, heading:"LOCATION", value: Contacts.address, ref: Contacts.googleLocation},
+  ],
 }
 
 export const FooterLinks = {
@@ -371,8 +383,8 @@ export const FooterLinks = {
     {text: "Online Training", link:"/online-training"},
   ],
   contact: [
-    {icon: icons.mobile, heading:"CALL/WHATSAPP", value: Contacts.mobile},
-    {icon: icons.email, heading:"E-MAIL", value: Contacts.email},
+    {icon: icons.mobile, heading:"CALL/WHATSAPP", value: Contacts.mobile, ref: Contacts.whatsappLink},
+    {icon: icons.email, heading:"E-MAIL", value: Contacts.email, ref: Contacts.emailLink},
     {icon: icons.location, heading:"LOCATION", value: Contacts.address, ref: Contacts.googleLocation},
   ],
   copyright: "Copyright © 2023, India Yoga TTC",
@@ -384,6 +396,12 @@ export const teachers = [
   {img:"url('/home/slide/1.png')", name:"Sagar Singh Chauhan", description:"Being a master in yoga, Yogi Saajan is full of knowledge and wisdom. He chose to teach meditation and Yoga philosophy because he believes in spreading peace to the world. He has a good strong texture of voice which certainly makes the environment holy when he chants the mantras at the same he has a therapeutic voice that takes people to reach a relaxed and peaceful state easily. He has been teaching for the last 8 years now. He teaches some beautiful meditation techniques to let go of all the negative emotions people are carrying inside them thus makes them lighter and peaceful."},
   {img:"url('/home/slide/1.png')", name:"Sagar Singh Chauhan", description:"Being a master in yoga, Yogi Saajan is full of knowledge and wisdom. He chose to teach meditation and Yoga philosophy because he believes in spreading peace to the world. He has a good strong texture of voice which certainly makes the environment holy when he chants the mantras at the same he has a therapeutic voice that takes people to reach a relaxed and peaceful state easily. He has been teaching for the last 8 years now. He teaches some beautiful meditation techniques to let go of all the negative emotions people are carrying inside them thus makes them lighter and peaceful."},
 ]
+
+export const social_images = [
+  { img: "/facebook.png", url: "https://instagram.com"},
+  { img: "/instagram.png", url: "https://instagram.com"},
+  { img: "/youtube.png", url: "https://instagram.com"},
+];
 
 export const galleryImages = [
   { url: "url('/home/slide/1.png')" },

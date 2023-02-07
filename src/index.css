@@ -530,3 +530,10 @@ li.dot::before {
 li::before {
   display: none;
 }
+
+.contacts {
+  display: block;
+  width: 100%;
+  background-color:#f1f1f1;
+  padding-bottom:2rem;
+}

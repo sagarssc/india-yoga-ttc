@@ -8,6 +8,7 @@ import Hrs from "./desktop/courses/hrs";
 import Blog from "./desktop/home/blog";
 import ScrollToTop from "./scrollToTop";
 import About from "./desktop/about/about"
+import Contact from "./desktop/contactus/contact";
 export default class DesktopMain extends Component {
   constructor(props) {
     super(props);
@@ -60,6 +61,7 @@ export default class DesktopMain extends Component {
                 <Route path="/courses" element={<Hrs hrs={100} />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/aboutus" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/100-hrs-course" element={<Hrs hrs={100} />} />
                 <Route path="/200-hrs-course" element={<Hrs hrs={200} />} />
                 <Route path="/300-hrs-course" element={<Hrs hrs={300} />} />
