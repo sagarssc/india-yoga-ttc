@@ -6,11 +6,13 @@ import Gallery from "../defaults/gallery";
 import {extraDetailsAboutUs, teachers} from "../../constant"
 import {contactus, icons, social_images} from "../../constant"
 // import {Mailto} from "../../utils"
+import MapComponent from '../defaults/googleMap'
+import QueryForm from '../defaults/queryForm'
 export default class Contact extends Component {
   render() {
     let contacts = contactus
     return (
-      <div>
+      <div style={{marginBottom: "2%"}}>
         <div className="blocks">
           <div
           style={{
@@ -45,23 +47,14 @@ export default class Contact extends Component {
                 </div>
           </div>
         </div>
-        {/* <div className="common-div">
-          <ExtraDiv extraDetails={extraDetailsAboutUs}/>
-        </div> */}
-        {/* <div className="our-teachers" style={{backgroundImage:"url('/home/bg/header.png')"}}>
-            <div className="heading">Our Teachers</div>
-            <div style={{display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"center"}}>
-              {teachers.map((teacher, index) => (<div style={{width:"45%", margin:"1%", height:"42rem", backgroundColor:"#f1f1f1", borderRadius:"2rem"}}>
-                <div style={{backgroundImage:teacher.img, width:"90%", margin:"5%", height:"20rem", backgroundSize:"100% 100%"}}></div>
-                <div><p style={{textAlign:"center", fontSize:"larger", fontWeight:"700"}}>{teacher.name}</p></div>
-                <div><p style={{margin:"2%"}}>{teacher.description}</p></div>
-              </div> ))}
+        <div className="contacts" style={{margin:"2.5%", marginLeft:"0%",backgroundColor:"white"}}>
+          <div style={{paddingRight:"5%", display:"flex", height:"100vh"}}>
+            <div style={{width:"50%", paddingLeft:"2%"}}><MapComponent /></div>
+            <div style={{width:"50%", zIndex:"9999", margin:"auto", backgroundImage:"url('./home/bg/2.png')", backgroundPosition:"top right", backgroundRepeat:"no-repeat", backgroundSize:"100% 100%"}}>
+              <QueryForm />
             </div>
+          </div>
         </div>
-        <div className="common-div" style={{marginTop:0, backgroundColor:"white", padding:"0", marginBottom:"5rem"}}>
-          <div className="heading">Gallery</div>
-          <Gallery />
-        </div> */}
       </div>
     );
   }
