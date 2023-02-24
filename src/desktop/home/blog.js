@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import "../../style.css";
 import "../../index.css";
-import { blogs } from "../../blogData";
+import { blogs } from "../../constant/blogData";
+import RightSideBar from "../blog/rightSideBar"
 
 export default class Blog extends Component {
   constructor(props) {
@@ -11,9 +12,11 @@ export default class Blog extends Component {
       current_index: 1,
       no_of_pages: 1,
       isloaded: false,
-      isLast: false
+      isLast: false,
+      categories: []
     };
     this.changePage = this.changePage.bind(this);
+    this.onSelectCategory = this.onSelectCategory.bind(this);
   }
 
   componentDidMount(){
@@ -22,12 +25,34 @@ export default class Blog extends Component {
     let current_blogs = blogs.slice(start,end)
     let no_of_blog = blogs.length
     let no_of_pages = Math.ceil(no_of_blog / 3)
+    let tre = blogs
+    let categories = [...new Set(blogs.map(({category})=> category))]
     this.setState({
       current_blogs: current_blogs,
       no_of_blog: no_of_blog,
       no_of_pages: no_of_pages,
-      isloaded: true
+      isloaded: true,
+      allBlogs: blogs,
+      categories: categories
     })
+  }
+
+  onSelectCategory(selectd_category){
+    let start = 0
+    let end = start + 3
+    let tmpBlogs = blogs.filter(blog => blog.category == selectd_category)
+    let current_blogs = tmpBlogs.slice(start,end)
+    let no_of_blog = tmpBlogs.length
+    let no_of_pages = Math.ceil(no_of_blog / 3)
+    let tre = blogs
+    let categories = [...new Set(blogs.map(({category})=> category))]
+    this.setState({
+      current_blogs: current_blogs,
+      no_of_blog: no_of_blog,
+      no_of_pages: no_of_pages,
+      isloaded: true,
+      categories: categories
+    }) 
   }
 
   changePage(pageNo){
@@ -48,24 +73,62 @@ export default class Blog extends Component {
     })
   }
 
+  onNext(){
+    window.scrollTo(0, 50);
+    let {no_of_pages, current_index} = this.state
+    let pageNo = current_index + 1
+    let start = (pageNo-1) * 3
+    let end = start + 3
+    let current_blogs = blogs.slice(start,end)
+    let no_of_blog = blogs.length
+    let isLast = no_of_pages == pageNo
+    this.setState({
+      current_blogs: current_blogs,
+      current_index: pageNo,
+      no_of_blog: no_of_blog,
+      no_of_pages: no_of_pages,
+      isloaded: true,
+      isLast: isLast
+    })
+  }
+
+  onPrev(){
+    window.scrollTo(0, 50);
+    let {no_of_pages, current_index} = this.state
+    let pageNo = current_index - 1
+    let start = (pageNo-1) * 3
+    let end = start + 3
+    let current_blogs = blogs.slice(start,end)
+    let no_of_blog = blogs.length
+    let isLast = no_of_pages == pageNo
+    this.setState({
+      current_blogs: current_blogs,
+      current_index: pageNo,
+      no_of_blog: no_of_blog,
+      no_of_pages: no_of_pages,
+      isloaded: true,
+      isLast: isLast
+    })
+  }
+
     render() {
-        let {current_blogs, no_of_blog, no_of_pages, current_index, isloaded, isLast} = this.state
+        let {current_blogs, no_of_blog, no_of_pages, current_index, isloaded, isLast, categories, allBlogs} = this.state
         let indexes = []
         Array(no_of_pages).fill().map((item, i) => indexes.push(i+1))
         return (
           <div style={{width:"100%", padding:"5%", display:"flex"}}>
-            {isloaded && <div className="post-sections"style={{width:"75%", display:"block"}}>
+            {isloaded && <div className="post-sections"style={{width:"70%", display:"block"}}>
               {current_blogs.map((blog, index)=>( 
               <div style={{padding:"2%"}}>
                 <img className="blog-image" src={blog.img} style={{width:"90%"}}/>
               <div style={{paddingTop:"2%", color:"gold", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.date}</text></div>
               <div className="blog-heading"><text>{blog.header}</text></div>
               <div style={{paddingTop:"2%", color:"black", fontSize:"15px", fontWeight:"300", width:"90%"}}><text>{blog.des}</text></div>
-              <div onClick={{}} style={{width:"20%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"1.5%"}}>
+              <div onClick={{}} className="pointer" style={{width:"20%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"1.5%"}}>
                   <text style={{fontWeight:"700", color:"wheat"}}>Read More</text>
               </div></div>))}
               {indexes.length != 0 && <div style={{width:"100%", height:"4rem", paddingLeft:"10%", display: "flex", marginTop:"2rem"}}>
-                  {current_index != 1 && <div className="index-button" style={{display:"flex", width:"15%",backgroundColor:"black", height:"80%", borderRadius:"50px", color:"white", margin:"0.5rem", paddingTop:"0", paddingLeft:"2%", paddingRight:"2%", justifyContent:"space-between"}}>
+                  {current_index != 1 && <div onClick={()=>this.onPrev()} className="index-button" style={{display:"flex", width:"15%",backgroundColor:"black", height:"80%", borderRadius:"50px", color:"white", margin:"0.5rem", paddingTop:"0", paddingLeft:"2%", paddingRight:"2%", justifyContent:"space-between"}}>
                     <div className="triangle-left" />
                     <div style={{fontSize:"medium"}}>PREV</div>
                   </div>}
@@ -78,14 +141,14 @@ export default class Blog extends Component {
                     </div>}
                   </div>
                   ))}
-                  {!isLast && <div className="index-button" style={{display:"flex", width:"15%",backgroundColor:"black", height:"80%", borderRadius:"50px", color:"white", margin:"0.5rem", paddingTop:"0", paddingLeft:"2%", paddingRight:"2%", justifyContent:"space-between"}}>
+                  {!isLast && <div onClick={()=>this.onNext()} className="index-button" style={{display:"flex", width:"15%",backgroundColor:"black", height:"80%", borderRadius:"50px", color:"white", margin:"0.5rem", paddingTop:"0", paddingLeft:"2%", paddingRight:"2%", justifyContent:"space-between"}}>
                     <div style={{fontSize:"medium"}}>NEXT</div>
                     <div className="triangle-right" />
                   </div>}
               </div>}
             </div>}
-            <div className="category" style={{width:"25%",backgroundColor:"green"}}>
-
+            <div className="category" style={{width:"30%",padding:"2%", position: "-webkit-sticky", position:"sticky",top:"0", bottom:"0", height:"90%" }}>
+              <RightSideBar categories={categories} onSelectCategory={this.onSelectCategory} blogs={allBlogs}/>
             </div>
           </div>
         );

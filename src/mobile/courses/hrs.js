@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {getDevider} from '../defaults/utils';
-import {CoursePage, KeyPoints} from "../../constant";
+import {KeyPoints} from "../../constant/keyPoint";
+import {CoursePage} from "../../constant/constant";
 import CourseDetails from "../defaults/courseDetails"
 
 // const course = course[100]
@@ -26,8 +27,8 @@ export default class Hrs extends Component {
         </div>
         <CourseDetails index={hrs} displayTitle={false} onReadMore={()=>this.props.selectCourse(hrs)}/>
         {KeyPoint.map((obj, index) => (<div style={{marginLeft:"5%", paddingLeft: "3%", backgroundColor:"#ffffff33", borderTopLeftRadius:"5%", boxShadow:"-5px 5px 4px 4px"}}>
-          <p style={{fontSize:"25px", fontWeight:"700", fontFamily:"ui-monospace"}}>{obj.header}</p>
-          <ul style={{listStyleType: "circle"}}>{obj.points.map((point, index) => ( <li className="point" style={{fontSize:"18px", fontFamily:"ui-monospace"}}>{point}</li>))}</ul>
+          <p style={{fontSize:"25px", fontWeight:"700", fontFamily:"'Poppins', sans-serif"}}>{obj.header}</p>
+          <ul style={{listStyleType: "circle"}}>{obj.points.map((point, index) => ( <li className="point" style={{fontSize:"18px", fontFamily:"'Poppins', sans-serif"}}>{point}</li>))}</ul>
         </div>))}
       </div>
     );

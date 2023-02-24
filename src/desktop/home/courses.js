@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SimpleImageSlider from "react-simple-image-slider";
-import { courses } from "../../constant";
+import { courses } from "../../constant/constant";
 import CourseDetails from "../defaults/courseDetails"
 export default class Courses extends Component {
   constructor(props) {

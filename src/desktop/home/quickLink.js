@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import {QuickLinks} from '../../constant'
+import {QuickLinks} from '../../constant/constant'
 export default class QuickLink extends Component {
   render() {
       let quickLinks = QuickLinks
@@ -8,7 +8,7 @@ export default class QuickLink extends Component {
           <div  className='links' style={{height:"100%", margin:"5%", display:'flex'}}>
             <div style={{width:"66%",height:"100%", display:"block"}}>
               <div style={{width:"100%",height:"20%", display:"flex", justifyContent:"space-between"}}>
-                <text style={{fontSize:"37px", fontFamily:"serif"}}>{quickLinks.heading}</text>
+                <text style={{fontSize:"37px", fontFamily:"'Poppins', sans-serif"}}>{quickLinks.heading}</text>
                 <div style={{width:"20%",height:"100%", backgroundImage:quickLinks.headImgUrl, backgroundSize:"100% 100%", backgroundColor:"gold"}}></div>
               </div>
               <div style={{width:"100%",height:"80%", display:'flex'}}>

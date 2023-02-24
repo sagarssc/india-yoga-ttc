@@ -45,3 +45,16 @@
   background-color: #f1f1f1;
   border-width: 5px;
 }
+
+.menu-text-drop{
+  padding: auto;
+}
+
+/* .menu-text-drop:hover{
+  background-color: black;
+  color: gold;
+} */
+
+.link:hover {
+  color: black;
+}

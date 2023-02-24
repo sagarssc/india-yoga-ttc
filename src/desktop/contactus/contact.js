@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Slider from "../defaults/slider";
 import ExtraDiv from "../defaults/extraDiv";
 import Gallery from "../defaults/gallery";
-import {extraDetailsAboutUs, teachers} from "../../constant"
-import {contactus, icons, social_images} from "../../constant"
+import {contactus, icons, social_images} from "../../constant/default"
 // import {Mailto} from "../../utils"
 import MapComponent from '../defaults/googleMap'
 import QueryForm from '../defaults/queryForm'

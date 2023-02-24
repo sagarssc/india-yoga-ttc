@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { courses } from "../../constant";
+import { courses } from "../../constant/constant";
 
 
 export default class CourseDetails extends Component {
@@ -20,7 +20,7 @@ export default class CourseDetails extends Component {
               marginBottom: "2rem",
             }}
           >
-            {displayTitle ? <text style={{ fontSize: "unset", fontFamily: "math" }}>
+            {displayTitle ? <text style={{ fontSize: "unset", fontFamily: "'Poppins', sans-serif" }}>
               {title}
             </text>:
             <div style={{padding:"1.5rem"}}></div>

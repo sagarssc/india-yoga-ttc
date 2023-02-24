@@ -3,7 +3,7 @@ import React, { Component } from "react";
 // import { Carousel } from 'react-responsive-carousel';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {galleryImages} from "../../constant";
+import {galleryImages} from "../../constant/constant";
 
 const responsive = {
   superLargeDesktop: {

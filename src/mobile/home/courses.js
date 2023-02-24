@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SimpleImageSlider from "react-simple-image-slider";
-import { courses } from "../../constant";
+import { courses } from "../../constant/constant";
 import CourseDetails from "../defaults/courseDetails"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";

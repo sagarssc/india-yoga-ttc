@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Slider from "../defaults/slider";
 import ExtraDiv from "../defaults/extraDiv";
 import Gallery from "../defaults/gallery";
-import {extraDetailsAboutUs, teachers} from "../../constant"
+import {extraDetailsAboutUs, teachers} from "../../constant/constant"
 
 export default class About extends Component {
   render() {

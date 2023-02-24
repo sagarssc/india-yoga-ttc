@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { extraDetails, social_images } from "../../constant";
+import { extraDetails } from "../../constant/constant";
+import { social_images } from "../../constant/default";
 
 export default class ExtraDiv extends Component {
   render() {
@@ -19,8 +20,8 @@ export default class ExtraDiv extends Component {
             }}>
               <div style={{width:"45%", margin:"2%"}}><img src={details.img} className="left-image"/></div>
               <div style={{width:"55%", margin:"2%"}}>
-                <p style={{fontSize:"32px", fontWeight:"500", fontFamilt:"system-ui"}}>{details.heading }</p>
-                <p style={{fontSize:"20px", fontWeight:"300", fontFamilt:"system-ui"}}>{details.content }</p>
+                <p style={{fontSize:"32px", fontWeight:"500", fontFamily:"Poppins"}}>{details.heading }</p>
+                <p style={{fontSize:"20px", fontWeight:"300", fontFamily:"Poppins"}}>{details.content }</p>
                 {details.social &&<div style={{width:"100%", height:"40%", marginTop:"10%", paddingTop:"10%", display:"inline-flex", justifyContent:"space-around"}}>
                   {social_images.map((social, index) =>(
                     <div>
@@ -41,8 +42,8 @@ export default class ExtraDiv extends Component {
               display:"flex"
             }}>
               <div style={{width:"55%", margin:"2%"}}>
-                <p style={{fontSize:"32px", fontWeight:"500", fontFamilt:"system-ui"}}>{details.heading }</p>
-                <p style={{fontSize:"20px", fontWeight:"300", fontFamilt:"system-ui"}}>{details.content }</p>
+                <p style={{fontSize:"32px", fontWeight:"500", fontFamily:"Poppins"}}>{details.heading }</p>
+                <p style={{fontSize:"20px", fontWeight:"300", fontFamily:"Poppins"}}>{details.content }</p>
                 {details.social &&<div>
                   <img src="./social/facebook.png"/>
                   <img src="./social/facebook.png"/>

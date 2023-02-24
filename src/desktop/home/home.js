@@ -7,7 +7,9 @@ import {getDevider} from '../../utils';
 import Faq from './faq';
 import QuickLink from "./quickLink";
 import ExtraDiv from "../defaults/extraDiv";
-import { extraDetailsHome } from "../../constant";
+import { extraDetailsHome } from "../../constant/constant";
+import CircularDiv from "../defaults/circularDiv";
+import HomeAbout from "./homeAbout";
 export default class Home extends Component {
   render() {
     return (
@@ -15,6 +17,10 @@ export default class Home extends Component {
         <div className="blocks">
           <Slider />
         </div>
+        <div className="testimonials">
+          <HomeAbout />
+        </div>
+        <div style={{backgroundImage:"url('/home/slide/29.jpg')", width:"100%", height:"30rem", backgroundSize:"cover", backgroundAttachment:"fixed"}}></div>
         <div className="blocks">
           <QuickLink />
         </div>
@@ -23,6 +29,9 @@ export default class Home extends Component {
         </div>
         <div className="common-div">
           <ExtraDiv extraDetails={extraDetailsHome}/>
+        </div>
+        <div className="testimonials transparent-div">
+          <CircularDiv />
         </div>
         <div className="testimonials">
           <Faq />

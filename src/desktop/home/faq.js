@@ -7,7 +7,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
-import { Faqs } from "../../constant";
+import { Faqs } from "../../constant/constant";
 
 export default class Faq extends Component {
   render() {
