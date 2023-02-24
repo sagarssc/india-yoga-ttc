@@ -78,7 +78,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .navbar {
-  position: sticky;
+  position: relative;
   top: 0;
   background-color: #5C5889;
   width: 100%;
