@@ -21,7 +21,7 @@ export default class CircularDiv extends Component {
   render() {
       let {extraDetails} = this.props
         return (
-          <div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./home/bg/2.png')", backgroundRepeat:"no-repeat", backgroundAttachment:"scroll", backgroundPosition:"center", paddingBottom:"2%"}}>
+          <div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", backgroundAttachment:"scroll", backgroundPosition:"center", paddingBottom:"2%"}}>
             <div className="first-line">
               {description(line, heading)}
             </div>

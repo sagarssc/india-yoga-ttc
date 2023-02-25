@@ -7,9 +7,9 @@ export default class QuickLink extends Component {
         return (
           <div  className='links' style={{height:"100%", margin:"5%", display:'flex'}}>
             <div style={{width:"66%",height:"100%", display:"block"}}>
-              <div style={{width:"100%",height:"20%", display:"flex", justifyContent:"space-between"}}>
+              <div style={{width:"100%",height:"20%", display:"flex", justifyContent:"space-between", paddingLeft:"1rem", paddingRight:"1rem"}}>
                 <text style={{fontSize:"37px", fontFamily:"'Poppins', sans-serif"}}>{quickLinks.heading}</text>
-                <div style={{width:"20%",height:"100%", backgroundImage:quickLinks.headImgUrl, backgroundSize:"100% 100%", backgroundColor:"gold"}}></div>
+                <div style={{width:"20%",height:"100%", backgroundImage:quickLinks.headImgUrl, backgroundSize:"100% 100%"}}></div>
               </div>
               <div style={{width:"100%",height:"80%", display:'flex'}}>
                 <div style={{width:"50%",margin:"2% 2% 0% 2%",display:"block"}}>
