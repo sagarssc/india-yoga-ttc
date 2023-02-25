@@ -24,9 +24,12 @@ export default class Navbar extends Component {
         return (
           <div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
             <div className="nav-container">
-              <Link to="/" className="link"><div className="logo-large">
+              <Link to="/" className="link" style={{width:"50%"}}>
+              <div style={{display:"flex"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"12%", height:"5rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
+                <div className="logo-large">
                 INDIA YOGA TTC
-              </div></Link>
+              </div></div>
+              </Link>
               <div className="nav-menu1">
                 <div className="dropdown">
                   <div className="dropbtn link"><p className="menu-text">Courses</p></div>
