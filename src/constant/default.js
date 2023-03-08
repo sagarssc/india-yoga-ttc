@@ -3,6 +3,7 @@ export const social_images = [
   { img: "/facebook.png", url: "https://instagram.com"},
   { img: "/instagram.png", url: "https://instagram.com"},
   { img: "/youtube.png", url: "https://instagram.com"},
+  { img: "/tripad.png", url: "https://instagram.com"},
 ];
 
 export const logo = "url('./icons/logo.png')"
@@ -51,4 +52,24 @@ export const FooterLinks = {
     {icon: icons.location, heading:"LOCATION", value: Contacts.address, ref: Contacts.googleLocation},
   ],
   copyright: "Copyright © 2023, India Yoga TTC",
+}
+
+
+export const schdules ={
+  100:{
+    headers: ["Time", "Class"],
+    details:[
+      {time:"6:30 AM - 7:30 AM", class: "Shatkarma/Pranayama"},
+      {time:"7:00 AM - 8:30 AM", class: "Ashtanga Vinyasa"},
+      {time:"8:30 AM - 9:30 AM", class: "Breakfast"},
+      {time:"10:30 AM - 11:30 AM", class: "Yoga Philosophy"},
+      {time:"11:30 AM - 12:30 PM", class: "Body Alignment"},
+      {time:"12:30 PM - 1:30 PM", class: "Anatomy"},
+      {time:"1:30 PM - 2:30 PM", class: "Lunch"},
+      {time:"4:30 PM - 6:00 PM", class: "Vinyasa Flow"},
+      {time:"6:00 PM - 7:00 PM", class: "Meditation"},
+      {time:"7:00 PM - 8:00 PM", class: "Dinner"},
+
+    ]
+  }
 }

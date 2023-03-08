@@ -9,6 +9,9 @@ import Blog from "./desktop/home/blog";
 import ScrollToTop from "./scrollToTop";
 import About from "./desktop/about/about"
 import Contact from "./desktop/contactus/contact";
+import Retreat from "./desktop/retreats/main";
+import RetreatType from "./desktop/retreats/varient";
+import RegistrationForm from "./desktop/registeration/registeration";
 export default class DesktopMain extends Component {
   constructor(props) {
     super(props);
@@ -67,6 +70,10 @@ export default class DesktopMain extends Component {
                 <Route path="/300-hrs-course" element={<Hrs hrs={300} />} />
                 <Route path="/500-hrs-course" element={<Hrs hrs={500} />} />
                 <Route path="/online-training" element={<Hrs hrs={"online"} />} />
+                <Route path="/retreats" element={<Retreat />} />
+                <Route path="/register" element={<RegistrationForm />} />
+                <Route path="/2-days-retreat" element={<RetreatType type={"2-day"} />} />
+                <Route path="/4-days-retreat" element={<RetreatType type={"4-day"} />} />
                 {/* </Route> */}
               </Routes>
             </div>

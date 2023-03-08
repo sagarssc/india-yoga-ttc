@@ -21,9 +21,8 @@ export default class RightSideBar extends Component {
         // Array(no_of_pages).fill().map((item, i) => indexes.push(i+1))
         return (
           <div style={{width:"100%"}}>
-            <Categories categories={this.props.categories} onSelectCategory={this.props.onSelectCategory}/>
-            <Recents blogs={this.props.blogs} />
-
+            <Categories categories={this.props.categories} onSelectCategory={(category)=>this.props.onSelectCategory(category)}/>
+            <Recents blogs={this.props.blogs} onSelectBlog={(id)=>this.props.onSelectBlog(id)}/>
           </div>
         );
     }

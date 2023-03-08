@@ -10,17 +10,21 @@ import ExtraDiv from "../defaults/extraDiv";
 import { extraDetailsHome } from "../../constant/constant";
 import CircularDiv from "../defaults/circularDiv";
 import HomeAbout from "./homeAbout";
+import TransparentDiv from "../defaults/transparentDiv";
+import Ratings from "../defaults/ratings";
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <div className="blocks">
+        <div className="blocks" style={{height: "auto"}}>
           <Slider />
         </div>
         <div className="testimonials">
           <HomeAbout />
         </div>
-        <div style={{backgroundImage:"url('/home/slide/29.jpg')", width:"100%", height:"30rem", backgroundSize:"cover", backgroundAttachment:"fixed"}}></div>
+        <div style={{backgroundImage:"url('/home/bg/IMG_5008.jpg')", width:"100%", height:"25rem", backgroundSize:"cover", backgroundAttachment:"fixed"}}>
+          <TransparentDiv />
+        </div>
         <div className="blocks">
           <QuickLink />
         </div>
@@ -38,6 +42,9 @@ export default class Home extends Component {
         </div>
         <div className="testimonials">
           <Testimonials />
+        </div>
+        <div className="online-review-block">
+          <Ratings />
         </div>
       </div>
     );

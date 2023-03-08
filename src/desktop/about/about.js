@@ -15,7 +15,7 @@ export default class About extends Component {
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url('/home/slide/1.png')",
+            backgroundImage: "url('/home/slide/2.jpg')",
           }}
         ></div>
         </div>

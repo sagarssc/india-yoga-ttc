@@ -7,9 +7,9 @@ export default class Courses extends Component {
     super(props);
     this.state = {
       title: "",
-      selected:  -1,
-      show: false,
-      details: {}
+      selected:  '100',
+      show: true,
+      details: courses['100'].details
     };
     this.showDetails = this.showDetails.bind(this);
     // this.showDetails(0)
@@ -19,11 +19,11 @@ export default class Courses extends Component {
     let title = courses[index].name;
     show = true
     let details =courses[index].details
-    if (index == selected) {
-      index = -1;
-      show = false
-      details = {}
-    }
+    // if (index == selected) {
+    //   index = -1;
+    //   show = false
+    //   details = {}
+    // }
     this.setState({
       selected: index,
       show: show,
@@ -38,23 +38,21 @@ export default class Courses extends Component {
       <div>
         <div className="courses">
           {Object.entries(courses).map((course, index) => (
-            <div>
+            <div>{!!!course[1].hide && <div>
               {selected == course[0] ? (
                 <div
                   className="selected-course"
                   onClick={() => this.showDetails(course[0])}
                   style={{backgroundImage: "url('./home/bg/header.png')"}}
                 >
-                  {/* <img src={course[1].img} /> */}
                   <text style={{margin: "4rem", marginTop:"0.5rem", marginBottom:"0.5rem"}}>{course[1].name}</text>
                 </div>
               ) : (
                 <div className="course" onClick={() => this.showDetails(course[0])}>
-                  {/* <img src={course[1].img} /> */}
                   <text style={{margin: "4rem", marginTop:"0.5rem", marginBottom:"0.5rem"}}>{course[1].name}</text>
                 </div>
               )}
-            </div>
+            </div>}</div>
           ))}
         </div>
         {show && (

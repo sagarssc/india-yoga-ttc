@@ -13,19 +13,33 @@ export default class QuickLink extends Component {
               </div>
               <div style={{width:"100%",height:"80%", display:'flex'}}>
                 <div style={{width:"50%",margin:"2% 2% 0% 2%",display:"block"}}>
-                <Link to={quickLinks.imageLinks[0].link} className="link"><div className="gery-image" style={{height:"60%", backgroundImage:quickLinks.imageLinks[0].img, backgroundSize:"100% 100%"}}></div></Link>
+                <Link to={quickLinks.imageLinks[0].link} className="link">
+                  <div className="gery-image" style={{height:"60%", backgroundImage:quickLinks.imageLinks[0].img, backgroundSize:"100% 100%"}}>
+                    <div style={{position:"absolute", textAlign:"center", bottom:"10%", width:"40%"}}>
+                    <text style={{fontSize:"25px", fontWeight:"700", color:"white"}}>{quickLinks.imageLinks[0].title}</text>
+                    </div>
+                  </div>
+                </Link>
                   <div style={{height:"10%"}}></div>
                   <div style={{height:"30%", backgroundColor:"#f2e0d0"}}></div>
                 </div>
                 <div style={{width:"50%",margin:"2% 2% 0% 2%",display:"block", paddingTop:"10%"}}>
-                <Link to={quickLinks.imageLinks[1].link} className="link"><div className="gery-image" style={{height:"70%", backgroundImage:quickLinks.imageLinks[1].img, backgroundSize:"100% 100%"}}></div></Link>
+                <Link to={quickLinks.imageLinks[1].link} className="link"><div className="gery-image" style={{height:"70%", backgroundImage:quickLinks.imageLinks[1].img, backgroundSize:"100% 100%"}}>
+                    <div style={{position:"absolute", textAlign:"center", bottom:"10%", width:"40%"}}>
+                      <text style={{fontSize:"25px", fontWeight:"700", color:"white"}}>{quickLinks.imageLinks[1].title}</text>
+                    </div>
+                  </div></Link>
                   <div style={{height:"10%"}}></div>
                   <div style={{height:"20%", backgroundColor:"#cad8e6"}}></div>
                 </div>
               </div>
             </div>
-            <div style={{width:"34%",margin:"0% 2% 0% 2%"}}>
-            <Link to={quickLinks.imageLinks[2].link} className="link"><div className="gery-image" style={{height:"65%", backgroundImage:quickLinks.imageLinks[2].img, backgroundSize:"100% 100%"}}></div></Link>
+            <div style={{width:"34%",margin:"0% 2% 0% 2%",paddingTop:"4rem"}}>
+            <Link to={quickLinks.imageLinks[2].link} className="link"><div className="gery-image" style={{height:"65%", backgroundImage:quickLinks.imageLinks[2].img, backgroundSize:"100% 100%"}}>
+                    <div style={{position:"absolute", textAlign:"center", bottom:"10%", width:"40%"}}>
+                      <text style={{fontSize:"25px", fontWeight:"700", color:"white"}}>{quickLinks.imageLinks[2].title}</text>
+                    </div>
+              </div></Link>
               <div style={{height:"10%"}}></div>
               <div style={{height:"25%", backgroundColor:"#ffc13e", justifyContent:"center", textAlign:"center", paddingTop:"8%"}}>
                 <p style={{fontWeight:"700", fontSize:"25px"}}> Contact US</p>

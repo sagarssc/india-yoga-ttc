@@ -41,8 +41,8 @@ export class MapComponent extends Component {
           zoom={17}
           style={{width:"45%", height:"100%"}}
           initialCenter={{
-            lat: 30.132325,
-            lng: 78.323074,
+            lat: 30.1328558,
+            lng: 78.320575,
           }}
         >
         <Marker

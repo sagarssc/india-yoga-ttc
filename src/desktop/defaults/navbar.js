@@ -9,7 +9,10 @@ const titles = [
   // {title:"Courses", link:"/courses"},
   {title:"About Us",  link:"/aboutus"},
   {title:"Blog", link:"/blog"},
-  {title:"Contact", link:"/contact"} ]
+  {title:"Contact", link:"/contact"},
+  {title:"Retreats", link:"/retreats"},
+  {title:"Register", link:"/register"},
+ ]
 
 const courses = [
   {title:"100 Hrs Course", link:"/100-hrs-course"},
@@ -33,7 +36,7 @@ export default class Navbar extends Component {
               <div className="nav-menu1">
                 <div className="dropdown">
                   <div className="dropbtn link"><p className="menu-text">Courses</p></div>
-                  <div class="dropdown-content">
+                  <div className="dropdown-content">
                     {courses.map((course, index) => (
                       <Link to={course.link} className="link"><p className="menu-text-drop">{course.title}</p></Link>
                     ))}

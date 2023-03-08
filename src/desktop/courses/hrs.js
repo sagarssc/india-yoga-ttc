@@ -4,7 +4,7 @@ import {getDevider} from '../../utils';
 import {KeyPoints} from "../../constant/keyPoint";
 import {CoursePage} from "../../constant/constant";
 import CourseDetails from "../defaults/courseDetails"
-
+import Schdule from "../defaults/schdule";
 // const course = course[100]
 
 export default class Hrs extends Component {
@@ -13,23 +13,38 @@ export default class Hrs extends Component {
     let course = CoursePage[hrs];
     let KeyPoint = KeyPoints[hrs];
     return (
-      <div className="hrs-course">
-        <div style={{padding:"10%", paddingTop:"5%",paddingBottom:0, position:"relative", textAlign:"center"}}>
-          <img src={course.img} style={{width:"100%", height:"-webkit-fill-available", borderRadius:"2rem", boxShadow:"-5px 5px 8px 8px"}}/>
-          <div style={{position:"absolute", bottom:"10%", width:"40%", marginLeft:"20%", backgroundColor:"#ffffff5e"}}>
-            <text style={{fontSize:"20px", fontWeight:"700"}}>{course.title}</text>
+      <div>
+         <div className="blocks">
+          <div
+          style={{
+            width: "100%",
+            height: "100%",
+            backgroundSize: "100% 100%",
+            backgroundImage: "url('/home/slide/2.jpg')",
+          }}
+        ></div>
+          <div style={{position:"absolute", bottom:"15%", width:"40%", marginLeft:"30%", backgroundColor:"#ffffff5e", textAlign:"center"}}>
+            <text style={{fontSize:"30px", fontWeight:"700", color:"gold"}}>{course.title}</text>
             </div>
         </div>
+        <div className="hrs-course">
         <div style={{padding:"10%", paddingTop:"5%", position:"relative", textAlign:"center"}}>
           { course.descriptions.map((description, index) =>(
             <p>{description}</p>
           ))}
         </div>
         <CourseDetails index={hrs} displayTitle={false} onReadMore={()=>this.props.selectCourse(hrs)}/>
-        {KeyPoint.map((obj, index) => (<div style={{margin:"3%",marginLeft:"5%", paddingLeft: "6%",paddingBottom:"1%",paddingTop:"1%", backgroundColor:"#ffffff33", borderTopLeftRadius:"15%", borderBottomRightRadius:"15%", boxShadow:"-5px 5px 4px 4px"}}>
-          <p style={{fontSize:"25px", fontWeight:"700", fontFamily:"'Poppins', sans-serif"}}>{obj.header}</p>
-          <ul style={{listStyleType: "circle"}}>{obj.points.map((point, index) => ( <li className="point" style={{fontSize:"18px", fontFamily:"'Poppins', sans-serif"}}>{point}</li>))}</ul>
+        <Schdule />
+        {KeyPoint.map((obj, index) => (
+        // <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"#ffffff33", borderTopLeftRadius:"15%", borderBottomRightRadius:"15%", boxShadow:"-5px 5px 4px 4px"}}>
+        <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white", backgroundImage:"url('./home/bg/4.png')"}}>
+          <p style={{fontSize:"25px", fontWeight:"700", fontFamily:"'Poppins', sans-serif", padding:"2% 6% 0%"}}>{obj.header}</p>
+          <ul style={{listStyleType: "none", padding:"0", paddingBottom:"3%", lineHeight:"3rem"}}>{obj.points.map((point, index) => ( 
+            <div>{index %2 == 0 ? <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"bisque"}}>{point}</li>
+            : <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"cornsilk"}}>{point}</li>}</div>
+            ))}</ul>
         </div>))}
+      </div>
       </div>
     );
   }

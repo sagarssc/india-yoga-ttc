@@ -16,19 +16,31 @@ export default class Recents extends Component {
 
   componentDidMount(){
     let {blogs} = this.props
-    if(blogs){blogs = blogs.slice(0,3) }
+    let isLoaded = false
+    if(blogs){
+      blogs = blogs.slice(0,3) 
+      if(blogs.length > 0){
+        isLoaded = true
+      }
+    }
     this.setState({
       blogs: blogs,
-      isLoaded: true
+      isLoaded: isLoaded
     })
   }
 
   componentWillReceiveProps(newProps){
     let {blogs} = newProps
-    if(blogs){blogs = blogs.slice(0,3) }
+    let isLoaded = false
+    if(blogs){
+      blogs = blogs.slice(0,3) 
+      if(blogs.length > 0){
+        isLoaded = true
+      }
+    }
     this.setState({
       blogs: blogs,
-      isLoaded: true
+      isLoaded: isLoaded
     })
   }
 
@@ -39,9 +51,9 @@ export default class Recents extends Component {
             <div><h5 style={{ fontFamily:"Poppins", fontSize:"x-large", fontFamily:"'Roboto Slab', serif", fontWeight:"300"}}>Recent Posts</h5></div>
             {isLoaded && <div style={{marginTop:"2rem"}}>
               {blogs.map((blog, index) => (
-                  <div className="pointer" style={{display:"flex", marginTop:"1rem", paddingBottom:"1rem",borderBottom:"1px #ededed solid"}} onClick={()=>this.props.onSelectCategory(blog)}>
+                  <div onClick={()=>this.props.onSelectBlog(blog._id)} className="pointer" style={{display:"flex", marginTop:"1rem", paddingBottom:"1rem",borderBottom:"1px #ededed solid"}}>
                     <div style={{width:"30%"}}>
-                      <img src={blog.img} style={{width:"100%", height:"auto"}}/>
+                      <img src={blog.image} style={{width:"100%", height:"auto"}}/>
                     </div>
                     <div style={{width:"70%", display:"block", paddingLeft:".5rem"}}>
                       <div style={{paddingTop:"2%", color:"#ecb537", fontSize:"15px", fontWeight:"500", fontFamily:"'Poppins'"}}><text>{blog.date}</text></div>

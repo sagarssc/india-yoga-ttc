@@ -44,10 +44,12 @@ export default class ExtraDiv extends Component {
               <div style={{width:"55%", margin:"2%"}}>
                 <p style={{fontSize:"32px", fontWeight:"500", fontFamily:"Poppins"}}>{details.heading }</p>
                 <p style={{fontSize:"20px", fontWeight:"300", fontFamily:"Poppins"}}>{details.content }</p>
-                {details.social &&<div>
-                  <img src="./social/facebook.png"/>
-                  <img src="./social/facebook.png"/>
-                  <img src="./social/facebook.png"/>
+                {details.social &&<div style={{width:"100%", height:"40%", marginTop:"10%", paddingTop:"10%", display:"inline-flex", justifyContent:"space-around"}}>
+                  {social_images.map((social, index) =>(
+                    <div>
+                      <a href={social.url} target="_blank" className="link"><img src={social.img} style={{height:"50%"}}/></a>
+                    </div>
+                  ))}
                 </div>}
               </div>
               <div style={{width:"45%", margin:"2%"}}><img src={details.img} className="right-image"/></div>

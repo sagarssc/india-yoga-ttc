@@ -16,17 +16,25 @@ export default class Categories extends Component {
 
   componentDidMount(){
     let {categories} = this.props
+    let isLoaded = false
+    if(categories.length > 0){
+      isLoaded = true
+    }
     this.setState({
       categories: categories,
-      isLoaded: true
+      isLoaded: isLoaded
     })
   }
 
   componentWillReceiveProps(newProps){
     let {categories} = newProps
+    let isLoaded = false
+    if(categories.length > 0){
+      isLoaded = true
+    }
     this.setState({
       categories: categories,
-      isLoaded: true
+      isLoaded: isLoaded
     })
   }
 

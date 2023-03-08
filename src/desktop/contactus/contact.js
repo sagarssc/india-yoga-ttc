@@ -18,7 +18,7 @@ export default class Contact extends Component {
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url('/home/slide/1.png')",
+            backgroundImage: "url('/home/slide/6.jpg')",
           }}
         ></div>
         </div>
@@ -40,7 +40,7 @@ export default class Contact extends Component {
                   <p style={{margin:"0", fontWeight:"700", textAlign:"center", fontSize:"1.2rem"}}>Follow Us on</p>
                   <div style={{display:"flex", justifyContent:"space-around", marginLeft:"10%"}}>{social_images.map((social, index) =>(
                     <div>
-                      <a href={social.url} target="_blank" className="link"><img src={social.img} style={{height:"50%"}}/></a>
+                      <a href={social.url} target="_blank" className="link"><img src={social.img} style={{height:"100%"}}/></a>
                     </div>
                   ))}</div>
                 </div>
