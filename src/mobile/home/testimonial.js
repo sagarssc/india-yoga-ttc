@@ -34,22 +34,30 @@ const reviews = [
 export default class Testimonials extends Component {
   render() {
     return (
-      <div style={{marginLeft:"20%"}}>
-        <Carousel slide={1} width="80%" showIndicators={false} showStatus={false}>
+      <div style={{paddingBottom:"5%", backgroundImage:"url('/home/bg/header.png')"}}>
+      <div className="heading">Testimonials</div>
+      <div style={{borderBottom: "0px"}}>
+        <Carousel slide={1} showArrows={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        showStatus={false}
+        autoPlay={true}
+        interval={6100}>
           {reviews.map((review, index) => (
-            <div className="testimonial">
-              <div className="student-image">
-                <img src={review.img} />
+            <div className="testimonial" style={{backgroundImage:"url('/home/bg/3.png')", backgroundPosition:"top left"}}>
+              <div className="student-image2">
+                <img src={review.img} style={{height:"5rem"}}/>
               </div>
               <div className="student-review">
-                <text className="review">{review.review}</text>
-                <text style={{ fontSize: "0.8rem" }}>
-                  {review.name} ({review.subtext})
-                </text>
+                {/* <p style={{ fontSize: "0.8rem", color:"black"}}> */}
+                <h3> {review.name} </h3><h4> ({review.subtext})</h4>
+                {/* </p> */}
+                <p className="review">{review.review}</p>
               </div>
             </div>
           ))}
         </Carousel>
+      </div>
       </div>
     );
   }

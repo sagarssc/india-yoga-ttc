@@ -1,9 +1,27 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import "../style.css";
+import "../../index.css";
+import { useNavigate } from "react-router-dom";
 
-const titles = ["Courses", "About Us", "Blog", "Contact"];
+
+const titles = [  
+  // {title:"Courses", link:"/courses"},
+  {title:"About Us",  link:"/aboutus"},
+  {title:"Blog", link:"/blog"},
+  {title:"Contact", link:"/contact"},
+  {title:"Retreats", link:"/retreats"},
+  {title:"Register", link:"/register"},
+ ]
+
+const courses = [
+  {title:"100 Hrs Course", link:"/100-hrs-course"},
+  {title:"200 Hrs Course",  link:"/200-hrs-course"},
+  {title:"200 Hrs Course", link:"/300-hrs-course"},
+  {title:"500 Hrs Course", link:"/500-hrs-course"},
+  {title:"Online Training", link:"/online-training"},
+
+]
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -20,22 +38,35 @@ export default class Navbar extends Component {
     });
   };
 
-  render() {
+    render() {
     let { showNavbar } = this.state;
-    return (
-      <div
-        className="navbar"
-        style={{
-          backgroundImage: "url('./header.png')",
-          position: "fixed",
-          paddingTop: "0",
-        }}
-      >
-        <div className="nav-container" style={{justifyContent:"space-between"}}>
-          <div onClick={() => this.props.switchTab("home")} className="logo">
-            INDIA YOGA TTC
-          </div>
-          {!showNavbar ? (
+
+        return (
+          <div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
+            <div className="nav-container2">
+              <Link to="/" className="link" style={{width:"100%"}}>
+              <div style={{display:"flex"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"10%", height:"2rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
+                <div className="logo-mobile">
+                INDIA YOGA TTC
+              </div></div>
+              </Link>
+              <div className="dropdown2">
+                  <div className="dropbtn2 link"><p><img src="./icons/nav.png" style={{paddingTop:"20%", height:"2rem"}}/></p></div>
+                  <div className="dropdown-content2">
+                    <div className="dropdown3">
+                      <div className="dropbtn3 link"><p className="menu-text2">Courses</p></div>
+                      <div className="dropdown-content3">
+                        {courses.map((course, index) => (
+                          <Link to={course.link} className="link"><p className="menu-text-drop">{course.title}</p></Link>
+                        ))}
+                      </div>
+                  </div>
+                {titles.map((title, index) => (  
+                  <Link to={title.link} className="link"><p className="menu-text2">{title.title}</p></Link>
+                  ))}
+                  </div>
+                </div>
+              {/* {!showNavbar ? (
             <div className="menu-icon" onClick={() => this.handleShowNavbar()}>
               <img src="./icons/nav.png" style={{paddingTop:"20%"}}/>
             </div>
@@ -53,38 +84,35 @@ export default class Navbar extends Component {
               onClick={() => this.handleShowNavbar()}
             >
               <div className="nav-menu">
+                <div className="dropdown">
+                  <div className="dropbtn link"><p className="menu-text">Courses</p></div>
+                  <div className="dropdown-content">
+                    {courses.map((course, index) => (
+                      <Link to={course.link} className="link"><p className="menu-text-drop">{course.title}</p></Link>
+                    ))}
+                  </div>
+                </div>
                 {titles.map((title, index) => (  
-                <p className="menu-text">{title}</p>
-                ))}
+                  <Link to={title.link} className="link"><p className="menu-text">{title.title}</p></Link>
+                  ))}
               </div>
             </div>
-          )}
-          {/* <div className="nav-elements">
-            <ul style={{listStyleType: "None"}}>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/blog">Blog</NavLink>
-              </li>
-              <li>
-                <NavLink to="/projects">Projects</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-            </ul>
-          </div> */}
-          {/* <div className="nav-menu">
+          )} */}
+              {/* <div className="nav-menu1">
+                <div className="dropdown">
+                  <div className="dropbtn link"><p className="menu-text">Courses</p></div>
+                  <div className="dropdown-content">
+                    {courses.map((course, index) => (
+                      <Link to={course.link} className="link"><p className="menu-text-drop">{course.title}</p></Link>
+                    ))}
+                  </div>
+                </div>
                 {titles.map((title, index) => (  
-                <p className="menu-text">{title}</p>
+                <Link to={title.link} className="link"><p className="menu-text">{title.title}</p></Link>
                 ))}
               </div> */}
-        </div>
-      </div>
-    );
-  }
+            </div>
+          </div>
+        );
+    }
 }

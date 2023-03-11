@@ -1,18 +1,13 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import {getDevider} from '../../utils';
-import {KeyPoints} from "../../constant/keyPoint";
-import {CoursePage, constBaseUrl} from "../../constant/constant";
+import {RetreatCoursePage, RetreatKeyPoints} from "../../constant/retreats";
 import CourseDetails from "../defaults/courseDetails"
-import Schdule from "../defaults/schdule";
-// const course = course[100]
 
-const backgroundImage = constBaseUrl+'/images/slider/2.jpg'
-export default class Hrs extends Component {
+
+export default class RetreatType extends Component {
   render() {
-    let {hrs} = this.props
-    let course = CoursePage[hrs];
-    let KeyPoint = KeyPoints[hrs];
+    let {type} = this.props
+    let course = RetreatCoursePage[type];
+    let KeyPoint = RetreatKeyPoints[type];
     return (
       <div>
          <div className="blocks">
@@ -21,7 +16,7 @@ export default class Hrs extends Component {
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url("+backgroundImage+")",
+            backgroundImage: "url('/home/slide/2.jpg')",
           }}
         ></div>
           <div style={{position:"absolute", bottom:"15%", width:"40%", marginLeft:"30%", backgroundColor:"#ffffff5e", textAlign:"center"}}>
@@ -34,8 +29,7 @@ export default class Hrs extends Component {
             <p>{description}</p>
           ))}
         </div>
-        <CourseDetails index={hrs} displayTitle={false} onReadMore={()=>this.props.selectCourse(hrs)}/>
-        <Schdule />
+        <CourseDetails index={type} displayTitle={false} onReadMore={()=>this.props.selectCourse(type)}/>
         {KeyPoint.map((obj, index) => (
         // <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"#ffffff33", borderTopLeftRadius:"15%", borderBottomRightRadius:"15%", boxShadow:"-5px 5px 4px 4px"}}>
         <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white", backgroundImage:"url('./home/bg/4.png')"}}>
