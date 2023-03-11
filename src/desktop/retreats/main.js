@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Slider from "../defaults/slider";
 import ExtraDiv from "../defaults/extraDiv";
 import Gallery from "../defaults/gallery";
-import {extraDetailsAboutUs} from "../../constant/constant"
+import {extraDetailsAboutUs, constBaseUrl} from "../../constant/constant"
 import {RetreatTypes} from "../../constant/retreats"
+
+const backgroundImage = constBaseUrl+'/images/slider/2.jpg'
 
 export default class Retreat extends Component {
   render() {
@@ -16,7 +18,7 @@ export default class Retreat extends Component {
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url('/home/slide/2.jpg')",
+            backgroundImage: "url("+backgroundImage+")",
           }}
         ></div>
         </div>

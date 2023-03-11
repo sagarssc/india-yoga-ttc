@@ -1,35 +1,9 @@
 import React, { Component } from "react";
 import SimpleImageSlider from "react-simple-image-slider";
 import  Carousel from "nuka-carousel";
-const images = [
-  { url: "/home/slide/1.jpg" },
-  { url: "/home/slide/2.jpg" },
-  { url: "/home/slide/3.jpg" },
-  { url: "/home/slide/4.jpg" },
-  { url: "/home/slide/5.jpg" },
-  { url: "/home/slide/6.jpg" },
-  // { url: "url('/home/slide/7.jpg')" },
-  // { url: "url('/home/slide/8.jpg')" },
-  // { url: "url('/home/slide/9.jpg')" },
-  // { url: "url('/home/slide/10.jpg')" },
-  // { url: "url('/home/slide/11.jpg')" },
-  // { url: "url('/home/slide/12.jpg')" },
-  // { url: "url('/home/slide/13.jpg')" },
-  // { url: "url('/home/slide/15.jpg')" },
-  // { url: "url('/home/slide/16.jpg')" },
-  // { url: "url('/home/slide/17.jpg')" },
-  // { url: "url('/home/slide/18.jpg')" },
-  // { url: "url('/home/slide/19.jpg')" },
-  // { url: "url('/home/slide/20.jpg')" },
-  // { url: "url('/home/slide/21.jpg')" },
-  // { url: "url('/home/slide/22.jpg')" },
-  // { url: "url('/home/slide/23.jpg')" },
-  // { url: "url('/home/slide/24.jpg')" },
-  // { url: "url('/home/slide/25.jpg')" },
-  // { url: "url('/home/slide/26.jpg')" },
-  // { url: "url('/home/slide/29.jpg')" },
+import { sliderImages } from "../../constant/constant";
 
-];
+const images = sliderImages
 
 export default class Slider extends Component {
   constructor(props) {

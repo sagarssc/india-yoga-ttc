@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Slider from "../defaults/slider";
 import ExtraDiv from "../defaults/extraDiv";
 import Gallery from "../defaults/gallery";
-import {extraDetailsAboutUs, teachers} from "../../constant/constant"
+import {extraDetailsAboutUs, teachers, constBaseUrl} from "../../constant/constant"
 
+const backgroundImage = constBaseUrl+'/images/slider/2.jpg'
 export default class About extends Component {
   render() {
     return (
@@ -15,7 +16,7 @@ export default class About extends Component {
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url('/home/slide/2.jpg')",
+            backgroundImage: "url("+backgroundImage+")",
           }}
         ></div>
         </div>

@@ -7,6 +7,10 @@ import {contactus, icons, social_images} from "../../constant/default"
 // import {Mailto} from "../../utils"
 import MapComponent from '../defaults/googleMap'
 import QueryForm from '../defaults/queryForm'
+import {extraDetailsAboutUs, teachers, constBaseUrl} from "../../constant/constant"
+
+const backgroundImage = constBaseUrl+'/images/slider/6.jpg'
+
 export default class Contact extends Component {
   render() {
     let contacts = contactus
@@ -18,7 +22,7 @@ export default class Contact extends Component {
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url('/home/slide/6.jpg')",
+            backgroundImage: "url("+backgroundImage+")",
           }}
         ></div>
         </div>

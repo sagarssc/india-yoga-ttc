@@ -41,6 +41,8 @@ export const CoursePage = {
   },
 };
 
+export const constBaseUrl = "https://d2rfai7fb7k0t1.cloudfront.net"
+
 export const courses = {
   100: { img: "/slide.png", name: "100 Hours TTC", details: [
     {title: "Fee", value: "$499" },
@@ -94,15 +96,15 @@ export const courses = {
 };
 
 export const extraDetailsHome = [
-  {img:'./home/slide/423.jpg',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
-  {img:'./home/slide/423.jpg',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
-  {img:'./home/slide/423.jpg', social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
 ];  
 
 export const extraDetailsAboutUs = [
-  {img:'./home/slide/423.jpg',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
-  {img:'./home/slide/423.jpg',heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
-  {img:'./home/slide/423.jpg', social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG",heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG",heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
 ];  
 
 export const Faqs = [
@@ -172,3 +174,12 @@ export const webRatings = {
   ]
 
 }
+
+export const sliderImages = [
+  { url: constBaseUrl+"/images/slider/1.jpg" },
+  { url: constBaseUrl+"/images/slider/2.jpg" },
+  { url: constBaseUrl+"/images/slider/3.jpg" },
+  { url: constBaseUrl+"/images/slider/4.jpg" },
+  { url: constBaseUrl+"/images/slider/5.jpg" },
+  { url: constBaseUrl+"/images/slider/6.jpg" },
+];

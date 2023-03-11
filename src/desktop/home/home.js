@@ -22,7 +22,7 @@ export default class Home extends Component {
         <div className="testimonials">
           <HomeAbout />
         </div>
-        <div style={{backgroundImage:"url('/home/bg/IMG_5008.jpg')", width:"100%", height:"25rem", backgroundSize:"cover", backgroundAttachment:"fixed"}}>
+        <div style={{backgroundImage:"url('https://d2rfai7fb7k0t1.cloudfront.net/images/home/bg/IMG_5008.JPG')", width:"100%", height:"25rem", backgroundSize:"cover", backgroundAttachment:"fixed"}}>
           <TransparentDiv />
         </div>
         <div className="blocks">

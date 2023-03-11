@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "../../index.css";
 import Categories from "./categories";
 import Recents from "./recents";
-import { blogs } from "../../constant/blogData";
 
 
 export default class DetailedBlog extends Component {

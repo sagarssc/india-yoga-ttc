@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {getDevider} from '../../utils';
 import {KeyPoints} from "../../constant/keyPoint";
-import {CoursePage} from "../../constant/constant";
+import {CoursePage, constBaseUrl} from "../../constant/constant";
 import CourseDetails from "../defaults/courseDetails"
 import Schdule from "../defaults/schdule";
 // const course = course[100]
 
+const backgroundImage = constBaseUrl+'/images/slider/2.jpg'
 export default class Hrs extends Component {
   render() {
     let {hrs} = this.props
@@ -20,7 +21,7 @@ export default class Hrs extends Component {
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url('/home/slide/2.jpg')",
+            backgroundImage: "url("+backgroundImage+")",
           }}
         ></div>
           <div style={{position:"absolute", bottom:"15%", width:"40%", marginLeft:"30%", backgroundColor:"#ffffff5e", textAlign:"center"}}>

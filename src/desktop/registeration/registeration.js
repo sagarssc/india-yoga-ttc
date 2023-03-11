@@ -6,7 +6,12 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import Select from "react-dropdown-select";
 import validator from 'validator'
+import { CustomPopUp } from "../defaults/popup";
+import { useNavigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom';
 
+
+// import { useHistory } from "react-router-dom";
 
 const RegisterationForm = [
   {
@@ -130,12 +135,15 @@ export default class RegistrationForm extends React.Component {
       same_as_phone: false,
       fee: "",
       showError: true,
-      loader: false
+      loader: false,
+      popUp: false,
+      popUpContent:{mainContent:"", subContent:""},
+      redirect: true
       };
   }
 
   componentDidMount(){
-   this.prepareCourseList() 
+    this.prepareCourseList() 
   }
 
   updateForm(index, e){
@@ -254,7 +262,7 @@ export default class RegistrationForm extends React.Component {
     event.preventDefault();
     this.setState({loader: true})
     let validate = this.validateForm()
-    let {form} = this.state
+    let {form, popUpContent} = this.state
     let l = form.length
     if(validate){
       let data = {}
@@ -264,21 +272,31 @@ export default class RegistrationForm extends React.Component {
       }
       let res = await submitBookingRequest(data)
       if(res && res.status == "success"){
-        alert("Your booking is success. we'll get back to you shortly");
+        popUpContent.mainContent = "Your booking is success. we'll get back to you shortly"
+        popUpContent.subContent = "you will be redirected to home page now."
+        this.setState({
+          popUpContent: popUpContent,
+          popUp: true
+        })
+        this.setState({loader: false})
       }
       else{
-        alert("We are unable to prcoess your request at this moment. please try after some time");
+        popUpContent.mainContent = "We are unable to prcoess your request at this moment."
+        popUpContent.subContent = "please try after some time"
+        this.setState({
+          popUpContent: popUpContent,
+          popUp: true
+        })
+        this.setState({loader: false})
       }
-      console.log(data)
     }
-    this.setState({loader: false})
   }
 
-
   render() {
-    let {form, same_as_phone, fee, loader} = this.state
+    let {form, same_as_phone, fee, loader, popUp, popUpContent, redirect} = this.state
     return (
       <div style={{backgroundColor:"#f6f7f8", paddingBottom:"3rem"}}>
+        {popUp && <CustomPopUp content={popUpContent} />}
         {loader ? <div><div style={{height:"30rem", position:"fixed", zIndex:"999", width:"100%", backgroundColor:"f4f4f4d1"}}>
             <div style={{marginLeft:"50%", marginTop:"10%", }}>
               <Loader />

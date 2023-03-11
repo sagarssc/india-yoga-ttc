@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import "../../style.css";
 import "../../index.css";
-// import { blogs } from "../../constant/blogData";
 import RightSideBar from "../blog/rightSideBar"
 import DetailedBlog from "../blog/detailed";
 import { getBlogs } from "../../core/request";
@@ -19,7 +18,8 @@ export default class Blog extends Component {
       categories: [],
       selected: -1,
       allBlogs: [],
-      loader: false
+      loader: false,
+      selected_category: "",
     };
     this.changePage = this.changePage.bind(this);
     this.onSelectCategory = this.onSelectCategory.bind(this);
@@ -51,12 +51,12 @@ export default class Blog extends Component {
     })
   }
 
-  onSelectCategory(selectd_category){
+  onSelectCategory(selected_category){
     let {allBlogs} = this.state
     let blogs = allBlogs
     let start = 0
     let end = start + 3
-    let tmpBlogs = blogs.filter(blog => blog.category == selectd_category)
+    let tmpBlogs = blogs.filter(blog => blog.category == selected_category)
     let current_blogs = tmpBlogs.slice(start,end)
     let no_of_blog = tmpBlogs.length
     let no_of_pages = Math.ceil(no_of_blog / 3)
@@ -68,6 +68,7 @@ export default class Blog extends Component {
       no_of_pages: no_of_pages,
       isloaded: true,
       selected: -1,
+      selected_category: selected_category,
       categories: categories
     }) 
   }
@@ -151,7 +152,7 @@ export default class Blog extends Component {
   }
 
     render() {
-        let {loader,current_blogs, no_of_blog, no_of_pages, current_index, isloaded, isLast, categories, allBlogs, selected, selectedBlog} = this.state
+        let {loader,current_blogs, no_of_blog, no_of_pages, current_index, isloaded, isLast, categories, allBlogs, selected, selectedBlog, selected_category} = this.state
         let indexes = []
         if(no_of_pages){
           Array(no_of_pages).fill().map((item, i) => indexes.push(i+1))
@@ -165,6 +166,7 @@ export default class Blog extends Component {
           <div style={{width:"100%", padding:"5%", display:"flex"}}>
             {selected == -1 ? <div style={{width:"70%"}}>
               {isloaded && <div className="post-sections"style={{width:"100%", display:"block"}}>
+                {selected_category && <div style={{fontSize:"30px", fontWeight:"700", padding:"2%"}}>Category: {selected_category}</div>}
               {current_blogs.map((blog, index)=>( 
               <div style={{padding:"2%"}}>
                 <img className="blog-image" src={blog.image} style={{width:"90%"}}/>
