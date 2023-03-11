@@ -25,7 +25,7 @@ export default class Home extends Component {
         <div style={{backgroundImage:"url('https://d2rfai7fb7k0t1.cloudfront.net/images/home/bg/IMG_5008.JPG')", width:"100%", height:"25rem", backgroundSize:"cover", backgroundAttachment:"fixed"}}>
           <TransparentDiv />
         </div>
-        <div className="blocks">
+        <div className="blocks2">
           <QuickLink />
         </div>
         <div className="explore-courses">
