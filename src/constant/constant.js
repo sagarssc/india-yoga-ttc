@@ -128,13 +128,20 @@ export const logo = "url('./icons/logo.png')"
 
 export const contactNo = "+91 9719700541"
 
+const quickLinksImages={
+  1: constBaseUrl+'/images/home/quickLinks/3.JPG',
+  2: constBaseUrl+'/images/home/quickLinks/2.JPG',
+  3: constBaseUrl+'/images/home/quickLinks/1.JPG'
+
+}
+
 export const QuickLinks = {
   heading: "Find your inner beauty through yoga and mediation",
   headImgUrl: logo,
   imageLinks:[
-    {img:"url('./home/quick/3.jpg')",link:"/200-hrs-course", title:"Courses"},
-    {img:"url('./home/quick/2.jpg')",link:"/blog", title:"Blogs"},
-    {img:"url('./home/quick/1.jpg')",link:"/retreats", title:"Retreat"},
+    {img:"url("+quickLinksImages[1]+")",link:"/200-hrs-course", title:"Courses"},
+    {img:"url("+quickLinksImages[2]+")",link:"/blog", title:"Blogs"},
+    {img:"url("+quickLinksImages[3]+")",link:"/retreats", title:"Retreat"},
   ],
   contact: contactNo
 };
