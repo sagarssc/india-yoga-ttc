@@ -51,20 +51,20 @@ export default class Navbar extends Component {
               </div></div>
               </Link>
               <div className="dropdown2">
-                  <div className="dropbtn2 link"><p><img src="./icons/nav.png" style={{paddingTop:"20%", height:"2rem"}}/></p></div>
-                  <div className="dropdown-content2">
+                  <div className="dropbtn2 link" onClick={()=>this.handleShowNavbar()}><p><img src="./icons/nav.png" style={{paddingTop:"20%", height:"2rem"}}/></p></div>
+                  {showNavbar && <div className="dropdown-content2">
                     <div className="dropdown3">
                       <div className="dropbtn3 link"><p className="menu-text2">Courses</p></div>
-                      <div className="dropdown-content3">
+                      <div className="dropdown-content3" onClick={()=>this.handleShowNavbar()}>
                         {courses.map((course, index) => (
                           <Link to={course.link} className="link"><p className="menu-text-drop">{course.title}</p></Link>
                         ))}
                       </div>
-                  </div>
-                {titles.map((title, index) => (  
-                  <Link to={title.link} className="link"><p className="menu-text2">{title.title}</p></Link>
+                    </div>
+                  {titles.map((title, index) => (  
+                  <Link to={title.link} className="link" onClick={()=>this.handleShowNavbar()}><p className="menu-text2">{title.title}</p></Link>
                   ))}
-                  </div>
+                  </div>}
                 </div>
               {/* {!showNavbar ? (
             <div className="menu-icon" onClick={() => this.handleShowNavbar()}>

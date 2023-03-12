@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import {RetreatCoursePage, RetreatKeyPoints} from "../../constant/retreats";
 import CourseDetails from "../defaults/courseDetails"
+import {CoursePage, constBaseUrl} from "../../constant/constant";
 
-
+const backgroundImage = constBaseUrl+'/images/slider/2.jpg'
 export default class RetreatType extends Component {
   render() {
     let {type} = this.props
@@ -10,13 +11,13 @@ export default class RetreatType extends Component {
     let KeyPoint = RetreatKeyPoints[type];
     return (
       <div>
-         <div className="blocks">
+         <div className="blocks3">
           <div
           style={{
             width: "100%",
             height: "100%",
             backgroundSize: "100% 100%",
-            backgroundImage: "url('/home/slide/2.jpg')",
+            backgroundImage: "url("+backgroundImage+")",
           }}
         ></div>
           <div style={{position:"absolute", bottom:"15%", width:"40%", marginLeft:"30%", backgroundColor:"#ffffff5e", textAlign:"center"}}>
@@ -24,7 +25,7 @@ export default class RetreatType extends Component {
             </div>
         </div>
         <div className="hrs-course">
-        <div style={{padding:"10%", paddingTop:"5%", position:"relative", textAlign:"center"}}>
+        <div style={{padding:"10%", paddingTop:"5%", position:"relative", textAlign:"justify"}}>
           { course.descriptions.map((description, index) =>(
             <p>{description}</p>
           ))}

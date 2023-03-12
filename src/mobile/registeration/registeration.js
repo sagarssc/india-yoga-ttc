@@ -302,27 +302,27 @@ export default class RegistrationForm extends React.Component {
               <Loader />
             </div>
             </div><div style={{height:"30rem"}}></div></div> :
-      <form onSubmit={(e)=>this.onSubmit(e)} className="submit-form">
+      <form onSubmit={(e)=>this.onSubmit(e)} className="submit-form2">
         {form.map((input,index)=>(
-          <label className="form-label">
-              <div style={{marginTop:"3%"}}>
-                <text style={{margin:"3%", fontSize:"18px"}}>{input.label}:</text>
+          <label className="form-label2">
+              <div style={{marginTop:"3%", display:"block"}}>
+              <div><text style={{margin:"3%", fontSize:"18px"}}>{input.label}:</text></div>
                   { input.key == "whatsapp_phone" && 
-                    <span>
+                    <div>
                       <input type="checkbox" onChange={(e)=>this.sameAsPhone(e)} checked={same_as_phone}/> Same as Mobile No
-                    </span>
+                    </div>
                   } 
               </div>
-              {input.type == "text" && <input type="text" value={input.value} placeholder={input.placeholder} onChange={(e) => this.updateForm(index, e)} className="register-input"/>}
+              {input.type == "text" && <input type="text" value={input.value} placeholder={input.placeholder} onChange={(e) => this.updateForm(index, e)} className="register-input2"/>}
               {input.type == "phone" && 
                 <PhoneInput
                   country={'us'}
                   value={input.value}
                   onChange={(e) => this.updateForm(index, e)}
-                  containerStyle={{height:"3rem", width:"30rem", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
-                  inputStyle={{height:"3rem", width:"95%", borderRadius:"1rem", paddingLeft:"6rem", margin:"6%", border:"0.2rem solid grey"}}
-                  dropdownStyle={{borderRadius:"1rem", paddingLeft:"2.5rem", margin:"2%"}}
-                  buttonStyle={{height:"3rem", width:"20%", borderTopLeftRadius:"1rem", borderBottomLeftRadius:"1rem", paddingLeft:"2.5rem", border:"0.2rem solid grey"}}
+                  containerStyle={{height:"3rem", width:"20rem", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
+                  inputStyle={{height:"3rem", width:"95%", borderRadius:"1rem", paddingLeft:"4rem", margin:"6%", border:"0.2rem solid grey"}}
+                  dropdownStyle={{borderRadius:"1rem", paddingLeft:"0.5rem", margin:"2%"}}
+                  buttonStyle={{height:"3rem", width:"20%", borderTopLeftRadius:"1rem", borderBottomLeftRadius:"1rem", paddingLeft:"0.5rem", border:"0.2rem solid grey"}}
                 />
               }
             
@@ -342,16 +342,16 @@ export default class RegistrationForm extends React.Component {
                     closeOnSelect = {true}
                     closeOnScroll = {true}
                     dropdownHandle = {true}
-                    className = "register-input"
-                    style={{border:"0.2rem solid grey", borderRadius:"1rem", width:"30rem", paddingLeft:"2rem"}}
+                    className = "register-input2"
+                    style={{border:"0.2rem solid grey", borderRadius:"1rem", width:"20rem", paddingLeft:"2rem"}}
                   />
               }
             {input.showError && <div><text style={{marginLeft:"3%", fontSize:"12px", color:"red", lineHeight:"0"}}>{input.error_msg} </text></div>}
           </label>
         ))}
-        <div style={{display:"flex", margin:"3%", paddingTop:"4%", width:"100%"}}>
-           <div style={{width:"50%", textAlign:"center", fontSize:"30px", fontWeight:"700", wordSpacing:"25px"}}><text>Fee : {  fee}</text></div>
-           <div style={{width:"50%", marginLeft:"30%"}}><input type="submit" value="Book Now" className="label" style={{fontWeight:"700", color:'gold', width:"75%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginBottom:"2%", justifyContent:"center"}}/></div>
+        <div style={{display:"block", margin:"3%", paddingTop:"4%", width:"100%"}}>
+           <div style={{width:"100%", textAlign:"center", fontSize:"30px", fontWeight:"700", wordSpacing:"25px"}}><text>Fee : {  fee}</text></div>
+           <div style={{width:"100%", marginLeft:"15%"}}><input type="submit" value="Book Now" className="label" style={{fontWeight:"700", color:'gold', width:"60%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginBottom:"2%", justifyContent:"center"}}/></div>
         </div>
       </form>
        } 

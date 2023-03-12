@@ -29,7 +29,7 @@ export default class Hrs extends Component {
             </div>
         </div>
         <div className="hrs-course">
-        <div style={{padding:"10%", paddingTop:"5%", position:"relative", textAlign:"center"}}>
+        <div style={{padding:"10%", paddingTop:"5%", position:"relative", textAlign:"justify"}}>
           { course.descriptions.map((description, index) =>(
             <p>{description}</p>
           ))}

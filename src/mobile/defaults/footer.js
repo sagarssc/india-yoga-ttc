@@ -24,7 +24,7 @@ export default class Footer extends Component {
               </div>
               <div style={{display:"block", width:"100%", paddingTop:"1rem"}}>
                 <div style={{justifyContent:"space-around", textAlign:"center", fontSize:"25px", fontWeight:"300", paddingTop:".5rem"}}>Quick Links</div>
-                <ul style={{paddingTop:"2rem",justifyContent:"space-around", columnCount:4, listStyleType: "none"}}>
+                <ul style={{paddingTop:"2rem",justifyContent:"space-around", columnCount:3, listStyleType: "none"}}>
                   {footer.ql.map((head, index) =>(
                     <li style={{ fontSize:"20px"}}><Link to={head.link} className="link">{head.text}</Link></li>
                     ))}

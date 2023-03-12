@@ -16,7 +16,7 @@ export default class Contact extends Component {
     let contacts = contactus
     return (
       <div style={{marginBottom: "2%"}}>
-        <div className="blocks">
+        <div className="blocks3">
           <div
           style={{
             width: "100%",
@@ -28,9 +28,9 @@ export default class Contact extends Component {
         </div>
         <div className="contacts">
           <div className="heading">Contact Details</div>
-          <div style={{paddingTop:"2rem",justifyContent:"space-around", display:"flex"}}>
+          <div style={{paddingTop:"2rem",justifyContent:"space-around", display:"block", flexWrap:""}}>
             {contactus.ContactDetails.map((contact, index)=>(
-              <div style={{display:"flex", marginLeft:"auto", marginRight:"auto", width:"30%"}}>
+              <div style={{display:"flex", marginLeft:"auto", marginRight:"auto", width:"90%"}}>
                 <div style={{width:"30%"}}>
                   <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundColor:"gold"}}></div>
                 </div>
@@ -40,7 +40,7 @@ export default class Contact extends Component {
                 </div>
               </div> 
             ))}
-            <div className="social-media" style={{width:"20%", marginLeft:"auto", marginRight:"auto", justifyContent:"space-around", display:"block"}}>
+            <div className="social-media" style={{width:"90%", marginLeft:"auto", marginRight:"auto", justifyContent:"space-around", display:"block"}}>
                   <p style={{margin:"0", fontWeight:"700", textAlign:"center", fontSize:"1.2rem"}}>Follow Us on</p>
                   <div style={{display:"flex", justifyContent:"space-around", marginLeft:"10%"}}>{social_images.map((social, index) =>(
                     <div>
@@ -50,14 +50,14 @@ export default class Contact extends Component {
                 </div>
           </div>
         </div>
-        <div className="contacts" style={{margin:"2.5%", marginLeft:"0%",backgroundColor:"white"}}>
-          <div style={{paddingRight:"5%", display:"flex", height:"100vh"}}>
-            <div style={{width:"50%", paddingLeft:"2%"}}><MapComponent /></div>
-            <div style={{width:"50%", zIndex:"9999", margin:"auto", backgroundImage:"url('./home/bg/2.png')", backgroundPosition:"top right", backgroundRepeat:"no-repeat", backgroundSize:"100% 100%"}}>
+        {/* <div className="contacts" style={{margin:"2.5%", marginLeft:"0%",backgroundColor:"white"}}> */}
+          <div style={{paddingRight:"5%", height:"100vh"}}>
+            <div style={{paddingLeft:"2%"}}><MapComponent /></div>
+          </div>
+            <div style={{width:"100%", zIndex:"9999", margin:"auto", backgroundImage:"url('./home/bg/2.png')", backgroundPosition:"top right", backgroundRepeat:"no-repeat", backgroundSize:"100% 100%"}}>
               <QueryForm />
             </div>
-          </div>
-        </div>
+        {/* </div> */}
       </div>
     );
   }

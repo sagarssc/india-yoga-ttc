@@ -35,11 +35,11 @@ export class MapComponent extends Component {
 
   render() {
     return (
-      <div style={{width:"50%"}}>
+      <div style={{width:"100%", margin:"auto"}}>
         <Map
           google={this.props.google}
           zoom={17}
-          style={{width:"45%", height:"100%"}}
+          style={{width:"90%", height:"100%", margin:"auto"}}
           initialCenter={{
             lat: 30.1328558,
             lng: 78.320575,

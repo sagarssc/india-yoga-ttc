@@ -172,6 +172,47 @@
   height: auto;
 }
 
+.register-input2 {
+  width:20rem;
+  /* border-width: 0.2rem 0.2rem 0.2rem .2rem; */
+  border:0.2rem solid grey;
+  border-radius: 1rem;
+  /* border-color: grey; */
+  height: 3rem ;
+  padding-left: 2rem;
+  margin: 2%;
+  margin-bottom: 0;
+}
+
+.submit-form2 {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  display: block;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  box-shadow: 0px 0px 40px 10px grey;
+  border-radius: 2rem;
+}
+
+.form-label2 {
+  display: block;
+  width: 90%;
+  /* margin: 5%; */
+}
+
+.blocks3{
+  position: relative;
+  padding-bottom: 2rem;
+  height: 20rem;
+}
+
 .course2 {
   border-radius: 1rem;
   width: 90%;
