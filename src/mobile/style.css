@@ -173,7 +173,7 @@
 }
 
 .register-input2 {
-  width:20rem;
+  width:"45%";
   /* border-width: 0.2rem 0.2rem 0.2rem .2rem; */
   border:0.2rem solid grey;
   border-radius: 1rem;

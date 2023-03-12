@@ -319,7 +319,7 @@ export default class RegistrationForm extends React.Component {
                   country={'us'}
                   value={input.value}
                   onChange={(e) => this.updateForm(index, e)}
-                  containerStyle={{height:"3rem", width:"20rem", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
+                  containerStyle={{height:"3rem", width:"115%", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
                   inputStyle={{height:"3rem", width:"95%", borderRadius:"1rem", paddingLeft:"4rem", margin:"6%", border:"0.2rem solid grey"}}
                   dropdownStyle={{borderRadius:"1rem", paddingLeft:"0.5rem", margin:"2%"}}
                   buttonStyle={{height:"3rem", width:"20%", borderTopLeftRadius:"1rem", borderBottomLeftRadius:"1rem", paddingLeft:"0.5rem", border:"0.2rem solid grey"}}
@@ -343,7 +343,7 @@ export default class RegistrationForm extends React.Component {
                     closeOnScroll = {true}
                     dropdownHandle = {true}
                     className = "register-input2"
-                    style={{border:"0.2rem solid grey", borderRadius:"1rem", width:"20rem", paddingLeft:"2rem"}}
+                    style={{border:"0.2rem solid grey", borderRadius:"1rem", width:"110%", paddingLeft:"2rem"}}
                   />
               }
             {input.showError && <div><text style={{marginLeft:"3%", fontSize:"12px", color:"red", lineHeight:"0"}}>{input.error_msg} </text></div>}
