@@ -10,7 +10,7 @@ export default class Footer extends Component {
         return (
           <nav className="footer">
             <hr style={{ boxShadow:"0 1rem 4px 0 rgb(0 0 0 / 64%)"}}/>
-            <div className="nav-container" style={{display:"block"}}>
+            <div className="nav-container3" style={{display:"block"}}>
               <div style={{display:"block", width:"100%", paddingTop:"1rem"}}>
                 <Link to="/" className="link"><div style={{width:"30%",height:"5rem", backgroundImage:"url('./icons/logo.png')", backgroundSize:"100% 100%", paddingTop:"1rem", marginLeft:"auto", marginRight:"auto"}}></div>
                 <div style={{justifyContent:"space-around", textAlign:"center", fontSize:"25px", fontWeight:"500", paddingTop:".5rem"}}>India Yoga TTC</div></Link>
@@ -32,13 +32,13 @@ export default class Footer extends Component {
               </div>
                     <div style={{display:"block", width:"100%", paddingTop:"1rem"}}>
                       <div style={{justifyContent:"space-around", textAlign:"center", fontSize:"25px", fontWeight:"300", paddingTop:".5rem"}}>Contact Us</div>
-                      <div style={{paddingTop:"2rem",justifyContent:"space-around"}}>
+                      <div style={{paddingTop:"2rem",justifyContent:"space-around",paddingLeft:"0"}}>
                         {footer.contact.map((contact, index)=>(
                           <div style={{display:"flex", marginLeft:"auto", marginRight:"auto"}}>
-                            <div style={{width:"20%"}}>
+                            <div style={{width:"30%"}}>
                               <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundColor:"gold"}}></div>
                             </div>
-                            <div style={{width:"80%"}}>
+                            <div style={{width:"70%"}}>
                               <p style={{margin:"0", fontWeight:"700"}}>{contact.heading}</p>
                               <a href={contact.ref} target="_blank" className="link"><p>{contact.value}</p></a>
                             </div>

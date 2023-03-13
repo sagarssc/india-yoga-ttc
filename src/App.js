@@ -12,6 +12,8 @@ import Footer from './desktop/defaults/footer';
 import Hrs100 from './desktop/courses/hrs';
 import DesktopMain from './desktopMain';
 import MobileMain from "./mobileMain";
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+
 function App() {
   const [width, setWindowWidth] = useState(0);
 
@@ -29,6 +31,8 @@ function App() {
   const isDesktopScreen = width > 1023
   return (
     <div>
+      {/* <BrowserView><DesktopMain /></BrowserView>
+      <MobileView><MobileMain /></MobileView> */}
     {isDesktopScreen ? <DesktopMain /> : <MobileMain />}
     </div>
   );

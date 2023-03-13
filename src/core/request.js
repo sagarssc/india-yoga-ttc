@@ -1,5 +1,5 @@
 
-export const baseUrl = "https://d4ad7dovuew3zqualszhfpc3vq0vseig.lambda-url.us-east-1.on.aws" ;
+export const baseUrl = "https://7ifdnmyj01.execute-api.us-east-1.amazonaws.com/master" ;
 // export const baseUrl = "http://localhost:5001" ;
 
 

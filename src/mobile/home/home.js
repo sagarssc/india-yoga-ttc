@@ -15,6 +15,7 @@ import Ratings from "../defaults/ratings";
 export default class Home extends Component {
   render() {
     return (
+      // <div style={{height: "auto", width:"1920px", zoom:"20%"}}>
       <div>
         <div className="blocks" style={{height: "auto"}}>
           <Slider />
@@ -22,7 +23,7 @@ export default class Home extends Component {
         <div className="testimonials">
           <HomeAbout />
         </div>
-        <div style={{backgroundImage:"url('https://d2rfai7fb7k0t1.cloudfront.net/images/home/bg/IMG_5008.JPG')", width:"100%", height:"25rem", backgroundSize:"cover", backgroundAttachment:"fixed"}}>
+        <div style={{backgroundImage:"url('https://d2rfai7fb7k0t1.cloudfront.net/images/home/bg/IMG_5008.JPG')", width:"100%", height:"15rem", backgroundSize:"100% 100%", backgroundAttachment:"fixed"}}>
           <TransparentDiv />
         </div>
         <div className="blocks2">

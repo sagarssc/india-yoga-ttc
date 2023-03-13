@@ -309,7 +309,7 @@ export default class RegistrationForm extends React.Component {
               <div><text style={{margin:"3%", fontSize:"18px"}}>{input.label}:</text></div>
                   { input.key == "whatsapp_phone" && 
                     <div>
-                      <input type="checkbox" onChange={(e)=>this.sameAsPhone(e)} checked={same_as_phone}/> Same as Mobile No
+                      <input type="checkbox" onChange={(e)=>this.sameAsPhone(e)} style={{margin:"1rem"}} checked={same_as_phone}/> Same as Mobile No
                     </div>
                   } 
               </div>
@@ -319,7 +319,7 @@ export default class RegistrationForm extends React.Component {
                   country={'us'}
                   value={input.value}
                   onChange={(e) => this.updateForm(index, e)}
-                  containerStyle={{height:"3rem", width:"115%", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
+                  containerStyle={{height:"3rem", width:"100%", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
                   inputStyle={{height:"3rem", width:"95%", borderRadius:"1rem", paddingLeft:"4rem", margin:"6%", border:"0.2rem solid grey"}}
                   dropdownStyle={{borderRadius:"1rem", paddingLeft:"0.5rem", margin:"2%"}}
                   buttonStyle={{height:"3rem", width:"20%", borderTopLeftRadius:"1rem", borderBottomLeftRadius:"1rem", paddingLeft:"0.5rem", border:"0.2rem solid grey"}}
@@ -342,8 +342,9 @@ export default class RegistrationForm extends React.Component {
                     closeOnSelect = {true}
                     closeOnScroll = {true}
                     dropdownHandle = {true}
+                    searchable = {false}
                     className = "register-input2"
-                    style={{border:"0.2rem solid grey", borderRadius:"1rem", width:"110%", paddingLeft:"2rem"}}
+                    style={{border:"0.2rem solid grey", borderRadius:"1rem", width:"100%", paddingLeft:"2rem"}}
                   />
               }
             {input.showError && <div><text style={{marginLeft:"3%", fontSize:"12px", color:"red", lineHeight:"0"}}>{input.error_msg} </text></div>}

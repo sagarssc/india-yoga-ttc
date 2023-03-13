@@ -9,8 +9,8 @@ export default class Ratings extends Component {
         return (
           <div>
             <div style={{display:"block", flexWrap:"wrap", alignItems:"center", justifyContent:"space-evenly"}}>
-              <div style={{width:"80%", height:"6rem", margin:"2rem", backgroundColor:"white", textAlign:"center", border:"6px solid #e2dddd", borderRadius:"1rem"}}>
-                <div style={{fontSize:"22px", color:"#af9c9c", margin:"auto"}}>{webRatings.students.text}</div>
+              <div style={{width:"80%", height:"4rem", margin:"2rem", backgroundColor:"white", textAlign:"center", border:"6px solid #e2dddd", borderRadius:"1rem"}}>
+                <div style={{fontSize:"22px", color:"#af9c9c", margin:"auto", marginTop:"2.5%"}}>{webRatings.students.text}</div>
               </div>
               {webRatings.stars.map((comp, index) => (
                 <div style={{width:"80%",padding:"auto", height:"6rem", margin:"2rem", backgroundColor:"white", display:"flex", padding:"1%", border:"6px solid #e2dddd", borderRadius:"1rem"}}>
