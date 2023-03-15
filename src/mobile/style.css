@@ -40,10 +40,11 @@
 
 .logo-mobile {
   font-size: 1.5rem;
+  font-weight: 700;
   color: black;
   font-family: cursive;
   text-align: start;
-  width: 50%;
+  width: 80%;
   /* background-color: #7f7d7d; */
 
 }
@@ -264,4 +265,23 @@
   width: 100%;
   display: flex;
   float: auto;
+}
+
+.common-div2 {
+  padding: 7% 0% 0% 0%;
+  width: 95%;
+}
+
+.left-image2 {
+  width: 100%;
+  height: 90%;
+  background-size: 100% 100%;
+  box-shadow: 20px 20px 0 0 silver;
+}
+
+.left-image2:hover {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  box-shadow: 15px 15px 0 0 silver;
+  transition: .7s;
 }

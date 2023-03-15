@@ -32,7 +32,7 @@ export default class Retreat extends Component {
                 <div style={{backgroundImage:retreat.img, width:"90%", margin:"5%", height:"20rem", backgroundSize:"100% 100%"}}></div>
                 <div><p style={{textAlign:"center", fontSize:"larger", fontWeight:"700"}}>{retreat.name}</p></div>
                 <div><p style={{margin:"2%"}}>{retreat.description}</p></div>
-                <Link to={retreat.link} className="link"><div style={{margin:"8%",marginLeft:"25%", width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"2%"}}>
+                <Link to={retreat.link} className="link"><div style={{margin:"8%",marginLeft:"25%", width:"50%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"2%"}}>
                     <text style={{fontWeight:"700", color:"wheat", fontSize:"22px"}}>Read More</text>
                   </div></Link>
               </div> ))}

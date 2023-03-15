@@ -6,7 +6,7 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import Select from "react-dropdown-select";
 import validator from 'validator'
-import { CustomPopUp } from "../defaults/popup";
+import { CustomPopUp2 } from "../defaults/popup";
 import { useNavigate } from 'react-router-dom'
 import { Navigate } from 'react-router-dom';
 
@@ -296,7 +296,7 @@ export default class RegistrationForm extends React.Component {
     let {form, same_as_phone, fee, loader, popUp, popUpContent, redirect} = this.state
     return (
       <div style={{backgroundColor:"#f6f7f8", paddingBottom:"3rem"}}>
-        {popUp && <CustomPopUp content={popUpContent} />}
+        {popUp && <CustomPopUp2 content={popUpContent} />}
         {loader ? <div><div style={{height:"30rem", position:"fixed", zIndex:"999", width:"100%", backgroundColor:"f4f4f4d1"}}>
             <div style={{marginLeft:"50%", marginTop:"10%", }}>
               <Loader />

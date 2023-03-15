@@ -59,8 +59,8 @@ export default class CourseDetails extends Component {
                     <hr style={{ borderTop: "2px solid #5C5889" }} />
                   </div>
                 ))}
-                {(displayTitle || displayReadMore) && <div style={{ height:"5rem"}}>
-                <Link to={ref_link} className="link"><div style={{width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"2%"}}>
+                {(displayTitle || displayReadMore) && <div style={{ height:"3rem"}}>
+                <Link to={ref_link} className="link"><div style={{width:"50%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"2%"}}>
                     <text style={{fontWeight:"700", color:"wheat"}}>Read More</text>
                   </div></Link>
                 </div>}

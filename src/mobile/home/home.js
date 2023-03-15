@@ -32,7 +32,7 @@ export default class Home extends Component {
         <div className="explore-courses">
           <Courses selectCourse={(hrs)=>this.props.selectCourse(hrs)}/>
         </div>
-        <div className="common-div">
+        <div className="common-div2">
           <ExtraDiv extraDetails={extraDetailsHome}/>
         </div>
         {/* <div className="testimonials transparent-div">
