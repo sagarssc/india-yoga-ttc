@@ -1,130 +1,17 @@
 import React, { Component } from "react";
 import { Circles } from 'react-loader-spinner'
 import { submitBookingRequest } from "../../core/request";
-import {Loader} from "../../core/loader"
+import Loader from "../../core/loader"
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-import Select from "react-dropdown-select";
+import Select from "react-select";
+import ReactSelect from "react-select";
+
 import validator from 'validator'
 import { CustomPopUp } from "../defaults/popup";
-import { useNavigate } from 'react-router-dom'
-import { Navigate } from 'react-router-dom';
+import {RegisterationForm, CourseCostAndSlot} from "../../constant/register"
 
 
-// import { useHistory } from "react-router-dom";
-
-const RegisterationForm = [
-  {
-    key:"name",
-    label: "Full Name",
-    type: "text",
-    value: "",
-    placeholder: "Full Name",
-    error_msg: "Name is required",
-    mendatory: true
-  },
-  {
-    key:"email",
-    label: "Email Id",
-    type: "text",
-    value: "",
-    placeholder: "example@xyz.com",
-    error_msg: "Enter valid Email!",
-    mendatory: true
-  },
-  {
-    key:"phone",
-    label: "Mobile No.",
-    type: "phone",
-    value: "",
-    placeholder: "Mobile No",
-    error_msg: "Mobile No. is required",
-    mendatory: true
-  },
-  {
-    key:"whatsapp_phone",
-    label: "Whatsapp Number",
-    type: "phone",
-    value: "",
-    placeholder: "Whatsapp No",
-    error_msg: "Whatsapp No is required",
-    mendatory: true
-  },
-  {
-    key:"gender",
-    label: "Gender",
-    type: "radio",
-    options: ["Male", "Female"],
-    value: "",
-    placeholder: "gender",
-    error_msg: "Gender is required",
-    mendatory: true
-  },
-  {
-    key:"course",
-    label: "Course",
-    type: "dropdown",
-    options: [],
-    value: [],
-    placeholder: "Course",
-    error_msg: "Please Select a course",
-    mendatory: true
-  },
-  {
-    key:"slot",
-    label: "Course Period",
-    type: "dropdown",
-    options: [],
-    value: [],
-    placeholder: "Course Period",
-    error_msg: "Please Select a slot",
-    mendatory: true
-  },
-  {
-    key:"reach",
-    label: "How did you hear about us",
-    type: "dropdown",
-    options: [{value: "instagram",label:"Instagram"}, {value: "fb",label:"Facebook"}, {value: "f&f",label:"Friends and Family"}, {value:"google", label:"Google"}],
-    value: [],
-    placeholder: "How did you hear about us",
-    mendatory: false
-  },
-]
-
-const CourseCostAndSlot = {
-  100: {
-    text: "100 Hrs Teacher Training",
-    fee: "$499",
-    slots: [{value:"April", label:"April 2023 (1st - 12th)"},
-            {value:"May", label:"May 2023 (1st - 12th)"},
-            {value:"June", label:"June 2023 (1st - 12th)"},
-            {value:"July", label:"July 2023 (1st - 12th)"}]
-  },
-  200: {
-    text: "200 Hrs Teacher Training",
-    fee: "$599",
-    slots: [{value:"April", label:"April 2023 (1st - 18th)"},
-    {value:"May", label:"May 2023 (1st - 18th)"},
-    {value:"June", label:"June 2023 (1st - 18th)"},
-    {value:"July", label:"July 2023 (1st - 18th)"}]
-  },
-  300: {
-    text: "300 Hrs Teacher Training",
-    fee: "$699",
-    slots: [{value:"April", label:"April 2023 (1st - 22th)"},
-    {value:"May", label:"May 2023 (1st - 22th)"},
-    {value:"June", label:"June 2023 (1st - 22)"},
-    {value:"July", label:"July 2023 (1st - 22th)"}]
-  },
-  500: {
-    text: "500 Hrs Teacher Training",
-    fee: "$799",
-    slots: [{value:"April", label:"April 2023 (1st - 28th)"},
-    {value:"May", label:"May 2023 (1st - 28th)"},
-    {value:"June", label:"June 2023 (1st - 28th)"},
-    {value:"July", label:"July 2023 (1st - 28th)"}]
-  }
-}
 
 export default class RegistrationForm extends React.Component {
   constructor(props) {
@@ -157,8 +44,8 @@ export default class RegistrationForm extends React.Component {
     }
     form[index] = input
     if(input.key=="course"){
-      form = this.updateSlots(e[0].value, form)
-      this.updateFee(e[0].value)
+      form = this.updateSlots(e.value, form)
+      this.updateFee(e.value)
     }
     this.setState({form: form})
   }
@@ -290,6 +177,9 @@ export default class RegistrationForm extends React.Component {
         this.setState({loader: false})
       }
     }
+    else{
+      this.setState({loader: false})
+    }
   }
 
   render() {
@@ -334,17 +224,26 @@ export default class RegistrationForm extends React.Component {
                 </div>
               }
               {input.type == "dropdown" && 
-                  <Select 
-                    options={input.options} 
-                    values={input.value}
-                    onChange={(e) => this.updateForm(index, e)} 
-                    multi={false}
-                    closeOnSelect = {true}
-                    closeOnScroll = {true}
-                    dropdownHandle = {true}
-                    className = "register-input"
-                    style={{border:"0.2rem solid grey", borderRadius:"1rem", width:"30rem", paddingLeft:"2rem"}}
-                  />
+                  <ReactSelect 
+                  options={input.options} 
+                  value={input.value}
+                  onChange={(e) => this.updateForm(index, e)} 
+                  // isMulti={false}
+                  // isClearable={true}
+                  // closeMenuOnSelect = {true}
+                  // menuShouldScrollIntoView = {true}
+                  // menuIsOpen = {false}
+                  // // className = "register-input"
+                  // onBlur={() => this.setState({ forceUpdate: !this.state.forceUpdate })}
+                  styles={{control: (provided) => ({
+                      ...provided,
+                      border:"0.2rem solid grey",
+                      borderRadius:"1rem",
+                      width:"30rem",
+                      paddingLeft:"2rem"
+                    })
+                  }}
+                />
               }
             {input.showError && <div><text style={{marginLeft:"3%", fontSize:"12px", color:"red", lineHeight:"0"}}>{input.error_msg} </text></div>}
           </label>

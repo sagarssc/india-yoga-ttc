@@ -9,3 +9,46 @@ export const About = {
             "Vinyasa means to “arrange” where one has to arrange different postures while connecting those with breathing and form a flow which certainly is very interesting and creative way of yoga asana practices. India yoga teacher training centre provides the best vinyasa yoga teacher training in Rishikesh India."
           ]
 }
+
+export const Transparent = {
+  quote: "”Yoga is the ultimate practice. It simultaneously stimulates our inner light and quiets our overactive minds. It is both energy and rest. Yin and Yang. We feel the burn and find our bliss.”",
+  author: "Elise Joan"
+}
+
+export const CircularBlocks = [
+  {heading:"Pranayama", line:"Yogic Breathing,  Nadi Shodhna,  Bhastrika,  Bhramri,  Surya Bhedna,  Ujjayi pranayama,  Chandra Bhedna,  Sheetli ,  Sheetkari."},
+  {heading:"Meditation", line:"Mindfulness, Open awareness meditation, Humming meditation, Mantra meditation, Vipassana, Yoga Nidra, Loving kindness meditation, Dynamic meditation."},
+  {heading:"Yoga Anatomy", line:"Digestive system, Respiratory system, Circulatory system, Nervous system, Endocrine system, Muscular system, Skeleton system."},
+  {heading:"Shatkarmas (cleansing)", line:"Neti (Nasal cleansing), Dhauti (Digestive cleansing), Basti (Yogic enema), Nauli (Abdominal churning), Kapalbhati (Skull shine breathing), Trataka (Still gazing)."},
+  {heading:"Body Alignment", line:"Detailed explanation of all the postures of Ashtanga series with correct body alignment and modifications according to student’s limitations."},
+  {heading:"Yoga Philosophy", line:"Meaning and evolution of yoga, Patanjali’s yoga sutras, Four paths of yoga, Mudras, Bandhas, Lifestyle of yogis, Chakras, Tri gunas, Karma theory."},
+
+]
+
+
+export const reviews = [
+  {
+    img: "/slide.png",
+    review: "denj fwejrnk fewr fw fw fw fdw w",
+    name: "Sagar Singh Chauhan",
+    subtext: "March 2021",
+  },
+  {
+    img: "/slide.png",
+    review: "fdewjnfw fwjnkw fwkj fwnfw wdf w fw www",
+    name: "Sagar Singh Chauhan1",
+    subtext: "March 2021",
+  },
+  {
+    img: "/slide.png",
+    review: "mkdw dfewkjdfew dfwskfwr fekw dekwcew dfew fdew fwe",
+    name: "Sagar Singh Chauhan2",
+    subtext: "March 2021",
+  },
+  {
+    img: "/slide.png",
+    review: "fdew fwe fw fw fwef fwe fwe fw fw fw fwewwrew",
+    name: "Sagar Singh Chauhan3",
+    subtext: "March 2021",
+  },
+];

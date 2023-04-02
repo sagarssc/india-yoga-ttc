@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Circles } from 'react-loader-spinner'
 import { submitBookingRequest } from "../../core/request";
-import {Loader} from "../../core/loader"
+import Loader from "../../core/loader"
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import Select from "react-dropdown-select";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Circles } from 'react-loader-spinner'
 import { submitQuery } from "../../core/request";
-import {Loader} from "../../core/loader"
+import Loader from "../../core/loader"
 import { CustomPopUp2 } from "../defaults/popup";
 
 export default class QueryForm extends React.Component {

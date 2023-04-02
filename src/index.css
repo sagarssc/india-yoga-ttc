@@ -858,6 +858,8 @@ tr:nth-child(odd){
   background: #fff;
   border-radius: 4px;
   padding: 20px;
+  border-radius: 5rem;
+  box-shadow: 0.2rem 0.2rem 1rem 1rem rgb(83, 82, 82);
   border: 1px solid #999;
   overflow: auto;
 }
@@ -876,4 +878,62 @@ tr:nth-child(odd){
   text-align: center;
   border: 1px solid #999;
   font-size: 20px;
+}
+
+.links {
+  height: 100%;
+  margin: 5%;
+  display: flex;
+}
+
+.links h1 {
+  font-size: 37px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.links .gery-image {
+  height: 100%;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.links .gery-image div {
+  position: absolute;
+  bottom: 10%;
+  width: 40%;
+}
+
+.links .link {
+  text-decoration: none;
+}
+
+.links .link:hover .gery-image {
+  transform: scale(1.05);
+}
+
+.links .link:hover .gery-image div {
+  bottom: 15%;
+}
+
+.links .bg-color {
+  height: 30%;
+  background-color: #f2e0d0;
+}
+
+.links .bg-color2 {
+  height: 20%;
+  background-color: #cad8e6;
+}
+
+.links .bg-color3 {
+  height: 25%;
+  background-color: #ffc13e;
+  justify-content: center;
+  text-align: center;
+  padding-top: 8%;
+}
+
+.links .contact {
+  font-weight: 700;
+  font-size: 25px;
 }

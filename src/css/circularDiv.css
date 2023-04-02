@@ -1,0 +1,68 @@
+.circular-div {
+  background-color: #ffffff00;
+  background-image: url("/icons/logo.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  /* padding-bottom: 2%; */
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  flex-direction: column;
+}
+
+.icon-container {
+  width: 20%;
+  /* padding-top: 1rem; */
+}
+
+.icon {
+  width: 100%;
+}
+
+.text-container {
+  width: 80%;
+  text-align: left;
+  line-height: 20px;
+  /* margin-top: 4%; */
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: .5rem;
+  padding-top: 1%;
+}
+
+.text {
+  font-size: 12px;
+  text-align: center;
+}
+
+.double-circle {
+  display: flex;
+  justify-content: space-around;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+}

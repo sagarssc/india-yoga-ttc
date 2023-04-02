@@ -5,7 +5,7 @@ import "../../index.css";
 import RightSideBar from "../blog/rightSideBar"
 import DetailedBlog from "../blog/detailed";
 import { getBlogs } from "../../core/request";
-import {Loader} from "../../core/loader"
+import Loader from "../../core/loader"
 
 export default class Blog extends Component {
   constructor(props) {
