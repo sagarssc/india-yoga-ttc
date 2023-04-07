@@ -33,7 +33,7 @@ function App() {
     <div>
       {/* <BrowserView><DesktopMain /></BrowserView>
       <MobileView><MobileMain /></MobileView> */}
-    {isDesktopScreen ? <DesktopMain /> : <MobileMain />}
+    {isDesktopScreen ? <DesktopMain /> : <DesktopMain />}
     </div>
   );
 }

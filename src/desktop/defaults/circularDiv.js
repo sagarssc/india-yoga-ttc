@@ -1,18 +1,37 @@
 import React from "react";
 import { CircularBlocks } from "../../constant/home";
 import "../../css/circularDiv.css"; // import the CSS file for styles
+import { Slide } from 'react-reveal'; // import Slide effect from react-reveal
 
 function Description({ text, heading }) {
   return (
-    <div className="circle">
-      <div className="icon-container">
-        <img src="./icons/s-icon.png" alt="icon" className="icon" />
+    <Slide top>
+      <div className="circle">
+        <div className="icon-container">
+          <img src="./icons/s-icon.png" alt="icon" className="icon" />
+        </div>
+        <div className="text-container">
+          <h2 className="heading">{heading}</h2>
+          <p className="text">{text}</p>
+        </div>
       </div>
-      <div className="text-container">
-        <h2 className="heading">{heading}</h2>
-        <p className="text">{text}</p>
+    </Slide>
+  );
+}
+
+function Description2({ text, heading }) {
+  return (
+    <Slide bottom>
+      <div className="circle">
+        <div className="icon-container">
+          <img src="./icons/s-icon.png" alt="icon" className="icon" />
+        </div>
+        <div className="text-container">
+          <h2 className="heading">{heading}</h2>
+          <p className="text">{text}</p>
+        </div>
       </div>
-    </div>
+    </Slide>
   );
 }
 
@@ -20,20 +39,20 @@ function CircularDiv({ extraDetails }) {
   return (
     <div className="circular-div">
       <div className="line">
-        <Description
+        <Description2
           heading={CircularBlocks[0].heading}
           text={CircularBlocks[0].line}
         />
       </div>
       <div className="double-circle">
         <div className="circle-container">
-          <Description
+          <Description2
             heading={CircularBlocks[1].heading}
             text={CircularBlocks[1].line}
           />
         </div>
         <div className="circle-container">
-          <Description
+          <Description2
             heading={CircularBlocks[2].heading}
             text={CircularBlocks[2].line}
           />

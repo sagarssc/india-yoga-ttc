@@ -96,9 +96,9 @@ export const courses = {
 };
 
 export const extraDetailsHome = [
-  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
-  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"kfmnsjefmweklf feknj fcsknf klcfsd klcfsd klcfsd", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
-  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", social: true, heading:"About India Yoga TTC", content:"dfmks kmlcsd kmfs mlfsd jlfseekmfs klmfsdnkjfskmlsfdklnknvn cdskljnjslnbfsiknfjberwkfn nkifnwenknvbjsdmlnkjfskjmiksf kfjnsj fljnse fijlksre okijfr opjifjsko nopjifsr kopjifsmopjifw pojfnerw jopinferw kojiferw ojkinfwe pojinjferw ojioferf"},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"Why choose India Yoga TTC?", content:"When looking for a thorough, useful, and encouraging teacher training programme, future yoga instructors might consider our yoga centre. Each student receives individualised attention from our team of knowledgeable professors who are passionate about it. Our teacher-training programmes are intended to be comprehensive and include a range of topics related to yoga, including asanas, pranayama, meditation, philosophy, and teaching methods. Online and in-person classes are among the various training alternatives we provide to meet a range of schedules and needs. We encourage connections between students, the sharing of experiences, and mutual support among our educators in order to establish a caring community. We want our students to feel capable and prepared to instruct yoga to others after completing our courses."},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"Our Vision", content:"The mission of our yoga centre is to open up yoga's transforming power to all people, regardless of their age, background, or level of physical fitness. We work to offer a warm, friendly environment where people can explore and develop their practises in a supportive setting. Our goal is to create a community of people who love yoga and are dedicated to their own personal development. In order to empower people to become educated and assured teachers, we strive to offer high-quality yoga teacher training. We believe in the power of education and lifelong learning. Our mission is based on the conviction that yoga is more than just a form of exercise and has the power to transform people's lives both personally and collectively. We are dedicated to bringing the advantages of yoga to everyone in the world while doing so in a way that is empowering and supportive."},
+  {img: constBaseUrl+"/images/home/extraDiv/423.JPG", social: true, heading:"About India Yoga TTC", content:"We at India Yoga TTC are a community-driven organisation dedicated to advancing yoga as a means of achieving overall health—physical, mental, and emotional. We provide a range of yoga classes and seminars led by qualified and experienced yoga instructors, as well as yoga teacher training courses for individuals looking to start their own yoga schools. In order to foster a secure and loving environment where people from all backgrounds and abilities can learn about the transforming potential of yoga, our institute values inclusivity, diversity, and community. The overarching objective of the India Yoga TTC is to encourage people to lead more aware and conscientious lives and to contribute to a more tranquil and harmonious world. Yoga is a holistic approach that, in our opinion, may assist people in connecting with their inner selves, finding inner peace, and growing in awareness and compassion for both themselves and others. We want to encourage people to reach their greatest potential and lead more fulfilled lives by fostering a friendly and accepting environment."},
 ];  
 
 export const extraDetailsAboutUs = [
@@ -154,23 +154,23 @@ export const teachers = [
 ]
 
 export const galleryImages = [
-  { url: "url('/gallery/1.jpg')" },
-  { url: "url('/gallery/2.jpg')" },
-  { url: "url('/gallery/3.jpg')" },
-  { url: "url('/gallery/4.jpg')" },
-  { url: "url('/gallery/5.jpg')" },
-  { url: "url('/gallery/6.jpg')" },
-  { url: "url('/gallery/7.jpg')" },
-  { url: "url('/gallery/8.jpg')" },
-  { url: "url('/gallery/9.jpg')" },
-  { url: "url('/gallery/10.jpg')" },
-  { url: "url('/gallery/11.jpg')" },
-  { url: "url('/gallery/12.jpg')" },
-  { url: "url('/gallery/3.jpg')" },
-  { url: "url('/gallery/14.jpg')" },
-  { url: "url('/gallery/15.jpg')" },
-  { url: "url('/gallery/16.jpg')" },
-  { url: "url('/gallery/17.jpg')" }
+  { url: '/gallery/1.jpg' },
+  { url: '/gallery/2.jpg' },
+  { url: '/gallery/3.jpg' },
+  { url: '/gallery/4.jpg' },
+  { url: '/gallery/5.jpg' },
+  { url: '/gallery/6.jpg' },
+  { url: '/gallery/7.jpg' },
+  { url: '/gallery/8.jpg' },
+  { url: '/gallery/9.jpg' },
+  { url: '/gallery/10.jpg' },
+  { url: '/gallery/11.jpg' },
+  { url: '/gallery/12.jpg' },
+  { url: '/gallery/3.jpg' },
+  { url: '/gallery/14.jpg' },
+  { url: '/gallery/15.jpg' },
+  { url: '/gallery/16.jpg' },
+  { url: '/gallery/17.jpg' }
 ];
 
 export const webRatings = {
