@@ -1,233 +1,329 @@
-import React, { Component } from "react";
-import { Circles } from 'react-loader-spinner'
-import { submitBookingRequest } from "../../core/request";
-import Loader from "../../core/loader"
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+// import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import { Circles } from "react-loader-spinner";
+import { submitBookingRequest, onSuccess } from "../../core/request";
+import Loader from "../../core/loader";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
 import ReactSelect from "react-select";
-
-import validator from 'validator'
+import validator from "validator";
 import { CustomPopUp } from "../defaults/popup";
-import {RegisterationForm, CourseCostAndSlot} from "../../constant/register"
+import { RegisterationForm, CourseCostAndSlot } from "../../constant/register";
+import Razorpay from "razorpay";
+import { Link, Routes, Route, useNavigate } from "react-router-dom";
 
+function RegistrationForm() {
+  const navigate = useNavigate();
+  const [form, setForm] = useState(RegisterationForm);
+  const [fee, setFee] = useState("");
+  const [showError, setShowError] = useState(true);
+  const [loader, setLoader] = useState(false);
+  const [popUp, setPopUp] = useState(false);
+  const [popUpContent, setPopUpContent] = useState({
+    mainContent: "",
+    subContent: "",
+  });
+  const [redirect, setRedirect] = useState(true);
+  const [same_as_phone, setSameAsPhone] = useState(false);
 
+  useEffect(() => {
+    prepareCourseList();
+  }, []);
 
-export default class RegistrationForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      form: RegisterationForm,
-      loader: false,
-      same_as_phone: false,
-      fee: "",
-      showError: true,
-      loader: false,
-      popUp: false,
-      popUpContent:{mainContent:"", subContent:""},
-      redirect: true
-      };
-  }
-
-  componentDidMount(){
-    this.prepareCourseList() 
-  }
-
-  updateForm(index, e){
-    let {form} = this.state
-    let input = form[index]
-    if(typeof(e) == "object" && 'target' in e){
-      input['value'] = e.target.value
+  const updateForm = (index, e) => {
+    let newForm = [...form];
+    let input = newForm[index];
+    input.value = typeof e === "object" && "target" in e ? e.target.value : e;
+    newForm[index] = input;
+    if (input.key === "course") {
+      newForm = updateSlots(e.value, newForm);
+      updateFee(e.value);
     }
-    else{
-      input['value'] = e
+    setForm(newForm);
+  };
+
+  const updateFee = (key) => {
+    const course_slot = CourseCostAndSlot;
+    const course = course_slot[key];
+    setFee(course.fee);
+  };
+
+  const updateSlots = (key, form) => {
+    let course_slot = CourseCostAndSlot;
+    let index = getIndexByKey(form, "batch");
+    let course = course_slot[key];
+    let input = form[index];
+    input.value = [];
+    input.options = course.slots;
+    form[index] = input;
+    return form;
+  };
+
+  const prepareCourseList = () => {
+    let course_slot = CourseCostAndSlot;
+    const newForm = [...form];
+    let index = getIndexByKey(newForm, "course");
+    let input = newForm[index];
+    let hrs = Object.keys(course_slot);
+    let courses = [];
+    hrs.map((hr, index) =>
+      courses.push({ value: hr, label: course_slot[hr].text })
+    );
+    input.options = courses;
+    newForm[index] = input;
+    setForm(newForm);
+  };
+
+  const getIndexByKey = (newForm, key) => {
+    // const newForm = [...form];
+    let input = newForm.filter((input) => input.key == key)[0];
+    return newForm.indexOf(input);
+  };
+
+  const sameAsPhone = (e) => {
+    // const { same_as_phone, form } = state;
+    const newForm = [...form];
+    const phoneIndex = getIndexByKey(newForm, "phone_number");
+    const phoneInput = newForm[phoneIndex];
+    const index = getIndexByKey(newForm, "whatsapp_number");
+    let input = newForm[index];
+    const newSameAsPhone = !same_as_phone;
+    if (newSameAsPhone) {
+      input = { ...input, value: phoneInput.value };
+    } else {
+      input = { ...input, value: "" };
     }
-    form[index] = input
-    if(input.key=="course"){
-      form = this.updateSlots(e.value, form)
-      this.updateFee(e.value)
-    }
-    this.setState({form: form})
-  }
+    newForm[index] = input;
+    setSameAsPhone(newSameAsPhone);
+    setForm(newForm);
+  };
 
-  updateFee(key){
-    let course_slot = CourseCostAndSlot
-    let course = course_slot[key]
-    this.setState({
-      fee: course.fee
-    })
-  }
+  const loadRazorpay = async () => {
+    const res = await fetch("https://checkout.razorpay.com/v1/checkout.js");
+    const scriptContent = await res.text();
+    eval(scriptContent);
+  };
 
-  updateSlots(key, form){
-    let course_slot = CourseCostAndSlot
-    let index = this.getIndexByKey("slot")
-    let course = course_slot[key]
-    let input = form[index]
-    input.value = []
-    input.options = course.slots
-    form[index] = input
-    return form
-  }
-
-  prepareCourseList(){
-    let course_slot = CourseCostAndSlot
-    let {form} = this.state
-    let index = this.getIndexByKey("course")
-    let input = form[index]
-    let hrs = Object.keys(course_slot)
-    let courses = []
-    hrs.map((hr,index)=>(courses.push({value:hr, label:course_slot[hr].text})))
-    input.options = courses
-    form[index] = input
-    this.setState({
-      form: form
-    })
-  }
-
-  getIndexByKey(key){
-    let {form} = this.state
-    let input = form.filter(input => input.key == key)[0]
-    return form.indexOf(input)
-  }
-
-  sameAsPhone(e){
-    let {same_as_phone, form} = this.state
-    let phoneIndex = this.getIndexByKey("phone")
-    let phoneInput = form[phoneIndex]
-    let index = this.getIndexByKey("whatsapp_phone")
-    let input = form[index]
-    same_as_phone = !same_as_phone
-    if(same_as_phone){
-      input.value = phoneInput.value
-    }
-    else{
-      input.value = ""
-    }
-    form[index] = input
-    this.setState({
-      same_as_phone: same_as_phone,
-      form: form
-    })
-  }
-
-  validateForm(){
-    let {form} = this.state
-    let l = form.length
-    let errors = false
-    for(let i=0; i < l; i++){
-      let input  = form[i]
-      if(input.mendatory){
-        if(!input.value || (Array.isArray(input.value) && !input.value.length )){
-          input.showError = true
-          errors = true
-        }
-        else{
-          input.showError = false
-          if(input.key=="email"){
-            let isValid = validator.isEmail(input.value)
-            if(!isValid){
-              input.showError = true
-              errors = true
+  const validateForm = () => {
+    const newForm = [...form];
+    let l = newForm.length;
+    let errors = false;
+    for (let i = 0; i < l; i++) {
+      let input = newForm[i];
+      if (input.mendatory) {
+        if (
+          !input.value ||
+          (Array.isArray(input.value) && !input.value.length)
+        ) {
+          input.showError = true;
+          errors = true;
+        } else {
+          input.showError = false;
+          if (input.key == "email") {
+            let isValid = validator.isEmail(input.value);
+            if (!isValid) {
+              input.showError = true;
+              errors = true;
             }
           }
         }
-        form[i] = input
+        newForm[i] = input;
       }
     }
-    if(errors){
-      this.setState({
-        form:form
-      })
-      return false
+    if (errors) {
+      setForm(newForm);
+      return false;
+    } else {
+      return true;
     }
-    else{
-      return true
-    }
-  }
+  };
 
-  async onSubmit(event){
+  const onSubmit = async (event) => {
     event.preventDefault();
-    this.setState({loader: true})
-    let validate = this.validateForm()
-    let {form, popUpContent} = this.state
-    let l = form.length
-    if(validate){
-      let data = {}
-      for(let i=0; i<l; i++){
-        let input = form[i]
-        data[input.key] = input.value
+    setLoader(true);
+    const validate = validateForm();
+    const l = form.length;
+    if (validate) {
+      let data = {};
+      for (let i = 0; i < l; i++) {
+        let input = form[i];
+        if (typeof input.value == "object") {
+          data[input.key] = input.value.value;
+        } else {
+          if (input.key == "gender") {
+            data[input.key] = input.value[0];
+          } else {
+            data[input.key] = input.value;
+          }
+        }
       }
-      let res = await submitBookingRequest(data)
-      if(res && res.status == "success"){
-        popUpContent.mainContent = "Your booking is success. we'll get back to you shortly"
-        popUpContent.subContent = "you will be redirected to home page now."
-        this.setState({
-          popUpContent: popUpContent,
-          popUp: true
-        })
-        this.setState({loader: false})
+      data["amount"] = parseInt(fee) * 100;
+      const res = await submitBookingRequest(data);
+      console.log(res);
+      if ( res && res.status=="success") {
+        const options = {
+          name: "India Yoga TTC",
+          description: "Payment for your Booking",
+          order_id: res.order_id,
+          handler: async function (response) {
+            console.log(response);
+            response["registeration_id"] = res.registration_id
+            const res1 = await onSuccess(response);
+            if(res1["status"] == "success"){
+              console.log(res1);
+              navigate("/success");
+            }
+            else{
+              console.log("failded on success",res1);
+              navigate("/error");
+            }
+          },
+          modal: {
+            ondismiss: function(){
+              console.log("failded on payment cancelled");
+              navigate("/payment-cancelled");
+            }
+          },
+          prefill: {
+            name: data['name'],
+            email: data['email'],
+            contact: data['phone_number'],
+          },
+          theme: {
+            color: "green",
+          },
+        };
+        loadRazorpay().then(() => {
+          const rzp1 = new window.Razorpay(options);
+          rzp1.open();
+        });
+      } else {
+        console.log("failded from server");
+        navigate("/error");
       }
-      else{
-        popUpContent.mainContent = "We are unable to prcoess your request at this moment."
-        popUpContent.subContent = "please try after some time"
-        this.setState({
-          popUpContent: popUpContent,
-          popUp: true
-        })
-        this.setState({loader: false})
-      }
+    } else {
+      setLoader(false);
     }
-    else{
-      this.setState({loader: false})
-    }
-  }
-
-  render() {
-    let {form, same_as_phone, fee, loader, popUp, popUpContent, redirect} = this.state
-    return (
-      <div style={{backgroundColor:"#f6f7f8", paddingBottom:"3rem"}}>
-        {popUp && <CustomPopUp content={popUpContent} />}
-        {loader ? <div><div style={{height:"30rem", position:"fixed", zIndex:"999", width:"100%", backgroundColor:"f4f4f4d1"}}>
-            <div style={{marginLeft:"50%", marginTop:"10%", }}>
+  };
+  return (
+    <div style={{ backgroundColor: "#f6f7f8", paddingBottom: "3rem" }}>
+      {popUp && <CustomPopUp content={popUpContent} />}
+      {loader ? (
+        <div>
+          <div
+            style={{
+              height: "30rem",
+              position: "fixed",
+              zIndex: "999",
+              width: "100%",
+              backgroundColor: "f4f4f4d1",
+            }}
+          >
+            <div style={{ marginLeft: "50%", marginTop: "10%" }}>
               <Loader />
             </div>
-            </div><div style={{height:"30rem"}}></div></div> :
-      <form onSubmit={(e)=>this.onSubmit(e)} className="submit-form">
-        {form.map((input,index)=>(
-          <label className="form-label">
-              <div style={{marginTop:"3%"}}>
-                <text style={{margin:"3%", fontSize:"18px"}}>{input.label}:</text>
-                  { input.key == "whatsapp_phone" && 
-                    <span>
-                      <input type="checkbox" onChange={(e)=>this.sameAsPhone(e)} checked={same_as_phone}/> Same as Mobile No
-                    </span>
-                  } 
+          </div>
+          <div style={{ height: "30rem" }}></div>
+        </div>
+      ) : (
+        <form onSubmit={(e) => onSubmit(e)} className="submit-form">
+          {form.map((input, index) => (
+            <label className="form-label">
+              <div style={{ marginTop: "3%" }}>
+                <text style={{ margin: "3%", fontSize: "18px" }}>
+                  {input.label}:
+                </text>
+                {input.key == "whatsapp_number" && (
+                  <span>
+                    <input
+                      type="checkbox"
+                      onChange={(e) => sameAsPhone(e)}
+                      checked={same_as_phone}
+                    />{" "}
+                    Same as Mobile No
+                  </span>
+                )}
               </div>
-              {input.type == "text" && <input type="text" value={input.value} placeholder={input.placeholder} onChange={(e) => this.updateForm(index, e)} className="register-input"/>}
-              {input.type == "phone" && 
-                <PhoneInput
-                  country={'us'}
+              {input.type == "text" && (
+                <input
+                  type="text"
                   value={input.value}
-                  onChange={(e) => this.updateForm(index, e)}
-                  containerStyle={{height:"3rem", width:"30rem", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
-                  inputStyle={{height:"3rem", width:"95%", borderRadius:"1rem", paddingLeft:"6rem", margin:"6%", border:"0.2rem solid grey"}}
-                  dropdownStyle={{borderRadius:"1rem", paddingLeft:"2.5rem", margin:"2%"}}
-                  buttonStyle={{height:"3rem", width:"20%", borderTopLeftRadius:"1rem", borderBottomLeftRadius:"1rem", paddingLeft:"2.5rem", border:"0.2rem solid grey"}}
+                  placeholder={input.placeholder}
+                  onChange={(e) => updateForm(index, e)}
+                  className="register-input"
                 />
-              }
-            
-              {input.type == "radio" && 
-                <div style={{margin: "2%", display:"flex"}}>
-                  { input.options.map((option, index1) => (
-                    <span style={{paddingLeft:"2rem", width:"50%", display:"flex"}}><input style={{height:"1.5rem", width:"40%", borderColor:"grey"}}  type="radio"  name={input.name}  value={option}  checked={input.value == option }  onChange={(option) => this.updateForm(index, option)}/> {option} </span>
+              )}
+              {input.type == "phone" && (
+                <PhoneInput
+                  country={"us"}
+                  value={input.value}
+                  onChange={(e) => updateForm(index, e)}
+                  containerStyle={{
+                    height: "3rem",
+                    width: "30rem",
+                    borderWidth: "0rem",
+                    borderBottomWidth: ".2rem",
+                    borderRadius: "1rem",
+                    margin: "2%",
+                    marginBottom: "0%",
+                  }}
+                  inputStyle={{
+                    height: "3rem",
+                    width: "95%",
+                    borderRadius: "1rem",
+                    paddingLeft: "6rem",
+                    margin: "6%",
+                    border: "0.2rem solid grey",
+                  }}
+                  dropdownStyle={{
+                    borderRadius: "1rem",
+                    paddingLeft: "2.5rem",
+                    margin: "2%",
+                  }}
+                  buttonStyle={{
+                    height: "3rem",
+                    width: "20%",
+                    borderTopLeftRadius: "1rem",
+                    borderBottomLeftRadius: "1rem",
+                    paddingLeft: "2.5rem",
+                    border: "0.2rem solid grey",
+                  }}
+                />
+              )}
+
+              {input.type == "radio" && (
+                <div style={{ margin: "2%", display: "flex" }}>
+                  {input.options.map((option, index1) => (
+                    <span
+                      style={{
+                        paddingLeft: "2rem",
+                        width: "50%",
+                        display: "flex",
+                      }}
+                    >
+                      <input
+                        style={{
+                          height: "1.5rem",
+                          width: "40%",
+                          borderColor: "grey",
+                        }}
+                        type="radio"
+                        name={input.name}
+                        value={option}
+                        checked={input.value == option}
+                        onChange={(option) => updateForm(index, option)}
+                      />{" "}
+                      {option}{" "}
+                    </span>
                   ))}
                 </div>
-              }
-              {input.type == "dropdown" && 
-                  <ReactSelect 
-                  options={input.options} 
+              )}
+              {input.type == "dropdown" && (
+                <ReactSelect
+                  options={input.options}
                   value={input.value}
-                  onChange={(e) => this.updateForm(index, e)} 
+                  onChange={(e) => updateForm(index, e)}
                   // isMulti={false}
                   // isClearable={true}
                   // closeMenuOnSelect = {true}
@@ -235,26 +331,75 @@ export default class RegistrationForm extends React.Component {
                   // menuIsOpen = {false}
                   // // className = "register-input"
                   // onBlur={() => this.setState({ forceUpdate: !this.state.forceUpdate })}
-                  styles={{control: (provided) => ({
+                  styles={{
+                    control: (provided) => ({
                       ...provided,
-                      border:"0.2rem solid grey",
-                      borderRadius:"1rem",
-                      width:"30rem",
-                      paddingLeft:"2rem"
-                    })
+                      border: "0.2rem solid grey",
+                      borderRadius: "1rem",
+                      width: "30rem",
+                      paddingLeft: "2rem",
+                    }),
                   }}
                 />
-              }
-            {input.showError && <div><text style={{marginLeft:"3%", fontSize:"12px", color:"red", lineHeight:"0"}}>{input.error_msg} </text></div>}
-          </label>
-        ))}
-        <div style={{display:"flex", margin:"3%", paddingTop:"4%", width:"100%"}}>
-           <div style={{width:"50%", textAlign:"center", fontSize:"30px", fontWeight:"700", wordSpacing:"25px"}}><text>Fee : {  fee}</text></div>
-           <div style={{width:"50%", marginLeft:"30%"}}><input type="submit" value="Book Now" className="label" style={{fontWeight:"700", color:'gold', width:"75%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginBottom:"2%", justifyContent:"center"}}/></div>
-        </div>
-      </form>
-       } 
-      </div>
-    );
-  }
+              )}
+              {input.showError && (
+                <div>
+                  <text
+                    style={{
+                      marginLeft: "3%",
+                      fontSize: "12px",
+                      color: "red",
+                      lineHeight: "0",
+                    }}
+                  >
+                    {input.error_msg}{" "}
+                  </text>
+                </div>
+              )}
+            </label>
+          ))}
+          <div
+            style={{
+              display: "flex",
+              margin: "3%",
+              paddingTop: "4%",
+              width: "100%",
+            }}
+          >
+            <div
+              style={{
+                width: "50%",
+                textAlign: "center",
+                fontSize: "30px",
+                fontWeight: "700",
+                wordSpacing: "25px",
+              }}
+            >
+              <text>Fee : ${fee}</text>
+            </div>
+            <div style={{ width: "50%", marginLeft: "30%" }}>
+              <input
+                type="submit"
+                value="Book Now"
+                className="label"
+                style={{
+                  fontWeight: "700",
+                  color: "gold",
+                  width: "75%",
+                  backgroundColor: "#5c5889",
+                  height: "3rem",
+                  borderRadius: "2rem",
+                  display: "inline-flex",
+                  marginBottom: "2%",
+                  justifyContent: "center",
+                }}
+              />
+            </div>
+          </div>
+        </form>
+      )}
+    </div>
+  );
 }
+
+export default RegistrationForm;

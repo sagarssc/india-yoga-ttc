@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Routes ,Route } from 'react-router-dom';
 import Navbar from "./desktop/defaults/navbar";
 import Home from "./desktop/home/home";
+import {RegistrationSuccess, RegistrationFailure, RegistrationPaymentCancelled} from "./desktop/home/success";
 import Footer from "./desktop/defaults/footer";
 import Hrs from "./desktop/courses/hrs";
 import Blog from "./desktop/home/blog";
@@ -65,6 +66,9 @@ export default class DesktopMain extends Component {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/aboutus" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/success" element={<RegistrationSuccess />} />
+                <Route path="/error" element={<RegistrationFailure />} />
+                <Route path="/payment-cancelled" element={<RegistrationPaymentCancelled />} />
                 <Route path="/100-hrs-course" element={<Hrs hrs={100} />} />
                 <Route path="/200-hrs-course" element={<Hrs hrs={200} />} />
                 <Route path="/300-hrs-course" element={<Hrs hrs={300} />} />
@@ -74,6 +78,7 @@ export default class DesktopMain extends Component {
                 <Route path="/register" element={<RegistrationForm />} />
                 <Route path="/2-days-retreat" element={<RetreatType type={"2-day"} />} />
                 <Route path="/4-days-retreat" element={<RetreatType type={"4-day"} />} />
+                
                 {/* </Route> */}
               </Routes>
             </div>

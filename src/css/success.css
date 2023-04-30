@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+}
+
+/* .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.container img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  height: 18rem;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}

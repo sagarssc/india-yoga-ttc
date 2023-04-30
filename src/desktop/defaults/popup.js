@@ -1,22 +1,19 @@
-import React, { Component } from "react";
+import React from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import {Link, Routes, Route, useNavigate} from 'react-router-dom';
+import '../../css/popup.css'
 
-export function CustomPopUp(props){
-  const navigate = useNavigate();
-  const handleSubmit = event => {
-    event.preventDefault();
-    navigate('/');
-  };
 
+export function CustomPopUp({ isOpen, handleClose, content}){
   return (
-    <div className="popup-box">
-      <div className="box">
-        <div style={{textAlign:"center", fontSize:"25px", fontWeight:"700", lineHeight:"5rem"}}><text>{props.content.mainContent}</text></div>
-        <div style={{textAlign:"center", fontSize:"18px", fontWeight:"700"}}><text>{props.content.subContent}</text></div>
-        <div onClick={(e)=>handleSubmit(e)} style={{textAlign:"center", width:"5%", lineHeight:"2rem", margin:"auto", marginTop:"2rem", color:"white", fontSize:"20px", backgroundColor:"gray"}}>ok</div>
+    <Popup open={isOpen} onClose={handleClose} modal>
+      <div className="popup-container">
+        <h2>{content.mainContent}</h2>
+        <p>{content.subContent}</p>
+        <button onClick={handleClose}>Close</button>
       </div>
-    </div>
+    </Popup>
   );
 };
+
+// export default CustomPopUp;

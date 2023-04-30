@@ -3,6 +3,7 @@ import { Circles } from 'react-loader-spinner'
 import { submitQuery } from "../../core/request";
 import Loader from "../../core/loader"
 import { CustomPopUp } from "../defaults/popup";
+import {Contacts} from "../../constant/default"
 
 export default class QueryForm extends React.Component {
   constructor(props) {
@@ -14,9 +15,8 @@ export default class QueryForm extends React.Component {
       query: '',
       loader: false,
       popUp: false,
-      popUpContent: {mainContent:"", subContent:""},
+      popUpContent: {mainContent:"",subContent:""},
       };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -58,12 +58,14 @@ export default class QueryForm extends React.Component {
       let data = {}
       data["name"] = name
       data["email"] = email
-      data["phone"] = mobile
-      data["query"] = query
+      data["phone_number"] = mobile
+      data["message"] = query
+      event.preventDefault();
       let res = await submitQuery(data)
       if(res && res.status == "success"){
-        popUpContent.mainContent = "Your query is submitted successfully. we'll get back to you shortly"
-        popUpContent.subContent = "you will be redirected to home page now."
+        popUpContent = {mainContent:"Thank you for reaching out! Your query has been submitted successfully.", subContent:" Our team will review it and get back to you as soon as possible."}
+        // popUpContent.mainContent = "Your query is submitted successfully. we'll get back to you shortly"
+        // popUpContent.subContent = "you will be redirected to home page now."
         this.setState({
           popUpContent: popUpContent,
           popUp: true
@@ -72,7 +74,7 @@ export default class QueryForm extends React.Component {
       }
       else{
         popUpContent.mainContent = "We are unable to prcoess your request at this moment."
-        popUpContent.subContent = "please try after some time"
+        popUpContent.subContent = "Please try again later or contact us directly at "+Contacts.mobile+" or "+Contacts.email+".";
         this.setState({
           popUpContent: popUpContent,
           popUp: true
@@ -84,10 +86,14 @@ export default class QueryForm extends React.Component {
     event.preventDefault();
   }
 
+  closePopUp(){
+    this.setState({popUp:false})
+  }
+
   render() {
     let {loader, popUp, popUpContent} = this.state
     return (
-      <div>{popUp && <CustomPopUp content={popUpContent} />}
+      <div>{popUp && <CustomPopUp isOpen={popUp} handleClose={()=>this.closePopUp()} content={popUpContent} />}
         {loader ? <div style={{marginLeft:"50%"}}><Loader /></div> :
       <form onSubmit={this.handleSubmit} className="form">
         <label className="label">

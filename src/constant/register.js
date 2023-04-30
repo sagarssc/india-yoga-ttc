@@ -18,7 +18,7 @@ export const RegisterationForm = [
     mendatory: true
   },
   {
-    key:"phone",
+    key:"phone_number",
     label: "Mobile No.",
     type: "phone",
     value: "",
@@ -27,7 +27,7 @@ export const RegisterationForm = [
     mendatory: true
   },
   {
-    key:"whatsapp_phone",
+    key:"whatsapp_number",
     label: "Whatsapp Number",
     type: "phone",
     value: "",
@@ -56,7 +56,7 @@ export const RegisterationForm = [
     mendatory: true
   },
   {
-    key:"slot",
+    key:"batch",
     label: "Course Period",
     type: "dropdown",
     options: [],
@@ -79,7 +79,7 @@ export const RegisterationForm = [
 export const CourseCostAndSlot = {
   100: {
     text: "100 Hrs Teacher Training",
-    fee: "$499",
+    fee: "499",
     slots: [{value:"April", label:"April 2023 (1st - 12th)"},
             {value:"May", label:"May 2023 (1st - 12th)"},
             {value:"June", label:"June 2023 (1st - 12th)"},
@@ -87,7 +87,7 @@ export const CourseCostAndSlot = {
   },
   200: {
     text: "200 Hrs Teacher Training",
-    fee: "$599",
+    fee: "599",
     slots: [{value:"April", label:"April 2023 (1st - 18th)"},
     {value:"May", label:"May 2023 (1st - 18th)"},
     {value:"June", label:"June 2023 (1st - 18th)"},
@@ -95,7 +95,7 @@ export const CourseCostAndSlot = {
   },
   300: {
     text: "300 Hrs Teacher Training",
-    fee: "$699",
+    fee: "699",
     slots: [{value:"April", label:"April 2023 (1st - 22th)"},
     {value:"May", label:"May 2023 (1st - 22th)"},
     {value:"June", label:"June 2023 (1st - 22)"},
@@ -103,7 +103,7 @@ export const CourseCostAndSlot = {
   },
   500: {
     text: "500 Hrs Teacher Training",
-    fee: "$799",
+    fee: "799",
     slots: [{value:"April", label:"April 2023 (1st - 28th)"},
     {value:"May", label:"May 2023 (1st - 28th)"},
     {value:"June", label:"June 2023 (1st - 28th)"},
