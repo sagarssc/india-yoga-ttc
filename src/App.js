@@ -13,6 +13,8 @@ import Hrs100 from './desktop/courses/hrs';
 import DesktopMain from './desktopMain';
 import MobileMain from "./mobileMain";
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import { Helmet } from 'react-helmet';
+
 
 function App() {
   const [width, setWindowWidth] = useState(0);
@@ -31,6 +33,12 @@ function App() {
   const isDesktopScreen = width > 1023
   return (
     <div>
+      <Helmet>
+        <meta 
+          http-equiv="Content-Security-Policy"   
+          content="upgrade-insecure-requests" 
+        />
+      </Helmet>
       {/* <BrowserView><DesktopMain /></BrowserView>
       <MobileView><MobileMain /></MobileView> */}
     {isDesktopScreen ? <DesktopMain /> : <DesktopMain />}
