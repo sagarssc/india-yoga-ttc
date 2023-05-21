@@ -12,7 +12,7 @@ import { CustomPopUp } from "../defaults/popup";
 import { RegisterationForm, CourseCostAndSlot } from "../../constant/register";
 import Razorpay from "razorpay";
 import { Link, Routes, Route, useNavigate } from "react-router-dom";
-
+import "../../css/registration.css"
 function RegistrationForm() {
   const navigate = useNavigate();
   const [form, setForm] = useState(RegisterationForm);
@@ -26,6 +26,7 @@ function RegistrationForm() {
   });
   const [redirect, setRedirect] = useState(true);
   const [same_as_phone, setSameAsPhone] = useState(false);
+  const isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
     prepareCourseList();
@@ -255,8 +256,9 @@ function RegistrationForm() {
                 />
               )}
               {input.type == "phone" && (
-                <PhoneInput
-                  country={"us"}
+                <div>{!isMobile ? 
+                  <PhoneInput
+                   country={"us"}
                   value={input.value}
                   onChange={(e) => updateForm(index, e)}
                   containerStyle={{
@@ -289,7 +291,16 @@ function RegistrationForm() {
                     paddingLeft: "2.5rem",
                     border: "0.2rem solid grey",
                   }}
-                />
+                /> :
+                <PhoneInput
+                  country={'us'}
+                  value={input.value}
+                  onChange={(e) => updateForm(index, e)}
+                  containerStyle={{height:"3rem", width:"100%", borderWidth:"0rem", borderBottomWidth:".2rem", borderRadius:"1rem", margin:"2%", marginBottom:"0%"}}
+                  inputStyle={{height:"3rem", width:"95%", borderRadius:"1rem", paddingLeft:"4rem", margin:"6%", border:"0.2rem solid grey"}}
+                  dropdownStyle={{borderRadius:"1rem", paddingLeft:"0.5rem", margin:"2%"}}
+                  buttonStyle={{height:"3rem", width:"20%", borderTopLeftRadius:"1rem", borderBottomLeftRadius:"1rem", paddingLeft:"0.5rem", border:"0.2rem solid grey"}}
+                />}</div>
               )}
 
               {input.type == "radio" && (
@@ -320,27 +331,38 @@ function RegistrationForm() {
                 </div>
               )}
               {input.type == "dropdown" && (
-                <ReactSelect
-                  options={input.options}
-                  value={input.value}
-                  onChange={(e) => updateForm(index, e)}
-                  // isMulti={false}
-                  // isClearable={true}
-                  // closeMenuOnSelect = {true}
-                  // menuShouldScrollIntoView = {true}
-                  // menuIsOpen = {false}
-                  // // className = "register-input"
-                  // onBlur={() => this.setState({ forceUpdate: !this.state.forceUpdate })}
-                  styles={{
-                    control: (provided) => ({
-                      ...provided,
-                      border: "0.2rem solid grey",
-                      borderRadius: "1rem",
-                      width: "30rem",
-                      paddingLeft: "2rem",
-                    }),
-                  }}
-                />
+                <div>
+                  {!isMobile ? <ReactSelect
+                    options={input.options}
+                    value={input.value}
+                    onChange={(e) => updateForm(index, e)}
+                    styles={{
+                      control: (provided) => ({
+                        ...provided,
+                        border: "0.2rem solid grey",
+                        borderRadius: "1rem",
+                        marginLeft:"2%", 
+                        width: "30rem",
+                        paddingLeft: "2rem",
+                      }),
+                    }}
+                  /> :
+                  <ReactSelect
+                    options={input.options}
+                    value={input.value}
+                    onChange={(e) => updateForm(index, e)}
+                    styles={{
+                      control: (provided) => ({
+                        ...provided,
+                        border: "0.2rem solid grey",
+                        borderRadius: "1rem",
+                        marginLeft:"2%", 
+                        width: "100%",
+                        paddingLeft: "2rem",
+                      }),
+                    }}
+                  /> }
+                </div>
               )}
               {input.showError && (
                 <div>
@@ -358,44 +380,73 @@ function RegistrationForm() {
               )}
             </label>
           ))}
-          <div
-            style={{
-              display: "flex",
-              margin: "3%",
-              paddingTop: "4%",
-              width: "100%",
-            }}
-          >
-            <div
-              style={{
-                width: "50%",
-                textAlign: "center",
-                fontSize: "30px",
-                fontWeight: "700",
-                wordSpacing: "25px",
-              }}
-            >
-              <text>Fee : ${fee}</text>
-            </div>
-            <div style={{ width: "50%", marginLeft: "30%" }}>
-              <input
-                type="submit"
-                value="Book Now"
-                className="label"
+          {!isMobile ? 
+            <div style={{display: "flex",margin: "3%",paddingTop: "4%",width: "100%"}}>
+              <div
                 style={{
+                  width: "50%",
+                  textAlign: "center",
+                  fontSize: "30px",
                   fontWeight: "700",
-                  color: "gold",
-                  width: "75%",
-                  backgroundColor: "#5c5889",
-                  height: "3rem",
-                  borderRadius: "2rem",
-                  display: "inline-flex",
-                  marginBottom: "2%",
-                  justifyContent: "center",
+                  wordSpacing: "25px",
                 }}
-              />
+              >
+                <text>Fee : ${fee}</text>
+              </div>
+              <div style={{ width: "50%", marginLeft: "30%" }}>
+                <input
+                  type="submit"
+                  value="Book Now"
+                  className="label"
+                  style={{
+                    fontWeight: "700",
+                    color: "wheat",
+                    width: "75%",
+                    fontSize:"20px",
+                    backgroundColor: "#5c5889",
+                    height: "3rem",
+                    borderRadius: "2rem",
+                    display: "inline-flex",
+                    marginBottom: "2%",
+                    justifyContent: "center",
+                  }}
+                />
+              </div>
+            </div> : 
+            <div style={{display: "block",margin: "3%",paddingTop: "2%",width: "100%"}}>
+              <div
+                style={{
+                  width: "80%",
+                  textAlign: "center",
+                  fontSize: "30px",
+                  fontWeight: "700",
+                  wordSpacing: "25px",
+                  marginBottom: "4%"
+                }}
+              >
+                <text>Fee : ${fee}</text>
+              </div>
+              <div style={{ width: "80%", marginLeft: "auto", marginRight:"auto" }}>
+                <input
+                  type="submit"
+                  value="Book Now"
+                  className="label"
+                  style={{
+                    fontWeight: "700",
+                    color: "wheat",
+                    width: "75%",
+                    fontSize:"20px",
+                    backgroundColor: "#5c5889",
+                    height: "3rem",
+                    borderRadius: "2rem",
+                    display: "inline-flex",
+                    marginBottom: "2%",
+                    justifyContent: "center",
+                  }}
+                />
+              </div>
             </div>
-          </div>
+          }
         </form>
       )}
     </div>

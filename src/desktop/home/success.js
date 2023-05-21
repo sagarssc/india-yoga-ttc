@@ -24,7 +24,7 @@ const RegistrationSuccess = (props) => {
 
   return (
     <div className="container">
-      <div className="logo">
+      <div className="logo-msg">
         <img src={'./icons/logo.png'} alt="Logo" />
       </div>
       <div className="message">
@@ -61,7 +61,7 @@ const RegistrationFailure = () => {
 
   return (
     <div className="container">
-      <div className="logo">
+      <div className="logo-msg">
         <img src={'./icons/logo.png'} alt="Logo" />
       </div>
       <div className="message">
@@ -98,7 +98,7 @@ const RegistrationPaymentCancelled = () => {
 
   return (
     <div className="container">
-      <div className="logo">
+      <div className="logo-msg">
         <img src={'./icons/logo.png'} alt="Logo" />
       </div>
       <div className="message">

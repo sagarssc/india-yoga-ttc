@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import {QuickLinks} from '../../constant/constant'
+import "../../css/Home.css"
+
 export default class QuickLink extends Component {
   render() {
       let quickLinks = QuickLinks
+      const isMobile = window.innerWidth <= 768;
         return (
-          <div  className='links' style={{height:"100%", margin:"5%", display:'flex'}}>
+          <div style={{width:"100%"}}>
+          {!isMobile ? <div  className='links'>
             <div style={{width:"66%",height:"100%", display:"block"}}>
               <div style={{width:"100%",height:"20%", display:"flex", justifyContent:"space-between", paddingLeft:"1rem", paddingRight:"1rem"}}>
                 <text style={{fontSize:"37px", fontFamily:"'Poppins', sans-serif"}}>{quickLinks.heading}</text>
@@ -46,6 +50,38 @@ export default class QuickLink extends Component {
                 <p style={{fontWeight:"700", fontSize:"25px"}}> {quickLinks.contact}</p>
               </div>
             </div>
+          </div> : <div  style={{display:"block", margin: "5%"}}>
+              <div style={{width:"100%",height:"8rem", display:"flex", justifyContent:"space-between", paddingLeft:"1rem", paddingRight:"1rem"}}>
+                <text style={{fontSize:"27px", fontFamily:"'Poppins', sans-serif"}}>{quickLinks.heading}</text>
+                <div style={{width:"40%",height:"100%", backgroundImage:quickLinks.headImgUrl, backgroundSize:"100% 100%"}}></div>
+              </div>
+                <div style={{height:"16rem",margin:"2% 2% 0% 2%",display:"block"}}>
+                  <Link to={quickLinks.imageLinks[0].link} className="link">
+                    <div className="gery-image" style={{height:"100%", backgroundImage:quickLinks.imageLinks[0].img, backgroundSize:"100% 100%"}}>
+                      <div style={{position:"absolute", textAlign:"center", bottom:"10%", width:"40%"}}>
+                      <text style={{fontSize:"25px", fontWeight:"700", color:"white"}}>{quickLinks.imageLinks[0].title}</text>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                <div style={{height:"16rem",margin:"2% 2% 0% 2%",display:"block", paddingTop:"10%"}}>
+                  <Link to={quickLinks.imageLinks[1].link} className="link"><div className="gery-image" style={{height:"100%", backgroundImage:quickLinks.imageLinks[1].img, backgroundSize:"100% 100%"}}>
+                      <div style={{position:"absolute", textAlign:"center", bottom:"10%", width:"40%"}}>
+                        <text style={{fontSize:"25px", fontWeight:"700", color:"white"}}>{quickLinks.imageLinks[1].title}</text>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                <div style={{height:"16rem",margin:"2% 2% 0% 2%",display:"block", paddingTop:"10%"}}>
+                    <Link to={quickLinks.imageLinks[2].link} className="link"><div className="gery-image" style={{height:"100%", backgroundImage:quickLinks.imageLinks[2].img, backgroundSize:"100% 100%"}}>
+                          <div style={{position:"absolute", textAlign:"center", bottom:"10%", width:"40%"}}>
+                            <text style={{fontSize:"25px", fontWeight:"700", color:"white"}}>{quickLinks.imageLinks[2].title}</text>
+                          </div>
+                      </div>
+                    </Link>
+                </div>
+          </div>
+          }
           </div>
         );
     }

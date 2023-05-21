@@ -108,7 +108,7 @@ export default class QueryForm extends React.Component {
         <label className="label">
           <textarea type="text" value={this.state.query} placeholder={"Message*"} onChange={(e) => this.handleChange(e, 'query')} className="textarea"/>
         </label>
-        <input type="submit" value="Submit" className="label" style={{fontWeight:"700", color:'gold', width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginBottom:"2%", justifyContent:"center", marginLeft:"4.8%"}}/>
+        <input type="submit" value="Submit" className="label" style={{fontWeight:"700", color:'#5c5889', width:"50%", backgroundColor:"#5c5889", height:"4rem", borderRadius:"2rem", display:"inline-flex", marginBottom:"2%", justifyContent:"center", marginLeft:"4.8%"}}/>
       </form>}</div>
     );
   }

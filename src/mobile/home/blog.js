@@ -170,8 +170,8 @@ export default class Blog extends Component {
               {current_blogs.map((blog, index)=>( 
               <div style={{padding:"2%"}}>
                 <img className="blog-image" src={blog.image} style={{width:"90%"}}/>
-              <div style={{paddingTop:"2%", color:"gold", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.date}</text></div>
-              <div className="blog-heading"><text>{blog.header}</text></div>
+              <div style={{paddingTop:"2%", color:"#5c5889", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.date}</text></div>
+              <div className="blog-heading"><text>{blog.title}</text></div>
               <div style={{paddingTop:"2%", color:"black", fontSize:"15px", fontWeight:"300", width:"90%"}}><text>{blog.description}</text></div>
               <div onClick={()=>this.onReadMore(blog._id)} className="pointer" style={{width:"20%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"1.5%"}}>
                   <text style={{fontWeight:"700", color:"wheat"}}>Read More</text>
@@ -183,7 +183,7 @@ export default class Blog extends Component {
                   </div>}
 
                   {indexes.map((val, index) => ( <div style={{width:"6%", margin:".5rem" }}> 
-                    {val == current_index ? <div className="index-button" style={{width:"100%",backgroundColor:"gold", height:"100%", borderRadius:"50%"}}>
+                    {val == current_index ? <div className="index-button" style={{width:"100%",backgroundColor:"#5c5889", height:"100%", borderRadius:"50%"}}>
                     {val}
                     </div> :  <div className="index-button" style={{width:"100%",backgroundColor:"#f0e7d6", height:"100%", borderRadius:"50%"}} onClick={()=>this.changePage(val)}>
                     {val}
@@ -200,9 +200,9 @@ export default class Blog extends Component {
                 <DetailedBlog selectedBlog={selectedBlog} />
               </div>
               }
-            {allBlogs.length > 0 && <div className="category" style={{width:"30%",padding:"2%", position: "-webkit-sticky", position:"sticky",top:"0", bottom:"0", height:"90%" }}>
+            {/* {allBlogs.length > 0 && <div className="category" style={{width:"30%",padding:"2%", position: "-webkit-sticky", position:"sticky",top:"0", bottom:"0", height:"90%" }}>
               <RightSideBar categories={categories} onSelectCategory={this.onSelectCategory} onSelectBlog={(id)=>this.onReadMore(id)} blogs={allBlogs}/>
-            </div>}
+            </div>} */}
           </div>}</div>
         );
     }

@@ -32,7 +32,7 @@ export default class Contact extends Component {
             {contactus.ContactDetails.map((contact, index)=>(
               <div style={{display:"flex", marginLeft:"auto", marginRight:"auto", width:"90%"}}>
                 <div style={{width:"30%"}}>
-                  <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundColor:"gold"}}></div>
+                  <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundColor:"#5c5889"}}></div>
                 </div>
                 <div style={{width:"80%"}}>
                   <p style={{margin:"0", fontWeight:"700"}}>{contact.heading}</p>

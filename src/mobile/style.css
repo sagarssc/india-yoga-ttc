@@ -25,7 +25,7 @@
 
 .menu-text{
   padding: 1rem;
-  /* border: 2px solid gold; */
+  /* border: 2px solid #5c5889; */
 }
 
 .logo {
@@ -51,7 +51,7 @@
 
 .menu-text:hover{
   padding: 1rem;
-  border-bottom: 2px solid gold;
+  border-bottom: 2px solid #5c5889;
   font-size: 25px;
   background-color: #f1f1f1;
   border-width: 5px;
@@ -63,7 +63,7 @@
 
 .menu-text2:hover{
   padding: 1rem;
-  border-bottom: 2px solid gold;
+  border-bottom: 2px solid #5c5889;
   font-size: 20px;
   background-color: #f1f1f1;
   border-width: 5px;
@@ -146,7 +146,7 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content3 a:hover {color: gold;}
+.dropdown-content3 a:hover {color: #5c5889;}
 
 /* Show the dropdown menu on hover */
 .dropdown3:hover .dropdown-content3 {display: block;}
@@ -221,8 +221,8 @@
   height: auto;
   text-align: center;
   display: inline-grid;
-  border-bottom: 5px solid gold;
-  color: gold;
+  border-bottom: 5px solid #5c5889;
+  color: #5c5889;
 }
 
 .course2 img {

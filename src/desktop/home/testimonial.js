@@ -13,11 +13,12 @@ export default class Testimonials extends Component {
             showArrows={true}
             showThumbs={false}
             showStatus={false}
-            autoPlay={true}
+            autoPlay={false}
             interval={6100}
             infiniteLoop={true}
             transitionTime={1000}
             swipeScrollTolerance={5}
+            width={"100%"}
           >
             {reviews.map((review, index) => (
               <div key={index} className="testimonial">

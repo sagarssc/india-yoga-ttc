@@ -53,11 +53,11 @@ export default class Recents extends Component {
               {blogs.map((blog, index) => (
                   <div onClick={()=>this.props.onSelectBlog(blog._id)} className="pointer" style={{display:"flex", marginTop:"1rem", paddingBottom:"1rem",borderBottom:"1px #ededed solid"}}>
                     <div style={{width:"30%"}}>
-                      <img src={blog.image} style={{width:"100%", height:"auto"}}/>
+                      <img src={blog.image_path} style={{width:"100%", height:"auto"}}/>
                     </div>
                     <div style={{width:"70%", display:"block", paddingLeft:".5rem"}}>
                       <div style={{paddingTop:"2%", color:"#ecb537", fontSize:"15px", fontWeight:"500", fontFamily:"'Poppins'"}}><text>{blog.date}</text></div>
-                      <h6 style={{color: "black", fontSize:"18px", fontFamily:"'Poppins'", fontWeight:"600"}}>{blog.header.slice(0,30) + '....'}</h6>
+                      <h6 style={{color: "black", fontSize:"18px", fontFamily:"'Poppins'", fontWeight:"600"}}>{blog.title.slice(0,30) + '....'}</h6>
                     </div>
                   </div>
               ))}

@@ -1,0 +1,67 @@
+/* Add this CSS to your existing CSS file or create a new CSS file for TransparentDiv component */
+
+.transparent-container {
+  width: 40%;
+  height: 100%;
+  background-color: #e4dadab8;
+  margin-left: 10%;
+  border-top-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.transparent-quote {
+  margin: auto;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.transparent-author {
+  margin: auto;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .transparent-container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+  }
+
+  .transparent-quote {
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+  }
+
+  .transparent-author {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transparent-container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+  }
+
+  .transparent-quote {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .transparent-author {
+    font-size: 16px;
+  }
+}

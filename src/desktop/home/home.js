@@ -17,6 +17,7 @@ import LazyLoad from "react-lazyload";
 
 export default function Home(props) {
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const isMobile = window.innerWidth <= 768;
 
   const handleSelectCourse = (hours) => {
     setSelectedCourse(hours);
@@ -38,14 +39,14 @@ export default function Home(props) {
               "url(https://d2rfai7fb7k0t1.cloudfront.net/images/home/bg/IMG_5008.JPG)",
             width: "100%",
             height: "25rem",
-            backgroundSize: "cover",
+            backgroundSize: "100% 100%",
             backgroundAttachment: "fixed",
           }}
         >
           <TransparentDiv />
         </div>
       </LazyLoad>
-      <div className="blocks">
+      <div className="blocks" style={{height:"auto"}}>
         <QuickLink />
       </div>
       <div className="explore-courses">
@@ -54,9 +55,9 @@ export default function Home(props) {
       <div className="common-div">
         <ExtraDiv extraDetails={extraDetailsHome} />
       </div>
-      <div className="testimonials transparent-div">
+      {!isMobile && <div className="testimonials transparent-div">
         <CircularDiv />
-      </div>
+      </div>}
       <div className="testimonials">
         <Faq />
       </div>

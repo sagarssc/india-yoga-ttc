@@ -25,7 +25,7 @@ export default class Hrs extends Component {
           }}
         ></div>
           <div style={{position:"absolute", bottom:"15%", width:"40%", marginLeft:"30%", backgroundColor:"#ffffff5e", textAlign:"center"}}>
-            <text style={{fontSize:"30px", fontWeight:"700", color:"gold"}}>{course.title}</text>
+            <text style={{fontSize:"30px", fontWeight:"700", color:"#5c5889"}}>{course.title}</text>
             </div>
         </div>
         <div className="hrs-course">

@@ -19,7 +19,7 @@ export default class Ratings extends Component {
                     <div style={{fontSize:"22px", color:"#af9c9c"}}> {comp.rating} / {comp.max}</div>
                     <StarRatings
                       rating={comp.rating}
-                      starRatedColor="gold"
+                      starRatedColor="#5c5889"
                       numberOfStars={comp.max}
                       starDimension="20px"
                       name='rating'

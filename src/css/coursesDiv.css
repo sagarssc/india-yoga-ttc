@@ -1,0 +1,69 @@
+.courses {
+  padding: auto;
+  border-radius: 5px;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-around;
+}
+
+.course {
+  /* background-color: #7e7aa2; */
+  /* background-color: #f4f4f5; */
+  border-radius: 1rem;
+  width: 90%;
+  /* margin: 1rem; */
+  height: auto;
+  text-align: center;
+  display: inline-grid;
+}
+
+.course:hover {
+  border-radius: 1rem;
+  width: 90%;
+  height: auto;
+  border-bottom: 5px solid #5c5889;
+  color: #5c5889;
+}
+
+.course img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.selected-course {
+  border-radius: 1rem;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  display: inline-grid;
+  background-color: #f1f1f1;
+  color: #5c5889;
+  border-bottom: 5px solid #5c5889;
+} 
+
+.selected img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .courses {
+    padding: auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #fff;
+    justify-content: space-around;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .courses {
+    padding: auto;
+    border-radius: 5px;
+    display: block;
+    background-color: #fff;
+    justify-content: space-around;
+  }
+}

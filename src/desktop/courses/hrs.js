@@ -25,7 +25,7 @@ export default class Hrs extends Component {
           }}
         ></div>
           <div style={{position:"absolute", bottom:"15%", width:"40%", marginLeft:"30%", backgroundColor:"#ffffff5e", textAlign:"center"}}>
-            <text style={{fontSize:"30px", fontWeight:"700", color:"gold"}}>{course.title}</text>
+            <text style={{fontSize:"30px", fontWeight:"700", color:"#5c5889"}}>{course.title}</text>
             </div>
         </div>
         <div className="hrs-course">
@@ -38,12 +38,15 @@ export default class Hrs extends Component {
         <Schdule />
         {KeyPoint.map((obj, index) => (
         // <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"#ffffff33", borderTopLeftRadius:"15%", borderBottomRightRadius:"15%", boxShadow:"-5px 5px 4px 4px"}}>
-        <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white", backgroundImage:"url('./home/bg/4.png')"}}>
+        <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white",backgroundRepeat:"no-repeat", backgroundImage:"url('./home/bg/4.png')", display:"flex", justifyContent:"space-between"}}>
+          <img src={backgroundImage} style={{width:"48%", backgroundSize: "100% 80%", padding:"3%", borderTopLeftRadius:"20%", borderBottomRightRadius:"20%"}}/>
+        <div style={{width:"48%"}}>
           <p style={{fontSize:"25px", fontWeight:"700", fontFamily:"'Poppins', sans-serif", padding:"2% 6% 0%"}}>{obj.header}</p>
-          <ul style={{listStyleType: "none", padding:"0", paddingBottom:"3%", lineHeight:"3rem"}}>{obj.points.map((point, index) => ( 
+          <ul style={{listStyleType: "square", listStylePosition: "inside", padding:"0", paddingBottom:"3%", lineHeight:"3rem"}}>{obj.points.map((point, index) => ( 
             <div>{index %2 == 0 ? <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"bisque"}}>{point}</li>
             : <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"cornsilk"}}>{point}</li>}</div>
             ))}</ul>
+        </div>
         </div>))}
       </div>
       </div>

@@ -1,0 +1,123 @@
+.links {
+  height: 40rem;
+  margin: 5%;
+  display: flex;
+}
+
+.links h1 {
+  font-size: 37px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.links .gery-image {
+  height: 100%;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.links .gery-image div {
+  position: absolute;
+  bottom: 10%;
+  width: 40%;
+}
+
+.links .link {
+  text-decoration: none;
+}
+
+.links .link:hover .gery-image {
+  transform: scale(1.05);
+}
+
+.links .link:hover .gery-image div {
+  bottom: 15%;
+}
+
+.links .bg-color {
+  height: 30%;
+  background-color: #f2e0d0;
+}
+
+.links .bg-color2 {
+  height: 20%;
+  background-color: #cad8e6;
+}
+
+.links .bg-color3 {
+  height: 25%;
+  background-color: #ffc13e;
+  justify-content: center;
+  text-align: center;
+  padding-top: 8%;
+}
+
+.links .contact {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+
+.ratings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.rating-item {
+  width: 25%;
+  height: 6rem;
+  margin: 2rem;
+  background-color: white;
+  display: flex;
+  padding: 2rem;
+  text-align: center;
+  border: 6px solid #e2dddd;
+  border-radius: 1rem;
+}
+
+.rating-star {
+  width: 25%;
+  height: 6rem;
+  margin: 2rem;
+  background-color: white;
+  display: flex;
+  padding: 1%;
+  text-align: center;
+  border: 6px solid #e2dddd;
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .ratings {
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+  }
+
+  .rating-item {
+    width: 80%;
+    height: 6rem;
+    background-color: white;
+    padding-top: 1rem;
+    text-align: center;
+    border: 6px solid #e2dddd;
+    border-radius: 1rem;
+  }
+
+  .rating-star {
+    width: 80%;
+    height: 6rem;
+    margin: 2rem;
+    background-color: white;
+    display: flex;
+    padding: 1%;
+    text-align: center;
+    border: 6px solid #e2dddd;
+    border-radius: 1rem;
+  }
+  
+}

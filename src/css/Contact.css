@@ -1,0 +1,140 @@
+/* Contact.css */
+
+.contact-container {
+  margin-bottom: 2%;
+}
+
+.contact-background {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+}
+
+.contact-details {
+  padding-top: 2rem;
+  justify-content: space-around;
+}
+
+/* .heading { */
+  /* Add your heading styles */
+/* } */
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  width: 30%;
+}
+
+.contact-icon {
+  width: 30%;
+  height: 4rem;
+  background-size: 100% 100%;
+  background-color: #5c5889;
+  /* Add any additional styles for the contact icon */
+}
+
+.contact-info {
+  width: 80%;
+  /* Add your contact info styles */
+}
+
+.contact-heading {
+  margin: 0;
+  font-weight: 700;
+  /* Add your contact heading styles */
+}
+
+/* .contact-link { */
+  /* Add your contact link styles */
+/* } */
+
+.social-media {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  display: block;
+  /* Add your social media container styles */
+}
+
+.follow-heading {
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+  /* Add your follow heading styles */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10%;
+  /* Add your social icons container styles */
+}
+
+/* .social-icon { */
+  /* Add your social icon styles */
+/* } */
+
+.contact-form {
+  margin: 2.5%;
+  margin-left: 0%;
+  background-color: white;
+  display: flex;
+  /* Add your contact form container styles */
+}
+
+.map-container {
+  width: 50%;
+  padding-left: 2%;
+  /* Add your map container styles */
+}
+
+.form-container {
+  width: 50%;
+  z-index: 9999;
+  margin: auto;
+  /* Add your form container styles */
+}
+
+/* .form-background { */
+  /* Add your form background styles */
+/* } */
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    width: 100%;
+  }
+
+  .social-icons {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .follow-heading {
+    font-size: 18px;
+  }
+}

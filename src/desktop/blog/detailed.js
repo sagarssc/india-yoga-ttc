@@ -6,41 +6,59 @@ import "../../index.css";
 import Categories from "./categories";
 import Recents from "./recents";
 
-
 export default class DetailedBlog extends Component {
   constructor(props) {
     super(props);
     this.state = {
       blog: {},
-      isLoaded:false
+      isLoaded: false
     };
   }
 
-  componentDidMount(){
-    let {selectedBlog} = this.props
+  componentDidMount() {
+    const { selectedBlog } = this.props;
     this.setState({
       blog: selectedBlog,
       isLoaded: true
-    })
+    });
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.setState({
-      isLoaded:false
-    })
+      isLoaded: false
+    });
   }
 
-    render() {
-      let {blog, isLoaded} = this.state
-        return (
-          <div style={{width:"100%"}}>
-            {isLoaded && <div style={{padding:"2%"}}>
-                <img className="blog-image" src={blog.image} style={{width:"90%"}}/>
-              <div style={{paddingTop:"2%", color:"gold", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.date}</text></div>
-              <div className="blog-heading"><text>{blog.header}</text></div>
-              <div style={{paddingTop:"2%", color:"black", fontSize:"15px", fontWeight:"300", width:"90%"}}><text>{blog.content}</text></div>
-            </div>}
+  render() {
+    const { blog, isLoaded } = this.state;
+
+    return (
+      <div style={{ width: "100%", fontFamily: "Arial, sans-serif" }}>
+        {isLoaded && (
+          <div style={{ padding: "2%" }}>
+            <img className="blog-image" src={blog.image_path} style={{ width: "90%" }} />
+            <div style={{ paddingTop: "2%", color: "#5c5889", fontSize: "18px", fontWeight: "500", fontFamily: "Poppins" }}>
+              {blog.date}
+            </div>
+            <h1 className="blog-heading" style={{ fontFamily: "Georgia, serif" }}>{blog.title}</h1>
+            <div style={{ paddingTop: "2%", color: "black", fontSize: "15px", fontWeight: "300", width: "90%", fontFamily: "Arial, sans-serif" }}>
+              {blog.content.content}
+            </div>
+            {blog.content.subcontent && (
+              <div>
+                {blog.content.subcontent.map((paragraph, index) => (
+                  <div key={index}>
+                    <h2 className="sub-heading" style={{ fontSize: "25px", fontWeight: "500", width: "90%", fontFamily: "Georgia, serif" }}>{paragraph.title}</h2>
+                    <div style={{ paddingTop: ".5%", color: "black", fontSize: "15px", fontWeight: "300", width: "90%", fontFamily: "Arial, sans-serif" }}>
+                      {paragraph.content}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-        );
-    }
+        )}
+      </div>
+    );
+  }
 }

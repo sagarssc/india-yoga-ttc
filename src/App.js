@@ -33,12 +33,12 @@ function App() {
   const isDesktopScreen = width > 1023
   return (
     <div>
-      <Helmet>
+      {/* <Helmet>
         <meta 
           http-equiv="Content-Security-Policy"   
           content="upgrade-insecure-requests" 
         />
-      </Helmet>
+      </Helmet> */}
       {/* <BrowserView><DesktopMain /></BrowserView>
       <MobileView><MobileMain /></MobileView> */}
     {isDesktopScreen ? <DesktopMain /> : <DesktopMain />}

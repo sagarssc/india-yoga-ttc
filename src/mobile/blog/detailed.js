@@ -36,8 +36,8 @@ export default class DetailedBlog extends Component {
           <div style={{width:"100%"}}>
             {isLoaded && <div style={{padding:"2%"}}>
                 <img className="blog-image" src={blog.image} style={{width:"90%"}}/>
-              <div style={{paddingTop:"2%", color:"gold", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.date}</text></div>
-              <div className="blog-heading"><text>{blog.header}</text></div>
+              <div style={{paddingTop:"2%", color:"#5c5889", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.date}</text></div>
+              <div className="blog-heading"><text>{blog.title}</text></div>
               <div style={{paddingTop:"2%", color:"black", fontSize:"15px", fontWeight:"300", width:"90%"}}><text>{blog.content}</text></div>
             </div>}
           </div>

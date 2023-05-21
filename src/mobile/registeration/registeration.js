@@ -352,7 +352,7 @@ export default class RegistrationForm extends React.Component {
         ))}
         <div style={{display:"block", margin:"3%", paddingTop:"4%", width:"100%"}}>
            <div style={{width:"100%", textAlign:"center", fontSize:"30px", fontWeight:"700", wordSpacing:"25px"}}><text>Fee : {  fee}</text></div>
-           <div style={{width:"100%", marginLeft:"15%"}}><input type="submit" value="Book Now" className="label" style={{fontWeight:"700", color:'gold', width:"60%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginBottom:"2%", justifyContent:"center"}}/></div>
+           <div style={{width:"100%", marginLeft:"15%"}}><input type="submit" value="Book Now" className="label" style={{fontWeight:"700", color:'#5c5889', width:"60%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginBottom:"2%", justifyContent:"center"}}/></div>
         </div>
       </form>
        } 

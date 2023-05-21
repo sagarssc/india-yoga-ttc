@@ -3,31 +3,17 @@ import "../../index.css";
 import { useNavigate } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import { webRatings } from "../../constant/constant";
+import "../../css/Home.css"
 
 export default class Ratings extends Component {
   render() {
     return (
       <div>
         <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            marginTop: "2rem",
-          }}
+          className="ratings"
         >
           <div
-            style={{
-              width: "25%",
-              height: "6rem",
-              margin: "2rem",
-              backgroundColor: "white",
-              paddingTop: "2%",
-              textAlign: "center",
-              border: "6px solid #e2dddd",
-              borderRadius: "1rem",
-            }}
+            className="rating-item"
           >
             <h3 style={{ fontSize: "22px", color: "#af9c9c" }}>
               {webRatings.students.text}
@@ -39,16 +25,7 @@ export default class Ratings extends Component {
           {webRatings.stars.map((comp, index) => (
             <div
               key={index}
-              style={{
-                width: "25%",
-                height: "6rem",
-                margin: "2rem",
-                backgroundColor: "white",
-                display: "flex",
-                padding: "1%",
-                border: "6px solid #e2dddd",
-                borderRadius: "1rem",
-              }}
+              className="rating-star"
             >
               <div
                 style={{
@@ -65,7 +42,7 @@ export default class Ratings extends Component {
                 </div>
                 <StarRatings
                   rating={comp.rating}
-                  starRatedColor="gold"
+                  starRatedColor="#5c5889"
                   numberOfStars={comp.max}
                   starDimension="20px"
                   name="rating"
