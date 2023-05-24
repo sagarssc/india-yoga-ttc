@@ -728,7 +728,7 @@ tr:nth-child(odd){
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 99999;
+  /* z-index: 99999; */
 }
  
 .box {
@@ -761,4 +761,12 @@ tr:nth-child(odd){
   text-align: center;
   border: 1px solid #999;
   font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .blocks{
+    position: relative;
+    padding-bottom: 2rem;
+    height: 20rem;
+  } 
 }

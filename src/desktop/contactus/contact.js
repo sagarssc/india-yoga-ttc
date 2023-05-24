@@ -53,14 +53,12 @@ export default class Contact extends Component {
             </div>
           </div>
         </div>
-        <div className="contact-form">
-          <div className="map-container">
-            <MapComponent />
-          </div>
-          <div className="form-container">
-            <div className="form-background"></div>
-            <QueryForm />
-          </div>
+        <div className="form-container">
+          <div className="form-background"></div>
+          <QueryForm />
+        </div>
+        <div className="map-container">
+          <MapComponent />
         </div>
       </div>
     );

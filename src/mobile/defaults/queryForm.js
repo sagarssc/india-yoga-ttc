@@ -35,7 +35,8 @@ export default class QueryForm extends React.Component {
   }
 
  async handleSubmit(event) {
-    let {name, email, mobile, query, loader} = this.state
+    let {name, email, mobile, query} = this.state
+    window.scrollTo(0, 0);
     let {popUpContent} = this.state
     this.setState({loader: true})
     let errors = []
@@ -89,8 +90,14 @@ export default class QueryForm extends React.Component {
     let {loader, popUp, popUpContent} = this.state
     return (
       <div>{popUp && <CustomPopUp2 content={popUpContent} />}
-      {loader ? <div style={{marginLeft:"50%"}}><Loader /></div> :
+      {loader ? <div><Loader /></div> :
       <form onSubmit={this.handleSubmit} className="form">
+        <label className="label">
+          <input type="text" value={this.state.name} placeholder={"Name*"} onChange={(e) => this.handleChange(e, 'name')} className="input"/>
+        </label>
+        <label className="label">
+          <input type="text" value={this.state.name} placeholder={"Name*"} onChange={(e) => this.handleChange(e, 'name')} className="input"/>
+        </label>
         <label className="label">
           <input type="text" value={this.state.name} placeholder={"Name*"} onChange={(e) => this.handleChange(e, 'name')} className="input"/>
         </label>

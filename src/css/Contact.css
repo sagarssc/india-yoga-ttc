@@ -14,11 +14,6 @@
   padding-top: 2rem;
   justify-content: space-around;
 }
-
-/* .heading { */
-  /* Add your heading styles */
-/* } */
-
 .contact-list {
   display: flex;
   margin-left: auto;
@@ -36,23 +31,17 @@
   height: 4rem;
   background-size: 100% 100%;
   background-color: #5c5889;
-  /* Add any additional styles for the contact icon */
 }
 
 .contact-info {
   width: 80%;
-  /* Add your contact info styles */
 }
 
 .contact-heading {
   margin: 0;
   font-weight: 700;
-  /* Add your contact heading styles */
 }
 
-/* .contact-link { */
-  /* Add your contact link styles */
-/* } */
 
 .social-media {
   width: 20%;
@@ -60,7 +49,6 @@
   margin-right: auto;
   justify-content: space-around;
   display: block;
-  /* Add your social media container styles */
 }
 
 .follow-heading {
@@ -68,46 +56,33 @@
   font-weight: 700;
   text-align: center;
   font-size: 1.2rem;
-  /* Add your follow heading styles */
 }
 
 .social-icons {
   display: flex;
   justify-content: space-around;
   margin-left: 10%;
-  /* Add your social icons container styles */
 }
-
-/* .social-icon { */
-  /* Add your social icon styles */
-/* } */
 
 .contact-form {
   margin: 2.5%;
   margin-left: 0%;
   background-color: white;
   display: flex;
-  /* Add your contact form container styles */
 }
 
 .map-container {
-  width: 50%;
-  padding-left: 2%;
-  /* Add your map container styles */
+  width: 100%;
+  margin: 2%;
+  height: 30rem;
 }
 
 .form-container {
   width: 50%;
-  z-index: 9999;
+  z-index: 1;
   margin: auto;
-  /* Add your form container styles */
 }
 
-/* .form-background { */
-  /* Add your form background styles */
-/* } */
-
-/* Media queries for responsiveness */
 
 @media (max-width: 768px) {
   .contact-details {
@@ -115,26 +90,48 @@
     align-items: center;
   }
 
-  .contact-item {
+  .social-media {
     width: 100%;
+    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    display: block;
+  }
+
+  .contact-item {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1rem;
   }
 
   .social-icons {
     margin-left: 0;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .form-container {
     width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  .heading {
-    font-size: 24px;
+  .contact-list {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 
-  .follow-heading {
-    font-size: 18px;
+  .contact-form {
+    margin: 2.5%;
+    margin-left: 0%;
+    background-color: white;
+    display: block;
+  }
+
+  .map-container {
+    width: 100%;
+    margin: 2%;
+    height: 20rem;
   }
 }

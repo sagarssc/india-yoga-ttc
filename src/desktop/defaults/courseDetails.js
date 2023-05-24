@@ -13,7 +13,7 @@ export default class CourseDetails extends Component {
 
 
     return (
-      <div style={{ height: "auto", backgroundColor:"white", backgroundImage:"url('./home/bg/3.png')", backgroundPosition: "left", backgroundRepeat:"no-repeat", marginBottom: "2rem" }}>
+      <div style={{ height: "auto", backgroundColor:"white", backgroundImage:"url('./home/bg/3.png')", backgroundPosition: "left", backgroundRepeat:"no-repeat", marginBottom: "2rem",paddingBottom:"2rem"}}>
         {displayTitle ? (
           <h2 style={{ fontSize: "2rem", fontFamily: "'Poppins', sans-serif" }}>{title}</h2>
         ) : (
@@ -34,8 +34,8 @@ export default class CourseDetails extends Component {
               {displayTitle && (
                 <div style={{ height: "5rem" }}>
                   <Link to={ref_link} className="link">
-                    <div style={{ width: "50%", backgroundColor: "#5c5889", height: "4rem", borderRadius: "2rem", display: "inline-flex", marginTop: "1rem", boxShadow: "-2px 3px 5px 5px", justifyContent: "center", paddingTop: "2%" }}>
-                      <h3 style={{ fontWeight: "700", color: "wheat" }}>Read More</h3>
+                    <div style={{ width: "50%", backgroundColor: "#5c5889", height: "3rem", borderRadius: "2rem", display: "inline-flex", marginTop: "1rem", boxShadow: "-2px 3px 5px 5px", justifyContent: "center", paddingTop: "1%" }}>
+                      <h3 style={{ fontWeight: "700", color: "wheat", fontSize:"25px"}}>Read More</h3>
                     </div>
                   </Link>
                 </div>
