@@ -15,6 +15,7 @@
 .popup-container p {
   font-size: 18px;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
 .popup-container button {
