@@ -11,7 +11,6 @@ import Home from  "./desktop/home/home";
 import Footer from './desktop/defaults/footer';
 import Hrs100 from './desktop/courses/hrs';
 import DesktopMain from './desktopMain';
-import MobileMain from "./mobileMain";
 import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 import { Helmet } from 'react-helmet';
 
