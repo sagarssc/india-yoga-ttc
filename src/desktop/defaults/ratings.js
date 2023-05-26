@@ -15,7 +15,7 @@ export default class Ratings extends Component {
           <div
             className="rating-item"
           >
-            <h3 style={{ fontSize: "22px", color: "#af9c9c" }}>
+            <h3 style={{ fontSize: "22px", color: "#af9c9c", marginLeft:"auto", marginRight:"auto" }}>
               {webRatings.students.text}
             </h3>
             <h2 style={{ fontSize: "30px", fontWeight: "bold" }}>

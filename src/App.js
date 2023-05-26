@@ -30,18 +30,12 @@ function App() {
     setWindowWidth(width);
   };
 
-  const isDesktopScreen = width > 1023
   return (
     <div>
-      {/* <Helmet>
-        <meta 
-          http-equiv="Content-Security-Policy"   
-          content="upgrade-insecure-requests" 
-        />
-      </Helmet> */}
-      {/* <BrowserView><DesktopMain /></BrowserView>
-      <MobileView><MobileMain /></MobileView> */}
-    {isDesktopScreen ? <DesktopMain /> : <DesktopMain />}
+      <Helmet>
+        <title>India Yoga TTC</title>
+      </Helmet>
+      <DesktopMain />
     </div>
   );
 }
