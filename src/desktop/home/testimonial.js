@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Carousel } from "react-responsive-carousel";
+import SimpleImageSlider from "react-simple-image-slider";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { reviews } from "../../constant/home";
 import "../../css/Testimonials.css";
 
