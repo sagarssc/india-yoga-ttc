@@ -66,7 +66,7 @@ export default class Navbar extends Component {
               </div>
             </div> :
             <div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
-            <div className="nav-container2">
+            <div className="nav-container2" style={{width:"100%", display:"flex"}}>
               <Link to="/" className="link" style={{width:"100%"}}>
               <div style={{display:"flex"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"10%", height:"2rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
                 <div className="logo-mobile">
