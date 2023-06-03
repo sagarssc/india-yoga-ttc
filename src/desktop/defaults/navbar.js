@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { isMobile } from "react-device-detect";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "../../index.css";
+import "../../css/navbar1.css"
 
 
 const titles = [  
@@ -67,9 +68,9 @@ export default class Navbar extends Component {
             </div> :
             <div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
             <div className="nav-container2" style={{width:"100%", display:"flex"}}>
-              <Link to="/" className="link" style={{width:"100%"}}>
-              <div style={{display:"flex"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"10%", height:"2rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
-                <div className="logo-mobile">
+              <Link to="/" className="link" style={{width:"100%", display:"flex", alignItems:"center"}}>
+              <div style={{display:"flex", width:"90%", alignItems:"center", justifyContent:"space-around"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"10%", height:"2rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
+                <div className="logo-large" style={{fontSize:"20px"}}>
                 INDIA YOGA TTC
               </div></div>
               </Link>

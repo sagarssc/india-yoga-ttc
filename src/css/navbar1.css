@@ -1,0 +1,92 @@
+.nav-container2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  float: auto;
+}
+
+.dropbtn3 {
+  color: black;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown2 {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content2 {
+  display: none;
+  right: 1%;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 15rem;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content3 {
+  display: none;
+  font-size: 10px;
+  /* padding-left: 20%; */
+  text-align: center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content3 a {
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content3 a:hover {color: #5c5889;}
+
+/* Show the dropdown menu on hover */
+.dropdown3:hover .dropdown-content3 {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown3:hover .dropbtn3 {
+  font-size: 15px;
+  color: #5c5889;
+  border-width: 5px;
+}
+
+.menu-text-drop{
+  text-align: center;
+  font-size: 14px;
+}
+
+.menu-text2{
+  padding: 1rem;
+  padding-bottom: 0rem;
+}
+
+.menu-text2:hover{
+  padding: 1rem;
+  border-bottom: 2px solid #5c5889;
+  font-size: 20px;
+  border-width: 5px;
+}
+
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn2 {
+  color: black;
+}
+.dropdown2:hover .dropdown-content2 {display: block;}
+
+.dropdown2:hover .dropbtn2 {
+  font-size: 18px;
+  background-color: #f1f1f1;
+  border-width: 5px;
+}

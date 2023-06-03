@@ -71,6 +71,7 @@
   margin: 2rem;
   background-color: white;
   display: flex;
+  align-items: center;
   padding: 2rem;
   text-align: center;
   border: 6px solid #e2dddd;
@@ -83,6 +84,7 @@
   margin: 2rem;
   background-color: white;
   display: flex;
+  align-items: center;
   padding: 1%;
   text-align: center;
   border: 6px solid #e2dddd;
@@ -102,7 +104,6 @@
     width: 80%;
     height: 6rem;
     background-color: white;
-    padding-top: 1rem;
     text-align: center;
     border: 6px solid #e2dddd;
     border-radius: 1rem;
@@ -114,6 +115,7 @@
     margin: 2rem;
     background-color: white;
     display: flex;
+    align-items: center;
     padding: 1%;
     text-align: center;
     border: 6px solid #e2dddd;
