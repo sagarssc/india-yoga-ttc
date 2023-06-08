@@ -77,7 +77,8 @@ export default class ExtraDiv extends Component {
                         fontSize: "20px",
                         fontWeight: "300",
                         fontFamily: "Palatino",
-                        textAlign: "justify"
+                        textAlign: "justify",
+                        whiteSpace: "pre-line",
                       }}
                     >
                       {details.content}
@@ -181,7 +182,8 @@ export default class ExtraDiv extends Component {
                       fontSize: "16px",
                       fontWeight: "100",
                       fontFamily: "Palatino",
-                      textAlign: "justify"
+                      textAlign: "justify",
+                      whiteSpace: "pre-line",
                     }}
                   >
                     {details.content}
