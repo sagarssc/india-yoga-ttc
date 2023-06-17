@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {getDevider} from '../../utils';
 import {KeyPoints} from "../../constant/keyPoint";
-import {CoursePage, constBaseUrl} from "../../constant/constant";
+import {CoursePage, constBaseUrl, extraDetailsCourse, Syllabuses} from "../../constant/constant";
 import CourseDetails from "../defaults/courseDetails"
 import Schdule from "../defaults/schdule";
+import ExtraDiv from "../defaults/extraDiv";
+import Syllabus from "../defaults/syllabus";
+
 // const course = course[100]
 
 const backgroundImage = constBaseUrl+'/images/slider/2.jpg'
@@ -13,6 +16,8 @@ export default class Hrs extends Component {
     let {hrs} = this.props
     let course = CoursePage[hrs];
     let KeyPoint = KeyPoints[hrs];
+    let detail = extraDetailsCourse[hrs]
+    let syllabus = Syllabuses[hrs]
     const isMobile = window.innerWidth <= 768;
     return (
       <div>
@@ -37,23 +42,27 @@ export default class Hrs extends Component {
             </div>
         </div>
         <div className="hrs-course">
-        <div style={{padding:"10%", paddingTop:"5%", position:"relative", textAlign:"justify"}}>
+        <div style={{padding:"10%", paddingTop:"5%", position:"relative", textAlign:"justify", whiteSpace: "pre-line", fontSize:"18px"}}>
           { course.descriptions.map((description, index) =>(
             <p>{description}</p>
           ))}
         </div>
         <CourseDetails index={hrs} displayTitle={false} onReadMore={()=>this.props.selectCourse(hrs)}/>
         <Schdule />
+        <Syllabus syllabus={syllabus}/>
+        <div className="common-div2" style={{marginTop:"5rem"}}>
+          <ExtraDiv extraDetails={detail}/>
+        </div>
         {KeyPoint.map((obj, index) => (
           <div>
             {!isMobile ?
-              <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white",backgroundRepeat:"no-repeat", backgroundImage:"url('./home/bg/4.png')", display:"flex", justifyContent:"space-between"}}>
-                <img src={backgroundImage} style={{width:"48%", backgroundSize: "100% 80%", padding:"3%", borderTopLeftRadius:"20%", borderBottomRightRadius:"20%"}}/>
-                <div style={{width:"48%"}}>
-                  <p style={{fontSize:"25px", fontWeight:"700", fontFamily:"'Poppins', sans-serif", padding:"2% 6% 0%"}}>{obj.header}</p>
+              <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white",backgroundRepeat:"no-repeat", backgroundImage:"url('./home/bg/4.png')", display:"flow-root", justifyContent:"space-between"}}>
+                <img src={backgroundImage} style={{width:"30rem", height:"30rem", float:"left", padding:"3%", borderTopLeftRadius:"20%", borderBottomRightRadius:"20%"}}/>
+                <div style={{width:"auto"}}>
+                  <p style={{flex:"1",fontSize:"25px", fontWeight:"700", fontFamily:"'Poppins', sans-serif", padding:"2% 6% 0%"}}>{obj.header}</p>
                   <ul style={{listStyleType: "square", listStylePosition: "inside", padding:"0", paddingBottom:"3%", lineHeight:"3rem"}}>{obj.points.map((point, index) => ( 
-                    <div>{index %2 == 0 ? <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"#e5e5e5"}}>{point}</li>
-                    : <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"#bbbabb"}}>{point}</li>}</div>
+                    <div>{index %2 == 0 ? <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif"}}>{point}</li>
+                    : <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif"}}>{point}</li>}</div>
                     ))}</ul>
                 </div>
               </div> :

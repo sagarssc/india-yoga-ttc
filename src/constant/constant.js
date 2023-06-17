@@ -3,8 +3,10 @@ export const CoursePage = {
     img: "./slide.png",
     title: "100 Hrs Yoga Teacher Training Course",
     descriptions: [
-      "We, at Rishikesh Yog Nirvana, offer you a very convenient short-term 100 Hours of Yoga Teacher Training in the picturesque Himalayan town of Rishikesh, India. The course suits those students the best who have time restraints but are still eager to complete their yoga teacher training course. It helps them learn the basics of yoga. Our 100 Hours Yoga Teacher Training Course in Rishikesh has been designed to help yoga learners who lack the tenacity and stamina for the 200-hour course.",
-      "The best thing about the Yoga TTC in Rishikesh is that it gives you a chance to return for another 100 hours of yoga training whenever it is convenient for you, thus allowing you to complete the entire 200-hour TTC program we conduct. Registered with Yoga Alliance USA, the school offers the best 100 Hours of Traditional Vinyasa, and Ashtanga Yoga Teacher Training in Rishikesh, India. This course will help you build your foundation in yoga. That will help you gain confidence so you can reach new milestones in your journey of achieving excellence in yoga.",
+      "Yoga's many advantages make it essential in today's society. It develops the mind-body connection, improves mental health by lowering stress and fostering inner calm, and improves physical well-being. Yoga encourages a sustainable way of living while also promoting social harmony, unity, and spiritual development. Its influence also extends to workplaces, where it improves good health and productivity. In conclusion, yoga is an important practice in today's society since it offers a holistic approach to health and well-being. \
+      \n\nThe 100-hour yoga teacher training course at India Yoga TTC is a brief course that is intended to give students the fundamental knowledge and skills they need to either become yoga instructors or advance their own personal yoga practice. The course materials are designed to give students a thorough introduction to yoga, giving them a firm grounding in yogic ideas and practices. Even though it might not go into as much detail or cover as many topics as a longer training course (like a 200 or 300-hour program), it is still a great place to start for anyone interested in becoming a yoga teacher or learning more about the yogic path. It is especially beneficial for anyone who does not have the stamina or practice for a 200 or 300-hour yoga teacher training course. \
+      \n\nBeing a spiritual and peaceful town tucked away in the Himalayas, Rishikesh provides a welcoming atmosphere for indulging in yoga practices as well as for self-reflection and personal development. Students can anticipate a life-changing experience that explores yoga's spiritual and philosophical components in addition to its physical features. Our 100-hour yoga teacher training in Rishikesh will give you a rewarding and life-changing experience whether you want to advance your own practice, start a new career, or simply nurture your mind, body, and soul. \
+      "
     ],
   },
   200: {
@@ -99,7 +101,7 @@ export const extraDetailsHome1 = [
   {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"Why choose India Yoga TTC?", content:"When looking for a thorough, useful, and encouraging teacher training programme, future yoga instructors might consider our yoga centre. Each student receives individualised attention from our team of knowledgeable professors who are passionate about it. Our teacher-training programmes are intended to be comprehensive and include a range of topics related to yoga, including asanas, pranayama, meditation, philosophy, and teaching methods. Online and in-person classes are among the various training alternatives we provide to meet a range of schedules and needs. We encourage connections between students, the sharing of experiences, and mutual support among our educators in order to establish a caring community. We want our students to feel capable and prepared to instruct yoga to others after completing our courses."},
   {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"Our Vision", content:"The mission of our yoga centre is to open up yoga's transforming power to all people, regardless of their age, background, or level of physical fitness. We work to offer a warm, friendly environment where people can explore and develop their practises in a supportive setting. Our goal is to create a community of people who love yoga and are dedicated to their own personal development. In order to empower people to become educated and assured teachers, we strive to offer high-quality yoga teacher training. We believe in the power of education and lifelong learning. Our mission is based on the conviction that yoga is more than just a form of exercise and has the power to transform people's lives both personally and collectively. We are dedicated to bringing the advantages of yoga to everyone in the world while doing so in a way that is empowering and supportive."},
   {img: constBaseUrl+"/images/home/extraDiv/423.JPG", social: true, heading:"About India Yoga TTC", content:"We at India Yoga TTC are a community-driven organisation dedicated to advancing yoga as a means of achieving overall health—physical, mental, and emotional. We provide a range of yoga classes and seminars led by qualified and experienced yoga instructors, as well as yoga teacher training courses for individuals looking to start their own yoga schools. In order to foster a secure and loving environment where people from all backgrounds and abilities can learn about the transforming potential of yoga, our institute values inclusivity, diversity, and community. The overarching objective of the India Yoga TTC is to encourage people to lead more aware and conscientious lives and to contribute to a more tranquil and harmonious world. Yoga is a holistic approach that, in our opinion, may assist people in connecting with their inner selves, finding inner peace, and growing in awareness and compassion for both themselves and others. We want to encourage people to reach their greatest potential and lead more fulfilled lives by fostering a friendly and accepting environment."},
-];  
+];
 
 export const extraDetailsAboutUs = [
   {
@@ -313,3 +315,44 @@ export const sliderImages = [
   { url: constBaseUrl+"/images/slider/5.jpg" },
   { url: constBaseUrl+"/images/slider/6.jpg" },
 ];
+
+
+export const extraDetailsCourse = {
+  100 : [
+    {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"The Curriculum", content:"The curriculum at India Yoga TTC has been designed with a focus on various aspects of yoga and chakra awakening. It covers six types of Satkarma procedures aimed at purifying the body and awakening the chakras. Students learn about the anatomy and physiology of yoga poses, meditation, pranayama, and body-cleansing techniques in relation to the chakras. Different meditation techniques are explored, and students gain a detailed understanding of yoga asanas, including alignment, variations, modifications, and adjustments. The curriculum also encompasses all types of pranayama exercises and their connection to the chakras. Mantra chanting is incorporated into the practice, recognizing its significance in contributing to the benefits of yoga. Additionally, students study postures in detail, including their Sanskrit names. Overall, the curriculum provides students with a comprehensive understanding of yoga, chakra awakening, and spiritual growth, equipping them with the necessary knowledge and skills to become expert yoga teachers."},
+    {img: constBaseUrl+"/images/home/extraDiv/423.JPG", heading:"Course Eligibility and Qualifications", content:"Yoga is a universal practice that can be modified to accommodate different body types and skill levels. However, a baseline level of physical fitness is often required for a 100-hour yoga teacher training program. Participants of the 100-hour course at India Yoga TTC should be able to maintain simple positions and undergo plenty of training and practice. The course requires group work, cooperation, and active participation in tasks including practice sessions and feedback sessions. Important qualities include clear communication and the capacity for constructive feedback exchange. Because the course is conducted in English, English fluency in reading, speaking, understanding, and following directions in English is a requirement for participation. Successful completion of the program necessitates a high degree of commitment to consistent yoga practice as well as a readiness to put in time and effort."},
+    {img: constBaseUrl+"/images/home/extraDiv/423.JPG", social: true, heading:"Accommodation and Facilities Offered", content:"India Yoga TTC offers a tranquil and beautiful environment for the best yoga practice experience because it is surrounded by the gorgeous Himalayan mountains. Modern conveniences offered by our accommodation include a well-stocked library, stable wifi, and round-the-clock surveillance for safety. You can take advantage of the convenience of private accommodation during the course, complete with fresh blankets, bedsheets, pillows, towels, and other necessities. Additionally, we offer yoga mats and other vital props for your practice, though if you would like, you are welcome to bring your own. For all of our residents' convenience, we also provide readily available cleaning and laundry services too. \
+    \n\nAdopting a yogic lifestyle includes more than just practising yoga; it also involves the foods we consume. The advantages of practising yoga can be increased by improving your food habits. We provide vegetarian \"Sattvic\" meals at our yoga school in accordance with the age-old science of Ayurveda. Sattvic meals are intended to be simple, filling, and easy to digest. Fresh fruits, vegetables, whole grains, legumes, nuts, and seeds make up the majority of what they contain. These meals are prepared mindfully and with love, concentrating on preserving the flavours and life force of the food. These kinds of meals can provide practitioners with a feeling of lightness, clarity, and improved energy, which can benefit their yoga practice and general well-being."},
+  ]
+};
+
+
+
+export const Syllabuses = {
+  100 : [
+      {
+        "title": "Asana Practice:",
+        "items": ["Daily asana sessions to explore and refine the physical postures.","Alignment principles, adjustments, and modifications.","Sequencing and structuring a yoga class."]
+      },
+      {
+        "title": "Pranayama and Breathwork:",
+        "items": ["Introduction to various pranayama techniques.","Breath awareness and control.","Incorporating pranayama into yoga practice and teaching."]
+      },
+      {
+        "title": "Meditation and Mindfulness:",
+        "items": ["Different meditation techniques.","Developing concentration and cultivating mindfulness.","Integration of meditation into personal practice and teaching."]
+      },
+      {
+        "title": "Yoga Philosophy and History:",
+        "items": ["Overview of classical yoga philosophy and its key texts (such as the Yoga Sutras of Patanjali).","Exploration of the eight limbs of yoga.","Understanding the philosophical foundations of yoga and its relevance in modern life."]
+      },
+      {
+        "title": "Anatomy and Physiology:",
+        "items": ["Basic understanding of the human body, its systems, and anatomical principles relevant to yoga.","Alignment and safety in yoga postures.","Preventing and addressing common yoga-related injuries.",]
+      },
+      {
+        "title": "Yoga Ethics and Lifestyle:",
+        "items": ["Exploring the ethical principles of yoga (Yamas and Niyamas).","Integrating yogic principles into daily life.","The role of a yoga teacher and professional ethics."]
+      },
+  ]
+};

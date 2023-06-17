@@ -322,6 +322,9 @@ li::before {
 .right-image {
   width: 100%;
   height: 90%;
+  margin: 6%;
+  margin-right: 0%;
+  margin-top: 0%;
   background-size: 100% 100%;
   box-shadow: -20px 20px 0 0 #5c5889;
 }
@@ -329,6 +332,9 @@ li::before {
 .left-image {
   width: 100%;
   height: 90%;
+  margin: 6%;
+  margin-left: 0%;
+  margin-top: 0%;
   background-size: 100% 100%;
   box-shadow: 20px 20px 0 0 silver;
 }

@@ -29,8 +29,8 @@ export default class ExtraDiv extends Component {
                   })`,
                   backgroundPosition: index % 2 === 0 ? "top right" : "top left",
                   backgroundRepeat: "no-repeat",
-                  display: "flex",
-                  flexWrap: "wrap",
+                  display: "flow-root",
+                  // flexWrap: "wrap",
                   flexDirection: index % 2 === 0 ? "row" : "row-reverse",
                 }}
               >
@@ -38,7 +38,6 @@ export default class ExtraDiv extends Component {
 
                   <div
                     style={{
-                      width: "45%",
                       margin: "2%",
                     }}
                   >
@@ -47,9 +46,10 @@ export default class ExtraDiv extends Component {
                       alt=""
                       className= {index % 2 === 0 ? "left-image" : "right-image"}
                       style={{
-                        width: "100%",
-                        height: "90%",
+                        width: "30rem",
+                        height: "30rem",
                         objectFit: "cover",
+                        float: index % 2 === 0 ? "left" : "right"
                       }}
                       loading="lazy"
                     />
@@ -59,7 +59,6 @@ export default class ExtraDiv extends Component {
 
                   <div
                     style={{
-                      width: "45%",
                       margin: "2%",
                     }}
                   >
@@ -74,6 +73,7 @@ export default class ExtraDiv extends Component {
                     </p>
                     <p
                       style={{
+                        flex: "1",
                         fontSize: "20px",
                         fontWeight: "300",
                         fontFamily: "Palatino",
@@ -87,9 +87,8 @@ export default class ExtraDiv extends Component {
                       <div
                         style={{
                           width: "100%",
-                          height: "10rem",
-                          marginTop: "10%",
-                          paddingTop: "10%",
+                          height: "8rem",
+                          marginTop: "4%",
                           display: "inline-flex",
                           justifyContent: "space-around",
                         }}
