@@ -419,23 +419,23 @@ export const teachers = [
 ]
 
 export const galleryImages = [
-  { url: '/gallery/1.jpg' },
-  { url: '/gallery/2.jpg' },
-  { url: '/gallery/3.jpg' },
-  { url: '/gallery/4.jpg' },
-  { url: '/gallery/5.jpg' },
-  { url: '/gallery/6.jpg' },
-  { url: '/gallery/7.jpg' },
-  { url: '/gallery/8.jpg' },
-  { url: '/gallery/9.jpg' },
-  { url: '/gallery/10.jpg' },
-  { url: '/gallery/11.jpg' },
-  { url: '/gallery/12.jpg' },
-  { url: '/gallery/3.jpg' },
-  { url: '/gallery/14.jpg' },
-  { url: '/gallery/15.jpg' },
-  { url: '/gallery/16.jpg' },
-  { url: '/gallery/17.jpg' }
+  { url: constBaseUrl+"/images/gallery/1.JPG" },
+  { url: constBaseUrl+"/images/gallery/2.JPG" },
+  { url: constBaseUrl+"/images/gallery/3.JPG" },
+  { url: constBaseUrl+"/images/gallery/4.JPG" },
+  { url: constBaseUrl+"/images/gallery/5.JPG" },
+  { url: constBaseUrl+"/images/gallery/6.JPG" },
+  { url: constBaseUrl+"/images/gallery/7.JPG" },
+  { url: constBaseUrl+"/images/gallery/8.JPG" },
+  { url: constBaseUrl+"/images/gallery/9.JPG" },
+  { url: constBaseUrl+"/images/gallery/10.JPG" },
+  { url: constBaseUrl+"/images/gallery/11.JPG" },
+  { url: constBaseUrl+"/images/gallery/12.JPG" },
+  { url: constBaseUrl+"/images/gallery/3.JPG" },
+  { url: constBaseUrl+"/images/gallery/14.JPG" },
+  { url: constBaseUrl+"/images/gallery/15.JPG" },
+  { url: constBaseUrl+"/images/gallery/16.JPG" },
+  { url: constBaseUrl+"/images/gallery/17.JPG" }
 ];
 
 export const webRatings = {
