@@ -7,6 +7,7 @@ import CourseDetails from "../defaults/courseDetails"
 import Schdule from "../defaults/schdule";
 import ExtraDiv from "../defaults/extraDiv";
 import Syllabus from "../defaults/syllabus";
+import Faq from "../home/faq";
 
 // const course = course[100]
 
@@ -53,7 +54,10 @@ export default class Hrs extends Component {
         <div className="common-div2" style={{marginTop:"5rem"}}>
           <ExtraDiv extraDetails={detail}/>
         </div>
-        {KeyPoint.map((obj, index) => (
+        <div className="testimonials">
+          <Faq course={hrs}/>
+        </div>
+        {/* {KeyPoint.map((obj, index) => (
           <div>
             {!isMobile ?
               <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white",backgroundRepeat:"no-repeat", backgroundImage:"url('./home/bg/4.png')", display:"flow-root", justifyContent:"space-between"}}>
@@ -78,7 +82,7 @@ export default class Hrs extends Component {
               </div>
             }
           </div>
-        ))}
+        ))} */}
       </div>
       </div>
     );

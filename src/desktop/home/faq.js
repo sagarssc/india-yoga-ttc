@@ -11,8 +11,10 @@ import { Faqs } from "../../constant/constant";
 
 export default class Faq extends Component {
   render() {
-  const isMobile = window.innerWidth <= 768;
-
+    const isMobile = window.innerWidth <= 768;
+    let course = this.props.course
+    if(!course){course = "default"}
+    let faqs = Faqs[course]
     return (
       <div>
         {!isMobile ? 
@@ -38,7 +40,7 @@ export default class Faq extends Component {
               padding: "40px"
             }}>
               <Accordion allowZeroExpanded={true}>
-                {Faqs.map((faq, index) => (
+                {faqs.map((faq, index) => (
                   <AccordionItem key={index}>
                     <AccordionItemHeading>
                       <AccordionItemButton
@@ -90,7 +92,7 @@ export default class Faq extends Component {
               boxShadow:"0 0 20px rgba(0, 0, 0, 0.1)"
             }}>
               <Accordion allowZeroExpanded={true}>
-                {Faqs.map((faq, index) => (
+                {faqs.map((faq, index) => (
                   <AccordionItem key={index}>
                     <AccordionItemHeading>
                       <AccordionItemButton

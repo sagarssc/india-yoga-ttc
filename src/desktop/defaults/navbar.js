@@ -17,9 +17,9 @@ const titles = [
 const courses = [
   {title:"100 Hrs Course", link:"/100-hrs-course"},
   {title:"200 Hrs Course",  link:"/200-hrs-course"},
-  {title:"200 Hrs Course", link:"/300-hrs-course"},
+  {title:"300 Hrs Course", link:"/300-hrs-course"},
   {title:"500 Hrs Course", link:"/500-hrs-course"},
-  {title:"Online Training", link:"/online-training"},
+  // {title:"Online Training", link:"/online-training"},
 ]
 export default class Navbar extends Component {
 

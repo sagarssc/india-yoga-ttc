@@ -4,6 +4,9 @@ import Slider from "../defaults/slider";
 import ExtraDiv from "../defaults/extraDiv";
 import Gallery from "../defaults/gallery";
 import {extraDetailsAboutUs, teachers, constBaseUrl} from "../../constant/constant"
+import HomeAbout from "../home/homeAbout";
+import { AboutUs, OurTeachers } from "../../constant/home";
+
 
 const backgroundImage = constBaseUrl+'/images/slider/2.jpg'
 export default class About extends Component {
@@ -22,11 +25,17 @@ export default class About extends Component {
           }}
         ></div>
         </div>
+        <div className="testimonials">
+          <HomeAbout aboutus={AboutUs}/>
+        </div>
         <div className="common-div">
           <ExtraDiv extraDetails={extraDetailsAboutUs}/>
         </div>
         <div className="our-teachers" style={{backgroundImage:"url('/home/bg/header.png')"}}>
-            <div className="heading">Our Teachers</div>
+            <div className="heading" style={{fontSize:"25px"}}>Our Teachers</div>
+            <div>
+              <p style={{fontSize:"18px",padding:"2rem",textAlign:"justify",fontFamily:'Roboto Slab'}}>{OurTeachers}</p>
+            </div>
             {!isMobile ? 
               <div style={{display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"center"}}>
                 {teachers.map((teacher, index) => (<div style={{width:"45%", margin:"1%", height:"auto", backgroundColor:"#f1f1f1", borderRadius:"2rem"}}>

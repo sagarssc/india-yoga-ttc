@@ -10,6 +10,15 @@ export const About = {
           ]
 }
 
+export const AboutUs = {
+  header: "About Us",
+  contents: [
+          "For many years, those seeking spiritual enlightenment have venerated Rishikesh, a prestigious site rich in history. This sanctuary's history dates back to ancient times, and it continues to captivate those looking for profound spiritual understanding and self-exploration. Rishikesh has deservedly acquired the illustrious moniker of \"Yoga Capital of the World\" as it is acknowledged as the birthplace of various ancient yoga books. It is an outstanding venue for people desiring to dig into the depths of this age-old discipline, enhancing their understanding and practice, due to its ancient cultural past and deeply ingrained relationship to yoga.",
+          "India Yoga TTC provides an authentic and traditional atmosphere for yoga teacher training within the embrace of Rishikesh's spiritual legacy. Aspiring teachers are able to dive into the profound principles and philosophy that guide this transforming practice because the teachings and practices are based on the age-old wisdom of yoga. The lively spirit of the city and the presence of knowledgeable yoga masters create the perfect environment for prospective teachers to receive thorough training and direction. ",
+          "At India Yoga TTC, students can fully immerse themselves in a comprehensive approach to yoga, which includes meditation, pranayama (breathing methods), mantra chanting, and the study of yogic scriptures in addition to physical postures. The course material is intended to give students a solid foundation and thorough grasp of yoga, as well as the knowledge and skills required to become competent and assured yoga instructors. Rishikesh provides a wealth of opportunities for spiritual development in addition to the academic side. Ashrams, temples, and spiritual retreats are abundant throughout the city, offering a plethora of opportunities for anyone looking to connect more deeply with themselves and their spiritual path.",
+          ]
+}
+
 export const Transparent = {
   quote: "”Yoga is the ultimate practice. It simultaneously stimulates our inner light and quiets our overactive minds. It is both energy and rest. Yin and Yang. We feel the burn and find our bliss.”",
   author: "Elise Joan"
@@ -52,3 +61,6 @@ export const reviews = [
     subtext: "March 2021",
   },
 ];
+
+export const OurTeachers = "We are proud to have a group of outstanding instructors at India Yoga TTC who contribute a lot of expertise, wisdom, and passion to our yoga training courses. Our students receive excellent learning opportunities, direction, and inspiration throughout their yoga teacher training journey thanks to their devotion, expertise, and dedication to yoga teachings. Our instructors are dedicated to imparting their expertise, experience, and enjoyment of the practice to their students because they are passionate about yoga and its transformational power. They infuse their instruction with energy, sincerity, and a strong feeling of purpose. They act as role models and mentors for trainees, inspiring and motivating them to further their understanding and dedication to yoga through their personal yoga practice and embodiment of yogic concepts.\
+\n\nOur instructors use a student-centred method that takes into account each student's particular needs, skills, and objectives. They develop a friendly inclusive learning environment that promotes candid communication and individual development. Our teachers are available and helpful outside of the classroom, which fosters a friendly and supportive environment where students can explore and develop. They build a sense of belonging and deepen relationships with each student, providing direction and support during the training course and beyond. Their enthusiasm for yoga and genuine concern for their student's success and well-being result in a dynamic learning environment."
