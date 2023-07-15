@@ -224,15 +224,15 @@ export const Faqs = {
     },
     {
       question:
-        "What qualifications do your yoga teachers hold?",
-      answer:
-        "All of the instructors at our yoga school in Rishikesh are very skilled, competent, and experienced, however, they all have different teaching philosophies. They hold various qualifications from organizations like Yoga Alliance, proving their expertise and skill.",
-    },
-    {
-      question:
         "Can I get a job after completing my yoga teacher training course from your school?",
       answer:
         "Completing a yoga teacher training course can equip you with the skills needed to pursue a career as a yoga teacher. Completing our yoga teacher training course will make you eligible to become a part of Yoga Alliance, the world-renowned organisation of yoga teachers.",
+    },
+    {
+      question:
+        "What qualifications do your yoga teachers hold?",
+      answer:
+        "All of the instructors at our yoga school in Rishikesh are very skilled, competent, and experienced, however, they all have different teaching philosophies. They hold various qualifications from organizations like Yoga Alliance, proving their expertise and skill.",
     },
   ],
   100: [
