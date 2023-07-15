@@ -18,7 +18,7 @@ export default class Faq extends Component {
     return (
       <div>
         {!isMobile ? 
-          <div style={{paddingBottom:"5%", backgroundImage:"url('/home/bg/4.png')", backgroundRepeat:"no-repeat", backgroundPosition:"bottom left"}}>
+          <div style={{paddingBottom:"1%", backgroundImage:"url('/home/bg/4.png')", backgroundRepeat:"no-repeat", backgroundPosition:"bottom left"}}>
             <div className="heading" style={{ 
               fontFamily: "'Roboto', sans-serif", 
               fontSize: "36px", 
@@ -72,7 +72,7 @@ export default class Faq extends Component {
               </Accordion>
             </div>
           </div> : 
-          <div style={{paddingBottom:"5%", backgroundImage:"url('/home/bg/4.png')", backgroundRepeat:"no-repeat", backgroundPosition:"bottom left"}}>
+          <div style={{paddingBottom:"1%", backgroundImage:"url('/home/bg/4.png')", backgroundRepeat:"no-repeat", backgroundPosition:"bottom left"}}>
             <div className="heading" style={{ 
               fontFamily: "'Roboto', sans-serif", 
               fontSize: "30px", 

@@ -54,7 +54,7 @@ export default class Hrs extends Component {
         <div className="common-div2" style={{marginTop:"5rem"}}>
           <ExtraDiv extraDetails={detail}/>
         </div>
-        <div className="testimonials">
+        <div className="testimonials" style={{margin:"0%"}}>
           <Faq course={hrs}/>
         </div>
         {/* {KeyPoint.map((obj, index) => (
