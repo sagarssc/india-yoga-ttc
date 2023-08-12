@@ -13,7 +13,7 @@ export default class CourseDetails extends Component {
 
 
     return (
-      <div style={{ height: "auto", backgroundColor:"white", backgroundImage:"url('./home/bg/3.png')", backgroundPosition: "left", backgroundRepeat:"no-repeat", marginBottom: "2rem",paddingBottom:"2rem"}}>
+      <div style={{ height: "auto", backgroundPosition: "left", backgroundRepeat:"no-repeat", marginBottom: "2rem",paddingBottom:"2rem"}}>
         {displayTitle ? (
           <h2 style={{ fontSize: "2rem", fontFamily: "'Poppins', sans-serif" }}>{title}</h2>
         ) : (

@@ -3,11 +3,11 @@
 .home-about-container {
   padding: 3%;
   font-size: 1.5rem;
-  background-image: url('/home/bg/header.png');
+  /* background-image: url('/home/bg/header.png'); */
 }
 
 .home-about-content {
-  background-color: white;
+  /* background-color: white; */
   padding: 1rem;
 }
 

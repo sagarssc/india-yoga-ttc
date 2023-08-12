@@ -22,18 +22,18 @@ export default class Contact extends Component {
             style={{ backgroundImage: "url(" + backgroundImage + ")" }}
           ></div>
         </div>
-        <div className="contact-details">
+        <div className="contact-details" style={{backgroundColor:"#70a2bb"}}>
           <div className="heading">Contact Details</div>
           <div className="contact-list">
             {contactus.ContactDetails.map((contact, index) => (
               <div className="contact-item" key={index}>
                 <div
                   className="contact-icon"
-                  style={{ backgroundImage: contact.icon }}
+                  style={{ backgroundImage: contact.icon, backgroundBlendMode:"darken",backgroundColor:"#70a2bb" }}
                 ></div>
                 <div className="contact-info">
                   <p className="contact-heading">{contact.heading}</p>
-                  <a href={contact.ref} target="_blank" className="contact-link">
+                  <a href={contact.ref} target="_blank" className="contact-link" style={{color:"#000"}}>
                     <p>{contact.value}</p>
                   </a>
                 </div>

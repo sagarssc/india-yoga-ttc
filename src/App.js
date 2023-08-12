@@ -32,6 +32,11 @@ function App() {
   return (
     <div>
       <Helmet>
+      <meta property="og:title" content={"India Yoga TTC"} />
+      <meta property="og:description" content={"Yoga Teacher Training Course in Rishikesh, India"} />
+      <meta property="og:image" content={"/public/icons/logo.png"} />
+      <meta property="og:url" content={"https://www.iyttc.in/"} />
+      <meta property="og:type" content="website" />
         <title>India Yoga TTC</title>
       </Helmet>
       <DesktopMain />

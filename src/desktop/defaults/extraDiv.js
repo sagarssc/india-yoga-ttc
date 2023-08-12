@@ -13,7 +13,7 @@ export default class ExtraDiv extends Component {
         {!isMobile  ? <div>{extraDetails.map((details, index) => (
             <div
               style={{
-                backgroundColor: "white",
+                // backgroundColor: "white",
                 marginBottom: "2rem",
                 display: "flex",
               }}
@@ -39,6 +39,8 @@ export default class ExtraDiv extends Component {
                   <div
                     style={{
                       margin: "2%",
+                      borderRadius: "2rem",
+                      backgroundSize: "cover"
                     }}
                   >
                     <img
@@ -49,6 +51,8 @@ export default class ExtraDiv extends Component {
                         width: "30rem",
                         height: "30rem",
                         objectFit: "cover",
+                        borderRadius: "3%",
+                        boxShadow:"0 10px 20px #000000",
                         float: index % 2 === 0 ? "left" : "right"
                       }}
                       loading="lazy"
@@ -120,7 +124,7 @@ export default class ExtraDiv extends Component {
         <div>{extraDetails.map((details, index) => (
           <div
             style={{
-              backgroundColor: "white",
+              // backgroundColor: "white",
               marginBottom: "2rem",
               display: "flex",
             }}

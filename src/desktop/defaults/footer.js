@@ -8,7 +8,8 @@ export default class Footer extends Component {
       let footer = FooterLinks
         return (
           <nav className="footer">
-            <hr style={{ boxShadow:"0 1rem 4px 0 rgb(0 0 0 / 64%)"}}/>
+            {/* <hr style={{ boxShadow:"0 1rem 4px 0 rgb(0 0 0 / 100%)"}}/> */}
+            <hr style={{ backgroundColor:"black", height:"0.5rem", marginBlockEnd:"0", marginBlockStart:"0", borderWidth:"0"}} />
             <div className="nav-container">
               <div className="footer-logo">
                 <Link to="/" className="link"><div className="footer-logo-img" style={{backgroundImage:"url('./icons/logo.png')", backgroundSize:"100% 100%", paddingTop:"1rem", marginLeft:"auto", marginRight:"auto"}}></div>
@@ -35,7 +36,7 @@ export default class Footer extends Component {
                   {footer.contact.map((contact, index)=>(
                     <div style={{display:"flex", marginLeft:"auto", marginRight:"auto"}}>
                       <div style={{width:"20%"}}>
-                        <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundColor:"#5c5889"}}></div>
+                        <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundBlendMode:"darken",backgroundColor:"#70a2bb"}}></div>
                       </div>
                       <div style={{width:"80%"}}>
                         <p style={{margin:"0", fontWeight:"700"}}>{contact.heading}</p>

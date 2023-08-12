@@ -26,11 +26,11 @@ export default class Retreat extends Component {
         <div className="common-div">
           <ExtraDiv extraDetails={extraDetailsAboutUs}/>
         </div>
-        <div className="our-teachers" style={{backgroundImage:"url('/home/bg/header.png')"}}>
-            <div className="heading">Retreats</div>
+        <div className="our-teachers" style={{backgroundImage:"url('/home/bg/4.png')", backgroundRepeat:"no-repeat"}}>
+            <div className="heading" style={{fontSize:"25px"}}>Retreats</div>
             {!isMobile ? 
               <div style={{display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"center"}}>
-                {RetreatTypes.map((retreat, index) => (<div style={{width:"45%", margin:"1%", height:"50rem", backgroundColor:"#f1f1f1", borderRadius:"2rem"}}>
+                {RetreatTypes.map((retreat, index) => (<div style={{width:"45%", margin:"1%", height:"50rem", borderRadius:"2rem",boxShadow:"0 5px 15px #00000033"}}>
                   <div style={{backgroundImage:retreat.img, width:"90%", margin:"5%", height:"20rem", backgroundSize:"100% 100%"}}></div>
                   <div><p style={{textAlign:"center", fontSize:"larger", fontWeight:"700"}}>{retreat.name}</p></div>
                   <div><p style={{margin:"2%"}}>{retreat.description}</p></div>
@@ -40,7 +40,7 @@ export default class Retreat extends Component {
                 </div> ))}
               </div> :
               <div style={{display:"block", flexWrap:"wrap", alignItems:"center", justifyContent:"center"}}>
-              {RetreatTypes.map((retreat, index) => (<div style={{width:"90%", margin:"2%", height:"auto", backgroundColor:"#f1f1f1", borderRadius:"2rem"}}>
+              {RetreatTypes.map((retreat, index) => (<div style={{width:"90%", margin:"2%", height:"auto", borderRadius:"2rem",boxShadow:"0 5px 15px #00000033", padding:"1%"}}>
                 <div style={{backgroundImage:retreat.img, width:"90%", margin:"5%", height:"10rem", backgroundSize:"100% 100%"}}></div>
                 <div><p style={{textAlign:"center", fontSize:"larger", fontWeight:"700"}}>{retreat.name}</p></div>
                 <div><p style={{margin:"2%"}}>{retreat.description}</p></div>
@@ -51,7 +51,7 @@ export default class Retreat extends Component {
             </div>
             }
         </div>
-        { !isMobile && <div className="common-div" style={{marginTop:0, backgroundColor:"white", padding:"0", marginBottom:"5rem"}}>
+        { !isMobile && <div className="common-div" style={{marginTop:0, padding:"0", paddingBottom:"3rem"}}>
           <div className="heading">Gallery</div>
           <Gallery />
         </div>}

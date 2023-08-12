@@ -29,7 +29,7 @@ const Courses = ({ selectCourse }) => {
                   <div
                     className="selected-course"
                     onClick={() => showDetails(index)}
-                    style={{ backgroundImage: "url('./home/bg/header.png')" }}
+                    // style={{ backgroundImage: "url('./home/bg/header.png')" }}
                   >
                     <text style={{ margin: "4rem", marginTop: "0.5rem", marginBottom: "0.5rem" }}>{course.name}</text>
                   </div>

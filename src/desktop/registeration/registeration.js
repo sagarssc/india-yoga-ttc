@@ -208,7 +208,7 @@ function RegistrationForm() {
     }
   };
   return (
-    <div style={{ backgroundColor: "#f6f7f8", paddingBottom: "3rem" }}>
+    <div style={{ paddingBottom: "3rem" }}>
       {popUp && <CustomPopUp content={popUpContent} />}
       {loader ? (
         <div>

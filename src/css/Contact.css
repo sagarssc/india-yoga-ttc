@@ -1,7 +1,7 @@
 /* Contact.css */
 
 .contact-container {
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
 }
 
 .contact-background {
@@ -74,6 +74,7 @@
 .map-container {
   width: 100%;
   margin: 2%;
+  margin-bottom: 0%;
   height: 30rem;
 }
 

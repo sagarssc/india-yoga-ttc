@@ -13,7 +13,7 @@ export default class Ratings extends Component {
           className="ratings"
         >
           <div className="rating-item">
-            <h3 style={{ fontSize: "22px", color: "#af9c9c", wordBreak: "break-word", marginLeft:"auto", marginRight:"auto" }}>
+            <h3 style={{ fontSize: "22px", color: "#000", wordBreak: "break-word", marginLeft:"auto", marginRight:"auto" }}>
               {webRatings.students.text}
             </h3>
           </div>
@@ -31,7 +31,7 @@ export default class Ratings extends Component {
                 }}
               ></div>
               <div style={{ display: "block", marginLeft: "10%" }}>
-                <div style={{ fontSize: "22px", color: "#af9c9c" }}>
+                <div style={{ fontSize: "22px", color: "#000" }}>
                   {comp.rating} / {comp.max}
                 </div>
                 <StarRatings

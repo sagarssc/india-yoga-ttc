@@ -43,14 +43,16 @@ export default class Navbar extends Component {
         const isMobile = window.innerWidth <= 768;
         return (
           <div>
-            {!isMobile ? <div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
-              <div className="nav-container">
-                <Link to="/" className="link" style={{width:"50%"}}>
-                <div style={{display:"flex"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"12%", height:"5rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
+            {!isMobile ? //<div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
+            <div className="navbar" >
+              <div className="nav-container" style={{display:"block"}}>
+                <Link to="/" className="link">
+                <div style={{display:"flex", justifyContent:"center"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"12%", height:"5rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
                   <div className="logo-large">
                   INDIA YOGA TTC
                 </div></div>
                 </Link>
+                <hr style={{border:"1px dashed #000000", margin:"10px 0", padding:"0"}}/>
                 <div className="nav-menu1">
                   <div className="dropdown">
                     <div className="dropbtn link"><p className="menu-text">Courses</p></div>
@@ -66,7 +68,8 @@ export default class Navbar extends Component {
                 </div>
               </div>
             </div> :
-            <div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
+            // <div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
+            <div className="navbar">
             <div className="nav-container2" style={{width:"100%", display:"flex"}}>
               <Link to="/" className="link" style={{width:"100%", display:"flex", alignItems:"center"}}>
               <div style={{display:"flex", width:"90%", alignItems:"center", justifyContent:"space-around"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"10%", height:"2rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>

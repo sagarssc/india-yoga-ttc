@@ -28,7 +28,7 @@ export default class Faq extends Component {
               textAlign: "center" 
             }}>FAQ's</div>
             <div style={{display:"flex" ,               
-                backgroundColor:"#f8f8f8", 
+                // backgroundColor:"#f8f8f8", 
                 boxShadow:"0 0 20px rgba(0, 0, 0, 0.1)", width:"90%",
                 borderRadius: "10px",marginLeft:"auto", marginRight:"auto"}}>
               <div style={{ 
@@ -48,8 +48,8 @@ export default class Faq extends Component {
                           style={{ 
                             fontFamily: "'Roboto', sans-serif", 
                             fontSize: "15px", 
-                            fontWeight: "500",
-                            color: "#333",
+                            fontWeight: "600",
+                            backgroundColor: "#0000",
                             height: "4.5rem"
                           }}
                         >
@@ -64,7 +64,7 @@ export default class Faq extends Component {
                           textAlign: "start",
                           lineHeight: "1.5",
                           letterSpacing: "0.5px",
-                          color: "#555"
+                          color: "#000"
                         }}
                       >
                         {faq.answer}
@@ -90,8 +90,8 @@ export default class Faq extends Component {
                           style={{ 
                             fontFamily: "'Roboto', sans-serif", 
                             fontSize: "15px", 
-                            fontWeight: "500",
-                            color: "#333",
+                            fontWeight: "600",
+                            backgroundColor: "#0000",
                             height: "4.5rem"
                           }}
                         >
@@ -106,7 +106,7 @@ export default class Faq extends Component {
                           textAlign: "start",
                           lineHeight: "1.5",
                           letterSpacing: "0.5px",
-                          color: "#555"
+                          color: "#000"
                         }}
                       >
                         {faq.answer}
@@ -133,7 +133,7 @@ export default class Faq extends Component {
               marginTop:'0%', 
               marginLeft:"auto",
               marginRight: "auto", 
-              backgroundColor:"#f8f8f8", 
+              // backgroundColor:"#f8f8f8", 
               boxShadow:"0 0 20px rgba(0, 0, 0, 0.1)"
             }}>
               <Accordion allowZeroExpanded={true}>
@@ -145,7 +145,8 @@ export default class Faq extends Component {
                           fontFamily: "'Roboto', sans-serif", 
                           fontSize: "15px", 
                           fontWeight: "500",
-                          color: "#333"
+                          backgroundColor: "#0000",
+                          // color: "#333"
                         }}
                       >
                         {faq.question}
@@ -159,7 +160,7 @@ export default class Faq extends Component {
                         textAlign: "start",
                         lineHeight: "1.5",
                         letterSpacing: "0.5px",
-                        color: "#555"
+                        // color: "#555"
                       }}
                     >
                       {faq.answer}

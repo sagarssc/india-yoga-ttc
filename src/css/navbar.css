@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   height: 10rem;
-  background-color: #fff;
-  background-image: url("/home/bg/header.png");
+  background-color: #78b7d4;
+  /* background-image: url("/home/bg/header.png"); */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,6 +19,7 @@
 }
 
 .link {
+  font-family: "Montserrat",sans-serif;
   text-decoration: none;
 }
 
@@ -38,9 +39,11 @@
 .menu-text {
   font-size: 1.8rem;
   font-weight: 600;
+  margin: 0;
   margin-left: 3rem;
   color: #fff;
   text-transform: uppercase;
+  display: contents;
   letter-spacing: 1px;
   transition: color 0.2s ease-in-out;
 }

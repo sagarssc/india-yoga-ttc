@@ -2,7 +2,7 @@
   padding: auto;
   border-radius: 5px;
   display: flex;
-  background-color: #fff;
+  /* background-color: #fff; */
   justify-content: space-around;
 }
 
@@ -36,7 +36,7 @@
   height: auto;
   text-align: center;
   display: inline-grid;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   color: #5c5889;
   border-bottom: 5px solid #5c5889;
 } 
@@ -52,7 +52,7 @@
     padding: auto;
     border-radius: 5px;
     display: block;
-    background-color: #fff;
+    /* background-color: #fff; */
     justify-content: space-around;
   }
   
@@ -63,7 +63,7 @@
     padding: auto;
     border-radius: 5px;
     display: block;
-    background-color: #fff;
+    /* background-color: #fff; */
     justify-content: space-around;
   }
 }
