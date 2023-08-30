@@ -47,7 +47,7 @@ export default class Navbar extends Component {
             <div className="navbar" >
               <div className="nav-container" style={{display:"block"}}>
                 <Link to="/" className="link">
-                <div style={{display:"flex", justifyContent:"center"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"12%", height:"5rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
+                <div style={{display:"flex", justifyContent:"center"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"6%", height:"4rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
                   <div className="logo-large">
                   INDIA YOGA TTC
                 </div></div>

@@ -88,8 +88,11 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .logo-large {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
   font-family: cursive;
   text-align: start;
   /* background-color: #7f7d7d; */

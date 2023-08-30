@@ -138,7 +138,7 @@ export default class Blog extends Component {
   onReadMore(index){
     window.scrollTo(0, 50);
     let {selected, allBlogs} = this.state
-    let blog = allBlogs.filter(blog => blog._id == index)
+    let blog = allBlogs.filter(blog => blog.id == index)
     if(blog){
       blog = blog[0]
     }
@@ -170,10 +170,10 @@ export default class Blog extends Component {
               {current_blogs.map((blog, index)=>( 
               <div style={{padding:"2%"}}>
                 <img className="blog-image" src={blog.image_path} style={{width:"90%"}}/>
-              <div style={{paddingTop:"2%", color:"#5c5889", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.date}</text></div>
+              <div style={{paddingTop:"2%", color:"#5c5889", fontSize:"18px", fontWeight:"500", fontFamily:"Poppins"}}><text>{blog.created_at.substring(0,10)}</text></div>
               <div className="blog-heading"><text>{blog.title}</text></div>
               <div style={{paddingTop:"2%", color:"black", fontSize:"15px", fontWeight:"300", width:"90%"}}><text>{blog.description}</text></div>
-              <div onClick={()=>this.onReadMore(blog._id)} className="pointer" style={{width:"20%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"1.5%"}}>
+              <div onClick={()=>this.onReadMore(blog.id)} className="pointer" style={{width:"20%", backgroundColor:"#5c5889", height:"3rem", borderRadius:"2rem", display:"inline-flex", marginTop:"1rem", boxShadow:"-2px 3px 5px 5px", justifyContent:"center", paddingTop:"1.5%"}}>
                   <text style={{fontWeight:"700", color:"wheat"}}>Read More</text>
               </div></div>))}
               {indexes.length != 0 && <div style={{width:"100%", height:"4rem", paddingLeft:"10%", display: "flex", marginTop:"2rem"}}>
