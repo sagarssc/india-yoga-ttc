@@ -43,13 +43,13 @@ export default class RetreatType extends Component {
         {KeyPoint.map((obj, index) => (
           <div>
             {!isMobile ?
-              <div style={{margin:"3%", paddingBottom:"1%",paddingTop:"1%", backgroundColor:"white",backgroundRepeat:"no-repeat", backgroundImage:"url('./home/bg/4.png')", display:"flex", justifyContent:"space-between"}}>
-                <img src={backgroundImage} style={{width:"48%", backgroundSize: "100% 80%", padding:"3%", borderTopLeftRadius:"20%", borderBottomRightRadius:"20%"}}/>
-                <div style={{width:"48%"}}>
+              <div style={{margin:"3%", marginBottom:"0%", paddingBottom:"1%",paddingTop:"1%",backgroundRepeat:"no-repeat", backgroundImage:"url('./home/bg/4.png')", display:"flex", justifyContent:"space-between"}}>
+                {/* <img src={backgroundImage} style={{width:"48%", backgroundSize: "100% 80%", padding:"3%", borderTopLeftRadius:"20%", borderBottomRightRadius:"20%"}}/> */}
+                <div style={{width:"100%"}}>
                   <p style={{fontSize:"25px", fontWeight:"700", fontFamily:"'Poppins', sans-serif", padding:"2% 6% 0%"}}>{obj.header}</p>
-                  <ul style={{listStyleType: "square", listStylePosition: "inside", padding:"0", paddingBottom:"3%", lineHeight:"3rem"}}>{obj.points.map((point, index) => ( 
-                    <div>{index %2 == 0 ? <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"#e5e5e5"}}>{point}</li>
-                    : <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"#bbbabb"}}>{point}</li>}</div>
+                  <ul style={{listStyleType: "square", listStylePosition: "inside", padding:"0", paddingBottom:"3%", lineHeight:"4rem"}}>{obj.points.map((point, index) => ( 
+                    <div>{index %2 == 0 ? <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif",boxShadow:"rgb(0, 0, 0) 0px 10px 20px", fontSize:"20px"}}>{point}</li>
+                    : <li className="point" style={{paddingLeft:"8%" ,fontSize:"18px", fontFamily:"'Poppins', sans-serif", backgroundColor:"#788c9533", boxShadow:"rgb(0, 0, 0) 0px 10px 20px", fontSize:"20px"}}>{point}</li>}</div>
                     ))}</ul>
                 </div>
               </div> :
