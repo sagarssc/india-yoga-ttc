@@ -163,6 +163,11 @@ function RegistrationForm() {
       const res = await submitBookingRequest(data);
       console.log(res);
       if ( res && res.status=="success") {
+        if (typeof window.Razorpay !== "undefined") {
+          if (window.rzp1) {
+            window.rzp1.destroy();
+          }
+        }
         const options = {
           name: "India Yoga TTC",
           description: "Payment for your Booking",
@@ -199,7 +204,11 @@ function RegistrationForm() {
           const rzp1 = new window.Razorpay(options);
           rzp1.open();
         });
-      } else {
+        // } else {
+        //   console.error("Razorpay script not loaded.");
+        // } 
+      }
+      else {
         console.log("failded from server");
         navigate("/error");
       }
