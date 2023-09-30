@@ -206,6 +206,9 @@ function RegistrationForm() {
     } else {
       setLoader(false);
     }
+    if (window.rzp1) {
+      window.rzp1.destroy();
+    }
   };
   return (
     <div style={{ paddingBottom: "3rem" }}>
