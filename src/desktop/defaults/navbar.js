@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { isMobile } from "react-device-detect";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "../../index.css";
+import "../../css/navbar2.css"
 import "../../css/navbar1.css"
 
 
@@ -45,14 +46,17 @@ export default class Navbar extends Component {
           <div>
             {!isMobile ? //<div className="navbar" style={{backgroundImage:"url('./header.png')"}}>
             <div className="navbar" >
-              <div className="nav-container" style={{display:"block"}}>
-                <Link to="/" className="link">
-                <div style={{display:"flex", justifyContent:"center"}}><div style={{backgroundColor:"#ffffff00" ,backgroundImage:"url('./icons/logo.png')", backgroundRepeat:"no-repeat", width:"6%", height:"4rem", backgroundSize:"100% 100%", paddingBottom:"2%"}}></div>
-                  <div className="logo-large">
-                  INDIA YOGA TTC
-                </div></div>
-                </Link>
-                <hr style={{border:"1px dashed #000000", margin:"10px 0", padding:"0"}}/>
+              <div className="nav-container">
+                  <Link to="/" className="link">
+                    <div className="logo-container">
+                      <img
+                        src="./icons/logo.png"
+                        alt="Logo"
+                        className="logo"
+                      />
+                      <h1 className="logo-text">INDIA YOGA TTC</h1>
+                    </div>
+                  </Link>
                 <div className="nav-menu1">
                   <div className="dropdown">
                     <div className="dropbtn link"><p className="menu-text">Courses</p></div>
