@@ -24,7 +24,7 @@ export default class Footer extends Component {
               </div>
               <div className="quick-links">
                 <div style={{justifyContent:"space-around", textAlign:"center", fontSize:"25px", fontWeight:"300", paddingTop:".5rem", fontWeight:"500"}}>Quick Links</div>
-                <ul style={{paddingTop:"1rem",justifyContent:"space-around", columnCount:2, listStyleType: "none", paddingLeft:"0rem"}}>
+                <ul style={{paddingTop:"1rem",justifyContent:"space-around", columnCount:2, listStyleType: "none", paddingLeft:"0rem", lineHeight:"2.5rem"}}>
                   {footer.ql.map((head, index) =>(
                     <li className="quick-links-list"><Link to={head.link} className="link">{head.text}</Link></li>
                     ))}
@@ -38,7 +38,7 @@ export default class Footer extends Component {
                       <div style={{width:"20%"}}>
                         <div style={{height:"4rem", backgroundImage: contact.icon, backgroundSize:"100% 100%", backgroundBlendMode:"darken",backgroundColor:"#70a2bb"}}></div>
                       </div>
-                      <div style={{width:"80%"}}>
+                      <div style={{width:"80%", lineHeight:"1rem"}}>
                         <p style={{margin:"0", fontWeight:"700"}}>{contact.heading}</p>
                         <a href={contact.ref} target="_blank" className="link"><p>{contact.value}</p></a>
                       </div>
