@@ -6,7 +6,7 @@ import '../../css/success.css'
 const RegistrationSuccess = (props) => {
   const navigate = useNavigate();
 
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(30);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,7 +18,7 @@ const RegistrationSuccess = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/");
-    }, 10000);
+    }, 30000);
     return () => clearTimeout(timer);
   }, [navigate]);
 
@@ -28,12 +28,13 @@ const RegistrationSuccess = (props) => {
         <img src={'./icons/logo.png'} alt="Logo" />
       </div>
       <div className="message">
-        <h1>Registration Successful</h1>
-        <p>Congratulations! You have successfully registered for our yoga teacher training course.</p>
-        <p>You will be redirected to the home page in {count} seconds.</p>
+      <h1>Registration Successful</h1>
+        <p>Thank you for registering for our yoga teacher training course.</p>
+        <p>Your registration has been received, and our team will review your application shortly.</p>
+        <p>You will receive an email confirmation with further details. If you have any questions or need assistance, please feel free to <Link to="/contact">contact us</Link>.</p>
         <p>
-            Alternatively, you can click <Link to="/">here</Link> to go back to
-            the homepage now.
+          You will be redirected to the home page in {count} seconds.
+          Alternatively, you can click <Link to="/">here</Link> to go back to the homepage now.
         </p>
       </div>
     </div>
