@@ -47,7 +47,7 @@ export default class DetailedBlog extends Component {
             {blog.content.subcontent && (
               <div>
                 {blog.content.subcontent.map((paragraph, index) => (
-                  <div key={index}>
+                  <div key={index} style={{paddingTop: "2rem", paddingBottom:"0rem"}}>
                     <h2 className="sub-heading" style={{ fontSize: "25px", fontWeight: "500", width: "90%", fontFamily: "Georgia, serif" }}>{paragraph.title}</h2>
                     <div style={{ paddingTop: ".5%", color: "black", fontSize: "15px", fontWeight: "300", width: "90%", fontFamily: "Arial, sans-serif" }}>
                       {paragraph.content}
