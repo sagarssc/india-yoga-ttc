@@ -8,7 +8,7 @@ import "react-phone-input-2/lib/style.css";
 import Select from "react-select";
 import ReactSelect from "react-select";
 import validator from "validator";
-import { CustomPopUp } from "../defaults/popup";
+import { CustomPopUp,  PaymentInfoModal} from "../defaults/popup";
 import { RegisterationForm, CourseCostAndSlot } from "../../constant/register";
 import Razorpay from "razorpay";
 import { Link, Routes, Route, useNavigate } from "react-router-dom";
@@ -163,47 +163,49 @@ function RegistrationForm() {
       const res = await submitBookingRequest(data);
       console.log(res);
       if ( res && res.status=="success") {
-        if (typeof window.Razorpay !== "undefined") {
-          if (window.rzp1) {
-            window.rzp1.destroy();
-          }
-        }
-        const options = {
-          name: "India Yoga TTC",
-          description: "Payment for your Booking",
-          order_id: res.order_id,
-          handler: async function (response) {
-            console.log(response);
-            response["registeration_id"] = res.registration_id
-            const res1 = await onSuccess(response);
-            if(res1["status"] == "success"){
-              console.log(res1);
-              navigate("/success");
-            }
-            else{
-              console.log("failded on success",res1);
-              navigate("/error");
-            }
-          },
-          modal: {
-            ondismiss: function(){
-              console.log("failded on payment cancelled");
-              navigate("/payment-cancelled");
-            }
-          },
-          prefill: {
-            name: data['name'],
-            email: data['email'],
-            contact: data['phone_number'],
-          },
-          theme: {
-            color: "green",
-          },
-        };
-        loadRazorpay().then(() => {
-          const rzp1 = new window.Razorpay(options);
-          rzp1.open();
-        });
+        setLoader(false)
+        setPopUp(true)
+        // if (typeof window.Razorpay !== "undefined") {
+        //   if (window.rzp1) {
+        //     window.rzp1.destroy();
+        //   }
+        // }
+        // const options = {
+        //   name: "India Yoga TTC",
+        //   description: "Payment for your Booking",
+        //   order_id: res.order_id,
+        //   handler: async function (response) {
+        //     console.log(response);
+        //     response["registeration_id"] = res.registration_id
+        //     const res1 = await onSuccess(response);
+        //     if(res1["status"] == "success"){
+        //       console.log(res1);
+        //       navigate("/success");
+        //     }
+        //     else{
+        //       console.log("failded on success",res1);
+        //       navigate("/error");
+        //     }
+        //   },
+        //   modal: {
+        //     ondismiss: function(){
+        //       console.log("failded on payment cancelled");
+        //       navigate("/payment-cancelled");
+        //     }
+        //   },
+        //   prefill: {
+        //     name: data['name'],
+        //     email: data['email'],
+        //     contact: data['phone_number'],
+        //   },
+        //   theme: {
+        //     color: "green",
+        //   },
+        // };
+        // loadRazorpay().then(() => {
+        //   const rzp1 = new window.Razorpay(options);
+        //   rzp1.open();
+        // });
         // } else {
         //   console.error("Razorpay script not loaded.");
         // } 
@@ -215,13 +217,20 @@ function RegistrationForm() {
     } else {
       setLoader(false);
     }
-    if (window.rzp1) {
-      window.rzp1.destroy();
-    }
+    // if (window.rzp1) {
+    //   window.rzp1.destroy();
+    // }
   };
+
+  const onCloseRequest = async() => {
+    setPopUp(false)
+    navigate("/success");
+  }
+
   return (
     <div style={{ paddingBottom: "3rem" }}>
-      {popUp && <CustomPopUp content={popUpContent} />}
+
+      {popUp && <PaymentInfoModal isOpen={true} onRequestClose={onCloseRequest} />}
       {loader ? (
         <div>
           <div

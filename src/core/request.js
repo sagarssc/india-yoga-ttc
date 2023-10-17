@@ -1,8 +1,8 @@
 
 // export const baseUrl = "https://7ifdnmyj01.execute-api.us-east-1.amazonaws.com/master" ;
-// export const baseUrl = "http://localhost:8000" ;
+export const baseUrl = "http://localhost:8000" ;
 // export const baseUrl = "https://54.197.30.176" ;
-export const baseUrl = "https://api.iyttc.in/" ;
+// export const baseUrl = "https://api.iyttc.in/" ;
 
 export async function getBlogs(){
   try {

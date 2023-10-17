@@ -127,3 +127,18 @@
   }
   
 }
+
+.custom-list-item {
+  padding-left: 1.5rem;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  background-color: #6099b3; /* Add your preferred background color */
+  border-radius: 5px; /* Add rounded corners if desired */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+
+
