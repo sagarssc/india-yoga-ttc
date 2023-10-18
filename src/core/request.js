@@ -97,3 +97,29 @@ export async function onSuccess(data){
     return res
   }
 }
+
+
+export async function getBatches(){
+  try{
+    const response = await fetch(baseUrl + '/iyt/batch/get_batches', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    if(response.status.toString()[0]=='2'){
+      const res = await response.json();
+      return res
+    }
+    else{
+      const res = {status: "failed"}
+      return res
+    }
+  }
+  catch (error) {
+    console.error("Something bad happened");
+    console.error(error);
+    const res = {status: "failed"}
+    return res
+  }
+}
