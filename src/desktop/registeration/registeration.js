@@ -1,7 +1,7 @@
 // import React, { Component } from "react";
 import React, { useState, useEffect } from "react";
 import { Circles } from "react-loader-spinner";
-import { submitBookingRequest, onSuccess } from "../../core/request";
+import { submitBookingRequest, onSuccess, getBatches } from "../../core/request";
 import Loader from "../../core/loader";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -9,7 +9,7 @@ import Select from "react-select";
 import ReactSelect from "react-select";
 import validator from "validator";
 import { CustomPopUp,  PaymentInfoModal} from "../defaults/popup";
-import { RegisterationForm, CourseCostAndSlot } from "../../constant/register";
+import { RegisterationForm } from "../../constant/register";
 import Razorpay from "razorpay";
 import { Link, Routes, Route, useNavigate } from "react-router-dom";
 import "../../css/registration.css"
@@ -27,9 +27,25 @@ function RegistrationForm() {
   const [redirect, setRedirect] = useState(true);
   const [same_as_phone, setSameAsPhone] = useState(false);
   const isMobile = window.innerWidth <= 768;
+  const [CourseCostAndSlot, setCourseAndSlot] = useState({})
 
-  useEffect(() => {
-    prepareCourseList();
+  useEffect(()=> {
+    const getCourses = async () => {
+      try {
+        setLoader(true)
+        const data = await getBatches();
+        if(data["status"]=="success"){
+          await setCourseAndSlot(data["batches"])
+          prepareCourseList(data["batches"]);
+        }
+        setLoader(false)
+        // Do something with CourseCostAndSlot data if needed
+      } catch (error) {
+        console.error('Error fetching course data', error);
+        setLoader(false)
+      }
+    };
+    getCourses();
   }, []);
 
   const updateForm = (index, e) => {
@@ -61,8 +77,8 @@ function RegistrationForm() {
     return form;
   };
 
-  const prepareCourseList = () => {
-    let course_slot = CourseCostAndSlot;
+  const prepareCourseList = (course_slot) => {
+    // let course_slot = CourseCostAndSlot;
     const newForm = [...form];
     let index = getIndexByKey(newForm, "course");
     let input = newForm[index];
